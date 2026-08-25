@@ -1,13 +1,13 @@
 {
   "version": "2.0",
   "meta": {
-    "last_updated": "2026-08-24T23:44:52Z",
-    "last_updated_pt": "2026-08-24T16:44:52-07:00",
+    "last_updated": "2026-08-25T01:07:20Z",
+    "last_updated_pt": "2026-08-24T18:07:20-07:00",
     "timezone": "America/Los_Angeles",
     "source": "schoology_parent",
     "parent_account": "loo*****@gmail.com",
     "parent_name": "J**** L****",
-    "school": "Middle School",
+    "school": "Hillview Middle School",
     "children_verified": [
       "Charlotte L****",
       "Louis L****"
@@ -29,8 +29,8 @@
       "primary_email": null,
       "role": "Student",
       "grade_level": "7",
-      "school": "Middle School",
-      "linked_parent_id": "parent_001"
+      "school": "Hillview Middle School",
+      "linked_parent_id": "parent_loosejp"
     },
     {
       "id": "12346",
@@ -40,14 +40,49 @@
       "primary_email": null,
       "role": "Student",
       "grade_level": "8",
-      "school": "Middle School",
-      "linked_parent_id": "parent_001"
+      "school": "Hillview Middle School",
+      "linked_parent_id": "parent_loosejp"
     },
     {
       "id": "t_789",
       "name_display": "Ms. H****",
       "role": "Teacher",
-      "primary_email": null
+      "primary_email": null,
+      "name_first": "Ms.",
+      "name_last": "H****",
+      "school": "Hillview Middle School"
+    },
+    {
+      "id": "t_790",
+      "name_display": "Ms. K****",
+      "role": "Teacher",
+      "primary_email": null,
+      "name_first": "Ms.",
+      "name_last": "K****"
+    },
+    {
+      "id": "t_791",
+      "name_display": "Ms. C****",
+      "role": "Teacher",
+      "primary_email": null,
+      "name_first": "Ms.",
+      "name_last": "C****"
+    },
+    {
+      "id": "t_792",
+      "name_display": "Ms. T****",
+      "role": "Teacher",
+      "primary_email": null,
+      "name_first": "Ms.",
+      "name_last": "T****"
+    },
+    {
+      "id": "parent_loosejp",
+      "name_display": "J**** L****",
+      "name_first": "J****",
+      "name_last": "L****",
+      "primary_email": null,
+      "role": "Parent"
     }
   ],
   "courses": [
@@ -68,6 +103,24 @@
       "title": "WEB Leadership",
       "course_code": "WEB-01",
       "course_title_raw": "WEB : Section 1"
+    },
+    {
+      "id": "8500088181",
+      "title": "English 8",
+      "course_code": "ENG8-02",
+      "course_title_raw": "English 8 : 2(A-B)"
+    },
+    {
+      "id": "8500088182",
+      "title": "History 8",
+      "course_code": "HIST8-03",
+      "course_title_raw": "U.S. History 8 : 3(A-B)"
+    },
+    {
+      "id": "8500088183",
+      "title": "Science 8",
+      "course_code": "SCI8-01",
+      "course_title_raw": "Science 8 : 1(A-B)"
     }
   ],
   "sections": [
@@ -86,7 +139,8 @@
         "Tri1-2026"
       ],
       "enrolled_user_ids": [
-        "12345"
+        "12345",
+        "12346"
       ]
     },
     {
@@ -98,7 +152,7 @@
       "course_title": "Science 7",
       "location": "Lab 3",
       "teachers": [
-        "Ms. H****"
+        "Ms. K****"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -116,14 +170,68 @@
       "course_title": "WEB Leadership",
       "location": "Gym",
       "teachers": [
-        "Ms. H****",
-        "Ms. H****"
+        "Ms. K****",
+        "Ms. C****"
       ],
       "grading_periods": [
         "Tri1-2026"
       ],
       "enrolled_user_ids": [
         "12345",
+        "12346"
+      ]
+    },
+    {
+      "id": "8500088181",
+      "course_id": "8500088181",
+      "section_title": "Period 2(A-B)",
+      "section_code": "ENG8-02",
+      "section_title_raw": "English 8 : 2(A-B)",
+      "course_title": "English 8",
+      "location": "Room 112",
+      "teachers": [
+        "Ms. T****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12346"
+      ]
+    },
+    {
+      "id": "8500088182",
+      "course_id": "8500088182",
+      "section_title": "Period 3(A-B)",
+      "section_code": "HIST8-03",
+      "section_title_raw": "U.S. History 8 : 3(A-B)",
+      "course_title": "U.S. History 8",
+      "location": "Room 110",
+      "teachers": [
+        "Mr. A****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12346"
+      ]
+    },
+    {
+      "id": "8500088183",
+      "course_id": "8500088183",
+      "section_title": "Period 1(A-B)",
+      "section_code": "SCI8-01",
+      "section_title_raw": "Science 8 : 1(A-B)",
+      "course_title": "Science 8",
+      "location": "Lab 4",
+      "teachers": [
+        "Ms. K****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
         "12346"
       ]
     }
@@ -146,6 +254,21 @@
       "id": "f_1029722624",
       "section_id": "8500088179",
       "title": "Unit 1 - Scientific Method"
+    },
+    {
+      "id": "f_1029722625",
+      "section_id": "8500088181",
+      "title": "Summer Reading"
+    },
+    {
+      "id": "f_1029722626",
+      "section_id": "8500088182",
+      "title": "Chapter 2 - Geography"
+    },
+    {
+      "id": "f_1029722627",
+      "section_id": "8500088183",
+      "title": "Lab Reports"
     }
   ],
   "assignments": [
@@ -176,7 +299,7 @@
       "is_missing": false,
       "submission_status": "not_submitted",
       "web_url": "https://app.schoology.com/assignment/8516163487/info",
-      "teacher_name": "Ms. Hagg",
+      "teacher_name": "Ms. H****",
       "student_id": "12345",
       "attachment_ids": [
         "3528031067",
@@ -197,7 +320,7 @@
       "due_tz": "America/Los_Angeles",
       "posted_at": "2026-08-21T10:00:00-07:00",
       "max_points": 50,
-      "grading_category": "Homework",
+      "grading_category": "Formative",
       "grading_period_id": "Tri1-2026",
       "type": "Assignment",
       "status": "Upcoming",
@@ -210,8 +333,167 @@
       "is_missing": false,
       "submission_status": "not_submitted",
       "web_url": "https://app.schoology.com/assignment/8516163499/info",
+      "teacher_name": "Ms. K****",
+      "student_id": "12345",
+      "attachment_ids": []
+    },
+    {
+      "id": "8516163510",
+      "section_id": "8500088178",
+      "course_id": "8500088178",
+      "folder_id": "f_1029722623",
+      "title": "1.2 Solving Two-Step Equations HW",
+      "description": "Complete practice problems 1-20 from textbook. Show work. Use Pham notes.",
+      "instructions_summary": "Complete 1-20 show work",
+      "due": "2026-08-27T23:59:00-07:00",
+      "due_human_pt": "Thursday, August 27, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-22T14:30:00-07:00",
+      "max_points": 100,
+      "grading_category": "Formative",
+      "grading_period_id": "Tri1-2026",
+      "type": "Assignment",
+      "status": "Upcoming",
+      "status_detail": "Due in 3 days",
+      "is_voluntary": false,
+      "is_web_voluntary": false,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": false,
+      "overdue_days": 0,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163510/info",
       "teacher_name": "Ms. H****",
       "student_id": "12345",
+      "attachment_ids": [
+        "3529363943"
+      ]
+    },
+    {
+      "id": "8516163520",
+      "section_id": "8500088180",
+      "course_id": "8500088180",
+      "folder_id": null,
+      "title": "WEB Icebreaker Activities Reflection",
+      "description": "Voluntary reflection activity for WEB Leaders after first week orientation.",
+      "instructions_summary": "Voluntary WEB reflection",
+      "due": "2026-08-28T23:59:00-07:00",
+      "due_human_pt": "Friday, August 28, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-22T09:00:00-07:00",
+      "max_points": null,
+      "grading_category": "Voluntary",
+      "grading_period_id": "Tri1-2026",
+      "type": "Volunteer",
+      "status": "Upcoming",
+      "status_detail": "Voluntary WEB activity",
+      "is_voluntary": true,
+      "is_web_voluntary": true,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": false,
+      "overdue_days": 0,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163520/info",
+      "teacher_name": "Ms. K****",
+      "student_id": "12345",
+      "attachment_ids": []
+    },
+    {
+      "id": "8516163530",
+      "section_id": "8500088179",
+      "course_id": "8500088179",
+      "folder_id": "f_1029722624",
+      "title": "Student Journal Entry 1 - Scientific Method",
+      "description": "Write first journal entry reflecting on lab safety and scientific method steps. PDF template attached.",
+      "instructions_summary": "Journal entry 1",
+      "due": "2026-08-24T23:59:00-07:00",
+      "due_human_pt": "Monday, August 24, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-20T09:00:00-07:00",
+      "max_points": 20,
+      "grading_category": "Formative",
+      "grading_period_id": "Tri1-2026",
+      "type": "Assignment",
+      "status": "Due Tomorrow",
+      "status_detail": "Overdue 1 day (hidden) div id=overdue-submissions hidden-important",
+      "is_voluntary": false,
+      "is_web_voluntary": false,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": true,
+      "overdue_days": 1,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163530/info",
+      "teacher_name": "Ms. K****",
+      "student_id": "12345",
+      "attachment_ids": [
+        "3530000001"
+      ]
+    },
+    {
+      "id": "8516163540",
+      "section_id": "8500088181",
+      "course_id": "8500088181",
+      "folder_id": "f_1029722625",
+      "title": "Summer Reading Response - The Giver",
+      "description": "Submit your summer reading response for The Giver with thesis and textual evidence.",
+      "instructions_summary": "Submit summer reading response",
+      "due": "2026-08-25T23:59:00-07:00",
+      "due_human_pt": "Tuesday, August 25, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-20T11:00:00-07:00",
+      "max_points": 100,
+      "grading_category": "Summative",
+      "grading_period_id": "Tri1-2026",
+      "type": "Assignment",
+      "status": "Due Tomorrow",
+      "status_detail": "Due Tomorrow",
+      "is_voluntary": false,
+      "is_web_voluntary": false,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": false,
+      "overdue_days": 0,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163540/info",
+      "teacher_name": "Ms. T****",
+      "student_id": "12346",
+      "attachment_ids": []
+    },
+    {
+      "id": "8516163550",
+      "section_id": "8500088182",
+      "course_id": "8500088182",
+      "folder_id": "f_1029722626",
+      "title": "Chapter 2 Map Activity - Colonies",
+      "description": "Label and color map of 13 colonies with trade routes.",
+      "instructions_summary": "Map labeling activity",
+      "due": "2026-08-26T23:59:00-07:00",
+      "due_human_pt": "Wednesday, August 26, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-21T13:00:00-07:00",
+      "max_points": 75,
+      "grading_category": "Formative",
+      "grading_period_id": "Tri1-2026",
+      "type": "In Class",
+      "status": "Upcoming",
+      "status_detail": "Due in 2 days",
+      "is_voluntary": false,
+      "is_web_voluntary": false,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": false,
+      "overdue_days": 0,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163550/info",
+      "teacher_name": "Mr. A****",
+      "student_id": "12346",
       "attachment_ids": []
     },
     {
@@ -241,7 +523,105 @@
       "is_missing": false,
       "submission_status": "not_submitted",
       "web_url": "https://app.schoology.com/assignment/8516163555/info",
+      "teacher_name": "Ms. K****",
+      "student_id": "12346",
+      "attachment_ids": []
+    },
+    {
+      "id": "8516163560",
+      "section_id": "8500088183",
+      "course_id": "8500088183",
+      "folder_id": "f_1029722627",
+      "title": "Lab Report - Scientific Method Application",
+      "description": "Complete lab report using Scientific Method template. Student Journal PDFs attached.",
+      "instructions_summary": "Complete lab report",
+      "due": "2026-08-27T10:00:00-07:00",
+      "due_human_pt": "Thursday, August 27, 2026 at 10:00 am PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-22T15:00:00-07:00",
+      "max_points": 80,
+      "grading_category": "Summative",
+      "grading_period_id": "Tri1-2026",
+      "type": "Assignment",
+      "status": "Upcoming",
+      "status_detail": "Due in 3 days with time",
+      "is_voluntary": false,
+      "is_web_voluntary": false,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": false,
+      "overdue_days": 0,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163560/info",
+      "teacher_name": "Ms. K****",
+      "student_id": "12346",
+      "attachment_ids": [
+        "3530000002",
+        "3530000003"
+      ]
+    },
+    {
+      "id": "8516163570",
+      "section_id": "8500088178",
+      "course_id": "8500088178",
+      "folder_id": "f_1029722623",
+      "title": "Chapter 1 Review - Algebra 1",
+      "description": "Complete Chapter 1 Review worksheet for Algebra 1.",
+      "instructions_summary": "Chapter 1 Review",
+      "due": "2026-08-26T23:59:00-07:00",
+      "due_human_pt": "Wednesday, August 26, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-23T09:00:00-07:00",
+      "max_points": 90,
+      "grading_category": "Formative",
+      "grading_period_id": "Tri1-2026",
+      "type": "Assignment",
+      "status": "Upcoming",
+      "status_detail": "Due in 2 days",
+      "is_voluntary": false,
+      "is_web_voluntary": false,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": false,
+      "overdue_days": 0,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163570/info",
       "teacher_name": "Ms. H****",
+      "student_id": "12346",
+      "attachment_ids": [
+        "3528031067"
+      ]
+    },
+    {
+      "id": "8516163580",
+      "section_id": "8500088180",
+      "course_id": "8500088180",
+      "folder_id": null,
+      "title": "WEB Volunteer Hours Log - August",
+      "description": "Voluntary hours logging for WEB Leaders community service.",
+      "instructions_summary": "Voluntary hours log",
+      "due": "2026-08-29T23:59:00-07:00",
+      "due_human_pt": "Saturday, August 29, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-23T10:00:00-07:00",
+      "max_points": null,
+      "grading_category": "Voluntary",
+      "grading_period_id": "Tri1-2026",
+      "type": "Volunteer",
+      "status": "Upcoming",
+      "status_detail": "Voluntary WEB hours",
+      "is_voluntary": true,
+      "is_web_voluntary": true,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": false,
+      "overdue_days": 0,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163580/info",
+      "teacher_name": "Ms. C****",
       "student_id": "12346",
       "attachment_ids": []
     }
@@ -266,6 +646,56 @@
       "source_url": "https://app.schoology.com/attachment/3529363942/source/stamp.pdf",
       "docviewer_url": "https://app.schoology.com/attachment/3529363942/docviewer",
       "material_url": "https://app.schoology.com/course/8500088178/materials/gp/8516163508"
+    },
+    {
+      "id": "3529363943",
+      "assignment_id": "8516163510",
+      "filename": "1_1.1_SolvingSimpleEquations_Pham.pdf",
+      "file_size": 193536,
+      "mime_type": "application/pdf",
+      "source_url": "https://app.schoology.com/attachment/3529363943/source/pham.pdf",
+      "docviewer_url": "https://app.schoology.com/attachment/3529363943/docviewer",
+      "material_url": "https://app.schoology.com/course/8500088178/materials/gp/8516163511"
+    },
+    {
+      "id": "3530000001",
+      "assignment_id": "8516163530",
+      "filename": "Student_Journal_Template_Unit1.pdf",
+      "file_size": 1250000,
+      "mime_type": "application/pdf",
+      "source_url": "https://app.schoology.com/attachment/3530000001/source/journal.pdf",
+      "docviewer_url": "https://app.schoology.com/attachment/3530000001/docviewer",
+      "material_url": "https://app.schoology.com/course/8500088179/materials/gp/8516163531"
+    },
+    {
+      "id": "3530000002",
+      "assignment_id": "8516163560",
+      "filename": "Student_Journal_ScientificMethod.pdf",
+      "file_size": 2100000,
+      "mime_type": "application/pdf",
+      "source_url": "https://app.schoology.com/attachment/3530000002/source/journal2.pdf",
+      "docviewer_url": "https://app.schoology.com/attachment/3530000002/docviewer",
+      "material_url": "https://app.schoology.com/course/8500088183/materials/gp/8516163561"
+    },
+    {
+      "id": "3530000003",
+      "assignment_id": "8516163560",
+      "filename": "Lab_Report_Template.pdf",
+      "file_size": 850000,
+      "mime_type": "application/pdf",
+      "source_url": "https://app.schoology.com/attachment/3530000003/source/labreport.pdf",
+      "docviewer_url": "https://app.schoology.com/attachment/3530000003/docviewer",
+      "material_url": "https://app.schoology.com/course/8500088183/materials/gp/8516163561"
+    },
+    {
+      "id": "3531986838",
+      "assignment_id": null,
+      "filename": "1.1_Notes_Hagg_Aug24.pdf",
+      "file_size": 95232,
+      "mime_type": "application/pdf",
+      "source_url": "https://app.schoology.com/attachment/3531986838/source/hagg_notes.pdf",
+      "docviewer_url": "https://app.schoology.com/attachment/3531986838/docviewer",
+      "material_url": "https://app.schoology.com/course/8500088178/materials/gp/8516163590"
     }
   ],
   "grades": [
@@ -275,6 +705,146 @@
       "assignment_id": "8516163487",
       "grade": null,
       "max_points": 100,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088179",
+      "uid": "12345",
+      "assignment_id": "8516163499",
+      "grade": null,
+      "max_points": 50,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088178",
+      "uid": "12345",
+      "assignment_id": "8516163510",
+      "grade": null,
+      "max_points": 100,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088180",
+      "uid": "12345",
+      "assignment_id": "8516163520",
+      "grade": null,
+      "max_points": null,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088179",
+      "uid": "12345",
+      "assignment_id": "8516163530",
+      "grade": null,
+      "max_points": 20,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088181",
+      "uid": "12346",
+      "assignment_id": "8516163540",
+      "grade": null,
+      "max_points": 100,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088182",
+      "uid": "12346",
+      "assignment_id": "8516163550",
+      "grade": null,
+      "max_points": 75,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088180",
+      "uid": "12346",
+      "assignment_id": "8516163555",
+      "grade": null,
+      "max_points": null,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088183",
+      "uid": "12346",
+      "assignment_id": "8516163560",
+      "grade": null,
+      "max_points": 80,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088178",
+      "uid": "12346",
+      "assignment_id": "8516163570",
+      "grade": null,
+      "max_points": 90,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    },
+    {
+      "section_id": "8500088180",
+      "uid": "12346",
+      "assignment_id": "8516163580",
+      "grade": null,
+      "max_points": null,
       "percent": null,
       "letter": null,
       "is_missing": false,
@@ -294,6 +864,106 @@
       "body": null,
       "file_ids": [],
       "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163499",
+      "assignment_id": "8516163499",
+      "uid": "12345",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163510",
+      "assignment_id": "8516163510",
+      "uid": "12345",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163520",
+      "assignment_id": "8516163520",
+      "uid": "12345",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163530",
+      "assignment_id": "8516163530",
+      "uid": "12345",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163540",
+      "assignment_id": "8516163540",
+      "uid": "12346",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163550",
+      "assignment_id": "8516163550",
+      "uid": "12346",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163555",
+      "assignment_id": "8516163555",
+      "uid": "12346",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163560",
+      "assignment_id": "8516163560",
+      "uid": "12346",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163570",
+      "assignment_id": "8516163570",
+      "uid": "12346",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    },
+    {
+      "id": "sub_8516163580",
+      "assignment_id": "8516163580",
+      "uid": "12346",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
     }
   ],
   "updates": [
@@ -304,13 +974,26 @@
       "author_id": "t_789",
       "author_name": "Ms. H****",
       "author_role": "Teacher",
-      "body": "Good morning and happy Monday! Here are the notes for today's lesson (1.1); please download them for class today.",
-      "body_html": "<p>Good morning and happy Monday! Here are the notes for today's lesson (1.1); please download them for class today.</p>",
+      "body": "Good morning and happy Monday! Here are the notes for today's lesson (1.1); please download them for class today. Attached is the 1.1 notes PDF and homework answers for reference. Remember to bring your stamp sheet tomorrow for check-in.",
+      "body_html": "<p>Good morning and happy Monday! Here are the notes for today's lesson (1.1); please download them for class today. Attached is the 1.1 notes PDF and homework answers for reference.</p>",
       "body_truncated": true,
       "created": "2026-08-24T11:25:00-07:00",
       "attachment_ids": [
         "3531986838"
       ]
+    },
+    {
+      "id": "136911846",
+      "section_id": "8500088179",
+      "course_id": "8500088179",
+      "author_id": "t_790",
+      "author_name": "Ms. K****",
+      "author_role": "Teacher",
+      "body": "Reminder: Lab Safety Contracts due Wednesday. Please review with parent/guardian. I-Ready testing tomorrow 10am in Lab 3.",
+      "body_html": "<p>Reminder: Lab Safety Contracts due Wednesday.</p>",
+      "body_truncated": false,
+      "created": "2026-08-24T09:15:00-07:00",
+      "attachment_ids": []
     }
   ],
   "calendar_events": [
@@ -322,10 +1005,24 @@
       "type": "school"
     },
     {
-      "id": "cal_0827",
-      "title": "Back to School Night (6:00 PM)",
+      "id": "cal_0826_iready",
+      "title": "I-Ready Testing",
       "section_id": null,
-      "start": "2026-08-27T18:00:00-07:00",
+      "start": "2026-08-26T10:00:00-07:00",
+      "type": "school"
+    },
+    {
+      "id": "cal_0827_iready",
+      "title": "I-Ready Testing",
+      "section_id": null,
+      "start": "2026-08-27T00:00:00-07:00",
+      "type": "school"
+    },
+    {
+      "id": "cal_0826_btsn",
+      "title": "Back to School Night",
+      "section_id": null,
+      "start": "2026-08-26T18:00:00-07:00",
       "type": "school"
     }
   ]
