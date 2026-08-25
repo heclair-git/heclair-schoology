@@ -31,13 +31,16 @@ interface SchoologyData {
     course_code: string;
   }>;
   sections: Array<{
-    id: string;
+    id?: string;
     course_id: string;
-    section_title: string;
-    course_title: string;
+    section_title?: string;
+    section_code?: string;
+    section?: string;
+    course_title?: string;
     location?: string;
-    teachers: string[];
-    enrolled_user_ids: string[];
+    teachers?: string[];
+    teacher?: string;
+    enrolled_user_ids?: string[];
   }>;
   folders: Array<{
     id: string;
@@ -46,44 +49,49 @@ interface SchoologyData {
   }>;
   assignments: Array<{
     id: string;
-    section_id: string;
-    course_id: string;
+    section_id?: string;
+    course_id?: string;
     folder_id?: string;
     title: string;
-    description: string;
+    description?: string;
     instructions_summary?: string;
-    due: string;
-    due_human_pt: string;
+    due?: string;
+    due_human_pt?: string;
+    due_iso?: string;
     max_points?: number;
-    grading_category: string;
-    type: string;
-    status: string;
+    grading_category?: string;
+    type?: string;
+    status?: string;
     status_detail?: string;
-    is_voluntary: boolean;
-    is_web_voluntary: boolean;
-    is_overdue_hidden: boolean;
-    overdue_days: number;
-    student_id: string;
+    is_voluntary?: boolean;
+    is_web_voluntary?: boolean;
+    is_overdue_hidden?: boolean;
+    overdue_days?: number;
+    student_id?: string;
+    child?: string;
     teacher_name?: string;
-    attachment_ids: string[];
-    web_url: string;
+    teacher?: string;
+    attachment_ids?: string[];
+    web_url?: string;
+    course_title?: string;
   }>;
   attachments: Array<{
     id: string;
-    assignment_id: string;
+    assignment_id?: string;
     filename: string;
     file_size: number;
-    mime_type: string;
+    mime_type?: string;
     source_url: string;
-    docviewer_url: string;
+    docviewer_url?: string;
   }>;
   updates: Array<{
     id: string;
-    section_id: string;
-    author_name: string;
+    section_id?: string;
+    author_name?: string;
     body: string;
-    body_truncated: boolean;
-    created: string;
+    body_truncated?: boolean;
+    created?: string;
+    author_role?: string;
   }>;
   calendar_events: Array<{
     id: string;
@@ -107,8 +115,6 @@ let userState: UserStateData = fallbackUserState as unknown as UserStateData;
 let activeFilter = 'all';
 let isFetching = false;
 let editingNoteAssignmentId: string | null = null;
-
-// GitHub API configuration for committing user state updates back to Git
 let githubToken = localStorage.getItem('gh_pat_token') || '';
 
 async function loadServerData(isManualClick = false) {
@@ -121,7 +127,7 @@ async function loadServerData(isManualClick = false) {
     const scrapeResponse = await fetch(scrapeUrl);
     if (scrapeResponse.ok) {
       const freshScrape = await scrapeResponse.json();
-      if (freshScrape && freshScrape.version) {
+      if (freshScrape && freshScrape.assignments) {
         data = freshScrape as SchoologyData;
       }
     }
@@ -154,12 +160,9 @@ async function loadServerData(isManualClick = false) {
 async function syncStateToServerInGit() {
   userState.last_updated = new Date().toISOString();
   
-  // If GitHub token is present, commit data/schoology_user_state.json directly to Git via GitHub API
   if (githubToken) {
     try {
       const apiUrl = 'https://api.github.com/repos/heclair-git/heclair-schoology/contents/data/schoology_user_state.json';
-      
-      // Get latest SHA
       let currentSha = userState.file_sha || '';
       if (!currentSha) {
         const getRes = await fetch(apiUrl, {
@@ -172,7 +175,6 @@ async function syncStateToServerInGit() {
       }
 
       const contentString = JSON.stringify(userState, null, 2);
-      // UTF-8 Base64 encoding
       const encodedContent = btoa(unescape(encodeURIComponent(contentString)));
 
       const putRes = await fetch(apiUrl, {
@@ -191,7 +193,6 @@ async function syncStateToServerInGit() {
       if (putRes.ok) {
         const putJson = await putRes.json();
         userState.file_sha = putJson.content.sha;
-        console.log('Successfully committed user state to Git on server!');
       }
     } catch (err) {
       console.warn('Could not push to GitHub API directly:', err);
@@ -199,6 +200,23 @@ async function syncStateToServerInGit() {
   }
   
   renderApp();
+}
+
+function getStudentIdForAssignment(assignment: any): '12345' | '12346' {
+  if (assignment.student_id === '12345' || assignment.student_id === '12346') {
+    return assignment.student_id;
+  }
+  if (assignment.child) {
+    const childStr = String(assignment.child).toLowerCase();
+    if (childStr.includes('louis')) return '12345';
+    if (childStr.includes('charlotte')) return '12346';
+  }
+  const section = (data.sections || []).find(s => s.course_id === assignment.course_id || (s.id && s.id === assignment.section_id));
+  if (section && section.enrolled_user_ids) {
+    if (section.enrolled_user_ids.includes('12345')) return '12345';
+    if (section.enrolled_user_ids.includes('12346')) return '12346';
+  }
+  return '12345';
 }
 
 function toggleAssignmentComplete(assignmentId: string) {
@@ -280,7 +298,7 @@ function renderAppLayout() {
             </svg>
             Schoology Family Dashboard
           </h1>
-          <p class="brand-subtitle" id="school-subtitle">${data.meta.school} • Server Git Sync</p>
+          <p class="brand-subtitle" id="school-subtitle">${data.meta?.school || 'Hillview Middle School'} • Server Git Sync</p>
         </div>
         <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
           <button id="refresh-btn" class="filter-btn" style="display: inline-flex; align-items: center; gap: 6px;">
@@ -291,7 +309,7 @@ function renderAppLayout() {
           </button>
           <div class="meta-timestamp">
             <span class="pulse-dot"></span>
-            Last Updated: <strong id="last-updated-text">${data.meta.last_updated_pt}</strong>
+            Last Updated: <strong id="last-updated-text">${data.meta?.last_updated_pt || 'Just now'}</strong>
           </div>
         </div>
       </header>
@@ -303,11 +321,11 @@ function renderAppLayout() {
       <div class="toolbar">
         <span class="filter-title">Filter Assignments:</span>
         <div class="filter-pills" id="filter-pills">
-          <button class="filter-btn active" data-filter="all">All Items (${data.meta.totals.total_upcoming})</button>
-          <button class="filter-btn" data-filter="homework">Homework Only (${data.meta.totals.homework_only})</button>
-          <button class="filter-btn" data-filter="voluntary">Voluntary & Activities (${data.meta.totals.web_voluntary})</button>
-          <button class="filter-btn" data-filter="overdue" id="overdue-filter-btn">Overdue Items (${data.meta.totals.overdue_hidden})</button>
-          <button class="filter-btn" data-filter="completed" id="completed-filter-btn">Completed (0)</button>
+          <button class="filter-btn active" data-filter="all" id="filter-all-btn">All Items</button>
+          <button class="filter-btn" data-filter="homework" id="filter-hw-btn">Homework Only</button>
+          <button class="filter-btn" data-filter="voluntary" id="filter-vol-btn">Voluntary & Activities</button>
+          <button class="filter-btn" data-filter="overdue" id="overdue-filter-btn">Overdue Items</button>
+          <button class="filter-btn" data-filter="completed" id="completed-filter-btn">Completed</button>
         </div>
       </div>
 
@@ -361,16 +379,35 @@ function renderAppLayout() {
 
 function renderApp() {
   const subtitle = document.querySelector('#school-subtitle');
-  if (subtitle) subtitle.textContent = `${data.meta.school} • Server Git Sync v${data.version}`;
+  if (subtitle) subtitle.textContent = `${data.meta?.school || 'Hillview Middle School'} • Server Git Sync v${data.version || '2.0'}`;
 
   const timestampText = document.querySelector('#last-updated-text');
-  if (timestampText) timestampText.textContent = data.meta.last_updated_pt;
+  if (timestampText) timestampText.textContent = data.meta?.last_updated_pt || 'Just now';
 
   const completedSet = new Set(userState.completed_assignment_ids || []);
+  
+  const allAssignments = data.assignments || [];
+  const totalUpcoming = allAssignments.length;
+  const homeworkOnly = allAssignments.filter(a => !a.is_voluntary && !a.is_web_voluntary && !String(a.course_title || '').toLowerCase().includes('web')).length;
+  const voluntary = allAssignments.filter(a => a.is_voluntary || a.is_web_voluntary || String(a.course_title || '').toLowerCase().includes('web')).length;
+  const overdueCount = allAssignments.filter(a => (a.is_overdue_hidden || (a.overdue_days && a.overdue_days > 0)) && !completedSet.has(a.id)).length;
+
+  const btnAll = document.querySelector('#filter-all-btn');
+  if (btnAll) btnAll.textContent = `All Items (${totalUpcoming})`;
+
+  const btnHw = document.querySelector('#filter-hw-btn');
+  if (btnHw) btnHw.textContent = `Homework Only (${homeworkOnly})`;
+
+  const btnVol = document.querySelector('#filter-vol-btn');
+  if (btnVol) btnVol.textContent = `Voluntary & Activities (${voluntary})`;
+
+  const btnOverdue = document.querySelector('#overdue-filter-btn');
+  if (btnOverdue) btnOverdue.textContent = `Overdue Items (${overdueCount})`;
+
   const completedBtn = document.querySelector('#completed-filter-btn');
   if (completedBtn) completedBtn.textContent = `Completed (${completedSet.size})`;
 
-  renderTotalsGrid();
+  renderTotalsGrid(totalUpcoming, homeworkOnly, voluntary, overdueCount, completedSet.size);
   renderStudentAssignments('12345', '#louis-assignments-list');
   renderStudentAssignments('12346', '#charlotte-assignments-list');
   renderCourses();
@@ -378,29 +415,28 @@ function renderApp() {
   renderCalendar();
 }
 
-function renderTotalsGrid() {
+function renderTotalsGrid(totalUpcoming: number, homeworkOnly: number, voluntary: number, overdueCount: number, completedCount: number) {
   const container = document.querySelector('#totals-grid');
   if (!container) return;
 
   const completedSet = new Set(userState.completed_assignment_ids || []);
-  const activeUpcoming = data.assignments.filter(a => !completedSet.has(a.id)).length;
-  const activeOverdue = data.assignments.filter(a => a.is_overdue_hidden && !completedSet.has(a.id)).length;
+  const pendingUpcoming = (data.assignments || []).filter(a => !completedSet.has(a.id)).length;
 
   container.innerHTML = `
     <div class="total-card">
-      <div class="total-value">${activeUpcoming}</div>
+      <div class="total-value">${pendingUpcoming}</div>
       <div class="total-label">Pending Upcoming</div>
     </div>
     <div class="total-card">
-      <div class="total-value" style="color: #2563eb;">${data.meta.totals.homework_only}</div>
+      <div class="total-value" style="color: #2563eb;">${homeworkOnly}</div>
       <div class="total-label">Homework Only</div>
     </div>
     <div class="total-card">
-      <div class="total-value" style="color: #059669;">${completedSet.size}</div>
+      <div class="total-value" style="color: #059669;">${completedCount}</div>
       <div class="total-label">Marked Completed</div>
     </div>
     <div class="total-card alert-card">
-      <div class="total-value">${activeOverdue}</div>
+      <div class="total-value">${overdueCount}</div>
       <div class="total-label">Hidden Overdue</div>
     </div>
   `;
@@ -413,14 +449,15 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
   const completedSet = new Set(userState.completed_assignment_ids || []);
   const notesMap = userState.assignment_notes || {};
 
-  let filtered = data.assignments.filter(a => a.student_id === studentId);
+  const allAssignments = data.assignments || [];
+  let filtered = allAssignments.filter(a => getStudentIdForAssignment(a) === studentId);
 
   if (activeFilter === 'homework') {
-    filtered = filtered.filter(a => !a.is_voluntary && !a.is_web_voluntary);
+    filtered = filtered.filter(a => !a.is_voluntary && !a.is_web_voluntary && !String(a.course_title || '').toLowerCase().includes('web'));
   } else if (activeFilter === 'voluntary') {
-    filtered = filtered.filter(a => a.is_voluntary || a.is_web_voluntary);
+    filtered = filtered.filter(a => a.is_voluntary || a.is_web_voluntary || String(a.course_title || '').toLowerCase().includes('web'));
   } else if (activeFilter === 'overdue') {
-    filtered = filtered.filter(a => (a.is_overdue_hidden || a.overdue_days > 0) && !completedSet.has(a.id));
+    filtered = filtered.filter(a => (a.is_overdue_hidden || (a.overdue_days && a.overdue_days > 0)) && !completedSet.has(a.id));
   } else if (activeFilter === 'completed') {
     filtered = filtered.filter(a => completedSet.has(a.id));
   }
@@ -435,9 +472,13 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
   }
 
   container.innerHTML = filtered.map(assignment => {
-    const section = data.sections.find(s => s.id === assignment.section_id);
-    const folder = data.folders.find(f => f.id === assignment.folder_id);
-    const attachments = data.attachments.filter(att => assignment.attachment_ids?.includes(att.id));
+    const section = (data.sections || []).find(s => s.course_id === assignment.course_id || (s.id && s.id === assignment.section_id));
+    const folder = (data.folders || []).find(f => f.id === assignment.folder_id);
+    const attachments = (data.attachments || []).filter(att => assignment.attachment_ids?.includes(att.id));
+
+    const courseTitle = assignment.course_title || (section ? (section.course_title || section.section_code || 'Course') : 'Course');
+    const folderTitle = folder ? folder.title : '';
+    const teacherName = assignment.teacher || assignment.teacher_name || (section && section.teachers ? section.teachers.join(', ') : (section && section.teacher ? section.teacher : ''));
 
     const isCompleted = completedSet.has(assignment.id);
     const noteText = notesMap[assignment.id] || '';
@@ -451,26 +492,28 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
       statusText = '✓ Completed';
     } else if (assignment.is_overdue_hidden) {
       statusClass = 'overdue';
-      statusText = `⚠️ Overdue (${assignment.overdue_days}d hidden)`;
-    } else if (assignment.is_voluntary) {
+      statusText = `⚠️ Overdue (${assignment.overdue_days || 1}d hidden)`;
+    } else if (assignment.is_voluntary || assignment.is_web_voluntary || String(courseTitle).toLowerCase().includes('web')) {
       statusClass = 'voluntary';
       statusText = 'Voluntary WEB';
     }
+
+    const dueDisplay = assignment.due_human_pt || assignment.due || assignment.due_iso || 'Upcoming';
 
     return `
       <article class="assignment-card ${isCompleted ? 'is-completed' : ''} ${assignment.is_overdue_hidden && !isCompleted ? 'overdue-hidden' : ''}">
         <div class="card-top">
           <div>
             <span class="course-badge">
-              ${section ? section.course_title : 'Course'}
+              ${courseTitle}
             </span>
-            ${folder ? `<span class="folder-path">📁 ${folder.title}</span>` : ''}
+            ${folderTitle ? `<span class="folder-path">📁 ${folderTitle}</span>` : ''}
           </div>
           <span class="status-badge ${statusClass}">${statusText}</span>
         </div>
 
         <h3 class="assignment-title">${assignment.title}</h3>
-        <p class="assignment-desc">${assignment.instructions_summary || assignment.description}</p>
+        <p class="assignment-desc">${assignment.instructions_summary || assignment.description || ''}</p>
 
         <!-- Student Note Display / Form -->
         ${noteText && !isEditingNote ? `
@@ -502,9 +545,10 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
             </svg>
-            ${assignment.due_human_pt}
+            ${dueDisplay}
           </div>
           <div style="display: flex; align-items: center; gap: 8px;">
+            ${teacherName ? `<span>Teacher: <strong>${teacherName}</strong></span>` : ''}
             ${!noteText && !isEditingNote ? `
               <button class="btn-add-note" data-assignment-id="${assignment.id}">+ Note</button>
             ` : ''}
@@ -522,21 +566,39 @@ function renderCourses() {
   const container = document.querySelector('#course-list');
   if (!container) return;
 
-  container.innerHTML = data.sections.map(section => `
-    <div class="course-item">
-      <div class="course-name">${section.course_title}</div>
-      <div class="course-period">${section.section_title} • ${section.teachers.join(', ')}</div>
-    </div>
-  `).join('');
+  const sections = data.sections || [];
+  if (sections.length === 0) {
+    container.innerHTML = '<div style="font-size:0.85rem; color:var(--text-muted);">No classes listed.</div>';
+    return;
+  }
+
+  container.innerHTML = sections.map(section => {
+    const title = section.course_title || 'Course';
+    const code = section.section_title || section.section_code || section.section || '';
+    const teachers = section.teachers ? section.teachers.join(', ') : (section.teacher || '');
+
+    return `
+      <div class="course-item">
+        <div class="course-name">${title}</div>
+        <div class="course-period">${code}${teachers ? ` • ${teachers}` : ''}</div>
+      </div>
+    `;
+  }).join('');
 }
 
 function renderUpdates() {
   const container = document.querySelector('#updates-list');
   if (!container) return;
 
-  container.innerHTML = data.updates.map(update => `
+  const updates = data.updates || [];
+  if (updates.length === 0) {
+    container.innerHTML = '<div style="font-size:0.85rem; color:var(--text-muted);">No recent updates.</div>';
+    return;
+  }
+
+  container.innerHTML = updates.map(update => `
     <div class="update-card">
-      <div class="update-author">${update.author_name} (${update.author_role})</div>
+      <div class="update-author">${update.author_name || 'Teacher'} ${update.author_role ? `(${update.author_role})` : ''}</div>
       <div class="update-body" id="update-body-${update.id}">${update.body}</div>
       ${update.body_truncated ? `
         <button class="btn-readmore" data-update-id="${update.id}">Read full update...</button>
@@ -549,7 +611,13 @@ function renderCalendar() {
   const container = document.querySelector('#calendar-list');
   if (!container) return;
 
-  container.innerHTML = data.calendar_events.map(event => {
+  const events = data.calendar_events || [];
+  if (events.length === 0) {
+    container.innerHTML = '<div style="font-size:0.85rem; color:var(--text-muted);">No upcoming events.</div>';
+    return;
+  }
+
+  container.innerHTML = events.map(event => {
     const d = new Date(event.start);
     const day = d.getDate();
     const month = d.toLocaleString('en-US', { month: 'short' });
@@ -562,7 +630,7 @@ function renderCalendar() {
         </div>
         <div>
           <div style="font-weight: 700; font-size: 0.875rem; color: var(--text-main);">${event.title}</div>
-          <div style="font-size: 0.75rem; color: var(--text-muted);">${event.type.toUpperCase()} EVENT</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">${(event.type || 'SCHOOL').toUpperCase()} EVENT</div>
         </div>
       </div>
     `;
@@ -642,7 +710,7 @@ function setupEventListeners() {
     if (!target) return;
     const updateId = target.getAttribute('data-update-id');
     if (updateId) {
-      const updateObj = data.updates.find(u => u.id === updateId);
+      const updateObj = (data.updates || []).find(u => u.id === updateId);
       const bodyEl = document.querySelector(`#update-body-${updateId}`);
       if (bodyEl && updateObj) {
         bodyEl.innerHTML = `${updateObj.body} <em>(full text loaded from Schoology API)</em>`;
