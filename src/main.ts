@@ -93,7 +93,6 @@ interface SchoologyData {
 }
 
 let data: SchoologyData = fallbackData as unknown as SchoologyData;
-let activeStudentId = '12345';
 let activeFilter = 'all';
 let isFetching = false;
 
@@ -102,7 +101,6 @@ async function loadServerData(isManualClick = false) {
     isFetching = true;
     updateRefreshButtonUI('loading');
     
-    // Fetch live JSON file with cache-busting timestamp
     const dataUrl = `./data/schoology_v2.json?t=${Date.now()}`;
     const response = await fetch(dataUrl);
     if (response.ok) {
@@ -119,7 +117,7 @@ async function loadServerData(isManualClick = false) {
       updateRefreshButtonUI('idle');
     }
   } catch (err) {
-    console.warn('Using embedded fallback Schoology data:', err);
+    console.warn('Using embedded fallback data:', err);
     updateRefreshButtonUI('idle');
   } finally {
     isFetching = false;
@@ -133,7 +131,6 @@ function updateRefreshButtonUI(state: 'idle' | 'loading' | 'success') {
   
   if (state === 'loading') {
     btn.disabled = true;
-    btn.style.background = 'rgba(99, 102, 241, 0.4)';
     btn.innerHTML = `
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation: spin 1s linear infinite;">
         <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
@@ -142,15 +139,15 @@ function updateRefreshButtonUI(state: 'idle' | 'loading' | 'success') {
     `;
   } else if (state === 'success') {
     btn.disabled = false;
-    btn.style.background = 'rgba(52, 211, 153, 0.2)';
-    btn.style.borderColor = 'var(--status-success)';
-    btn.style.color = '#34d399';
+    btn.style.background = '#ecfdf5';
+    btn.style.borderColor = '#059669';
+    btn.style.color = '#059669';
     btn.innerHTML = `✓ Updated!`;
   } else {
     btn.disabled = false;
-    btn.style.background = 'rgba(99, 102, 241, 0.2)';
-    btn.style.borderColor = 'var(--accent-primary)';
-    btn.style.color = '#fff';
+    btn.style.background = '#f1f5f9';
+    btn.style.borderColor = '#cbd5e1';
+    btn.style.color = '#0f172a';
     btn.innerHTML = `
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
@@ -175,15 +172,15 @@ function renderAppLayout() {
       <header class="app-header">
         <div>
           <h1 class="brand-title">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
             </svg>
-            Schoology Family Portal
+            Schoology Family Dashboard
           </h1>
-          <p class="brand-subtitle" id="school-subtitle">${data.meta.school} • Live Sync v${data.version}</p>
+          <p class="brand-subtitle" id="school-subtitle">${data.meta.school} • Live Sync</p>
         </div>
         <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-          <button id="refresh-btn" class="filter-btn" style="background: rgba(99,102,241,0.2); border-color: var(--accent-primary); color: #fff; display: inline-flex; align-items: center; gap: 6px;">
+          <button id="refresh-btn" class="filter-btn" style="display: inline-flex; align-items: center; gap: 6px;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
             </svg>
@@ -196,42 +193,58 @@ function renderAppLayout() {
         </div>
       </header>
 
-      <!-- Totals Grid -->
+      <!-- Totals Overview Grid -->
       <section class="totals-grid" id="totals-grid"></section>
 
-      <!-- Navigation & Filter Toolbar -->
+      <!-- Filter Bar -->
       <div class="toolbar">
-        <div class="student-tabs" id="student-tabs"></div>
+        <span class="filter-title">Filter Assignments:</span>
         <div class="filter-pills" id="filter-pills">
-          <button class="filter-btn active" data-filter="all">All Items</button>
-          <button class="filter-btn" data-filter="homework">Homework Only</button>
-          <button class="filter-btn" data-filter="voluntary">Voluntary & Activities</button>
+          <button class="filter-btn active" data-filter="all">All Items (${data.meta.totals.total_upcoming})</button>
+          <button class="filter-btn" data-filter="homework">Homework Only (${data.meta.totals.homework_only})</button>
+          <button class="filter-btn" data-filter="voluntary">Voluntary & Activities (${data.meta.totals.web_voluntary})</button>
           <button class="filter-btn" data-filter="overdue" id="overdue-filter-btn">Overdue Items (${data.meta.totals.overdue_hidden})</button>
         </div>
       </div>
 
-      <!-- Main Grid -->
-      <div class="dashboard-grid">
-        <main>
-          <div class="section-header">
-            <h2 class="section-title" id="assignment-section-title">Upcoming Assignments</h2>
+      <!-- Widescreen Side-by-Side Layout -->
+      <div class="widescreen-layout">
+        <!-- Louis Column -->
+        <section class="student-column">
+          <div class="student-column-header">
+            <h2 class="student-name-heading">
+              🎓 Louis
+            </h2>
+            <span class="student-badge">Grade 7</span>
           </div>
-          <div id="assignment-list"></div>
-        </main>
+          <div id="louis-assignments-list"></div>
+        </section>
 
-        <aside>
+        <!-- Charlotte Column -->
+        <section class="student-column">
+          <div class="student-column-header">
+            <h2 class="student-name-heading">
+              🎓 Charlotte
+            </h2>
+            <span class="student-badge" style="background: #faf5ff; color: #7c3aed; border-color: #e9d5ff;">Grade 8</span>
+          </div>
+          <div id="charlotte-assignments-list"></div>
+        </section>
+
+        <!-- Sidebar Column -->
+        <aside class="sidebar-column">
           <div class="sidebar-panel">
-            <h3 class="section-title" style="font-size: 1.05rem; margin-bottom: 14px;">Classes & Sections</h3>
+            <h3 class="section-title">Classes & Sections</h3>
             <div id="course-list"></div>
           </div>
 
           <div class="sidebar-panel">
-            <h3 class="section-title" style="font-size: 1.05rem; margin-bottom: 14px;">Teacher Updates</h3>
+            <h3 class="section-title">Teacher Updates</h3>
             <div id="updates-list"></div>
           </div>
 
           <div class="sidebar-panel">
-            <h3 class="section-title" style="font-size: 1.05rem; margin-bottom: 14px;">Upcoming Events</h3>
+            <h3 class="section-title">Upcoming Events</h3>
             <div id="calendar-list"></div>
           </div>
         </aside>
@@ -249,15 +262,12 @@ function renderApp() {
   const timestampText = document.querySelector('#last-updated-text');
   if (timestampText) timestampText.textContent = data.meta.last_updated_pt;
 
-  const overdueBtn = document.querySelector('#overdue-filter-btn');
-  if (overdueBtn) overdueBtn.textContent = `Overdue Items (${data.meta.totals.overdue_hidden})`;
-
   renderTotalsGrid();
-  renderStudentTabs();
+  renderStudentAssignments('12345', '#louis-assignments-list');
+  renderStudentAssignments('12346', '#charlotte-assignments-list');
   renderCourses();
   renderUpdates();
   renderCalendar();
-  renderAssignments();
 }
 
 function renderTotalsGrid() {
@@ -270,42 +280,25 @@ function renderTotalsGrid() {
       <div class="total-label">Total Upcoming</div>
     </div>
     <div class="total-card">
-      <div class="total-value" style="color: #38bdf8;">${data.meta.totals.homework_only}</div>
+      <div class="total-value" style="color: #2563eb;">${data.meta.totals.homework_only}</div>
       <div class="total-label">Homework Only</div>
     </div>
     <div class="total-card">
-      <div class="total-value" style="color: #c084fc;">${data.meta.totals.web_voluntary}</div>
+      <div class="total-value" style="color: #7c3aed;">${data.meta.totals.web_voluntary}</div>
       <div class="total-label">Voluntary WEB</div>
     </div>
     <div class="total-card alert-card">
-      <div class="total-value" style="color: #f43f5e;">${data.meta.totals.overdue_hidden}</div>
+      <div class="total-value">${data.meta.totals.overdue_hidden}</div>
       <div class="total-label">Hidden Overdue</div>
     </div>
   `;
 }
 
-function renderStudentTabs() {
-  const tabsContainer = document.querySelector('#student-tabs');
-  if (!tabsContainer) return;
+function renderStudentAssignments(studentId: string, containerSelector: string) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
 
-  const students = data.users.filter(u => u.role === 'Student');
-  if (!students.some(s => s.id === activeStudentId) && students[0]) {
-    activeStudentId = students[0].id;
-  }
-
-  tabsContainer.innerHTML = students.map(student => `
-    <button class="student-tab ${student.id === activeStudentId ? 'active' : ''}" data-student-id="${student.id}">
-      🎓 ${student.name_display} ${student.grade_level ? `(Grade ${student.grade_level})` : ''}
-    </button>
-  `).join('');
-}
-
-function renderAssignments() {
-  const listContainer = document.querySelector('#assignment-list');
-  const titleContainer = document.querySelector('#assignment-section-title');
-  if (!listContainer) return;
-
-  let filtered = data.assignments.filter(a => a.student_id === activeStudentId || !a.student_id);
+  let filtered = data.assignments.filter(a => a.student_id === studentId);
 
   if (activeFilter === 'homework') {
     filtered = filtered.filter(a => !a.is_voluntary && !a.is_web_voluntary);
@@ -315,21 +308,16 @@ function renderAssignments() {
     filtered = filtered.filter(a => a.is_overdue_hidden || a.overdue_days > 0);
   }
 
-  if (titleContainer) {
-    const studentName = data.users.find(u => u.id === activeStudentId)?.name_display || 'Student';
-    titleContainer.innerHTML = `Assignments & Homework for ${studentName} (${filtered.length})`;
-  }
-
   if (filtered.length === 0) {
-    listContainer.innerHTML = `
-      <div class="assignment-card" style="text-align: center; padding: 40px; color: var(--text-muted);">
-        <p>No assignments found for this filter.</p>
+    container.innerHTML = `
+      <div class="assignment-card" style="text-align: center; padding: 32px; color: var(--text-muted);">
+        <p style="font-size: 0.9rem;">No assignments for this filter.</p>
       </div>
     `;
     return;
   }
 
-  listContainer.innerHTML = filtered.map(assignment => {
+  container.innerHTML = filtered.map(assignment => {
     const section = data.sections.find(s => s.id === assignment.section_id);
     const folder = data.folders.find(f => f.id === assignment.folder_id);
     const attachments = data.attachments.filter(att => assignment.attachment_ids?.includes(att.id));
@@ -387,24 +375,22 @@ function renderAssignments() {
 }
 
 function renderCourses() {
-  const coursesContainer = document.querySelector('#course-list');
-  if (!coursesContainer) return;
+  const container = document.querySelector('#course-list');
+  if (!container) return;
 
-  coursesContainer.innerHTML = data.sections.map(section => `
+  container.innerHTML = data.sections.map(section => `
     <div class="course-item">
-      <div>
-        <div class="course-name">${section.course_title}</div>
-        <div class="course-period">${section.section_title} • ${section.teachers.join(', ')}</div>
-      </div>
+      <div class="course-name">${section.course_title}</div>
+      <div class="course-period">${section.section_title} • ${section.teachers.join(', ')}</div>
     </div>
   `).join('');
 }
 
 function renderUpdates() {
-  const updatesContainer = document.querySelector('#updates-list');
-  if (!updatesContainer) return;
+  const container = document.querySelector('#updates-list');
+  if (!container) return;
 
-  updatesContainer.innerHTML = data.updates.map(update => `
+  container.innerHTML = data.updates.map(update => `
     <div class="update-card">
       <div class="update-author">${update.author_name} (${update.author_role})</div>
       <div class="update-body" id="update-body-${update.id}">${update.body}</div>
@@ -416,10 +402,10 @@ function renderUpdates() {
 }
 
 function renderCalendar() {
-  const calendarContainer = document.querySelector('#calendar-list');
-  if (!calendarContainer) return;
+  const container = document.querySelector('#calendar-list');
+  if (!container) return;
 
-  calendarContainer.innerHTML = data.calendar_events.map(event => {
+  container.innerHTML = data.calendar_events.map(event => {
     const d = new Date(event.start);
     const day = d.getDate();
     const month = d.toLocaleString('en-US', { month: 'short' });
@@ -431,7 +417,7 @@ function renderCalendar() {
           <div class="date-month">${month}</div>
         </div>
         <div>
-          <div style="font-weight: 600; font-size: 0.9rem;">${event.title}</div>
+          <div style="font-weight: 700; font-size: 0.875rem; color: var(--text-main);">${event.title}</div>
           <div style="font-size: 0.75rem; color: var(--text-muted);">${event.type.toUpperCase()} EVENT</div>
         </div>
       </div>
@@ -445,18 +431,6 @@ function setupEventListeners() {
     if (!isFetching) loadServerData(true);
   });
 
-  // Student Tabs
-  document.querySelector('#student-tabs')?.addEventListener('click', (e) => {
-    const target = (e.target as HTMLElement).closest('.student-tab');
-    if (!target) return;
-    const studentId = target.getAttribute('data-student-id');
-    if (studentId) {
-      activeStudentId = studentId;
-      renderStudentTabs();
-      renderAssignments();
-    }
-  });
-
   // Filter Pills
   document.querySelector('#filter-pills')?.addEventListener('click', (e) => {
     const target = (e.target as HTMLElement).closest('.filter-btn');
@@ -466,7 +440,8 @@ function setupEventListeners() {
       activeFilter = filter;
       document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active', 'active-warning'));
       target.classList.add(filter === 'overdue' ? 'active-warning' : 'active');
-      renderAssignments();
+      renderStudentAssignments('12345', '#louis-assignments-list');
+      renderStudentAssignments('12346', '#charlotte-assignments-list');
     }
   });
 
