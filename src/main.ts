@@ -106,8 +106,9 @@ interface UserStateData {
   last_updated: string;
   completed_assignment_ids: string[];
   assignment_notes: Record<string, string>;
-  file_sha?: string;
 }
+
+const REALTIME_DB_URL = 'https://api.restful-api.dev/objects/ff8081819ff5b11001a036a1f0cd14c4';
 
 let data: SchoologyData = fallbackData as unknown as SchoologyData;
 let userState: UserStateData = fallbackUserState as unknown as UserStateData;
@@ -115,7 +116,6 @@ let userState: UserStateData = fallbackUserState as unknown as UserStateData;
 let activeFilter = 'all';
 let isFetching = false;
 let editingNoteAssignmentId: string | null = null;
-let githubToken = localStorage.getItem('gh_pat_token') || '';
 
 async function loadServerData(isManualClick = false) {
   try {
@@ -132,14 +132,17 @@ async function loadServerData(isManualClick = false) {
       }
     }
 
-    // 2. Fetch server-side student completions & notes JSON from Git
-    const stateUrl = `./data/schoology_user_state.json?t=${Date.now()}`;
-    const stateResponse = await fetch(stateUrl);
-    if (stateResponse.ok) {
-      const freshState = await stateResponse.json();
-      if (freshState && Array.isArray(freshState.completed_assignment_ids)) {
-        userState = freshState as UserStateData;
+    // 2. Fetch live real-time server database state (shared across all devices)
+    try {
+      const dbResponse = await fetch(REALTIME_DB_URL);
+      if (dbResponse.ok) {
+        const dbJson = await dbResponse.json();
+        if (dbJson && dbJson.data && Array.isArray(dbJson.data.completed_assignment_ids)) {
+          userState = dbJson.data as UserStateData;
+        }
       }
+    } catch (dbErr) {
+      console.warn('Realtime database fetch fallback to local JSON:', dbErr);
     }
     
     if (isManualClick) {
@@ -157,49 +160,28 @@ async function loadServerData(isManualClick = false) {
   }
 }
 
-async function syncStateToServerInGit() {
+async function syncStateToServerDatabase() {
   userState.last_updated = new Date().toISOString();
-  
-  if (githubToken) {
-    try {
-      const apiUrl = 'https://api.github.com/repos/heclair-git/heclair-schoology/contents/data/schoology_user_state.json';
-      let currentSha = userState.file_sha || '';
-      if (!currentSha) {
-        const getRes = await fetch(apiUrl, {
-          headers: { Authorization: `token ${githubToken}` }
-        });
-        if (getRes.ok) {
-          const getJson = await getRes.json();
-          currentSha = getJson.sha;
-        }
-      }
-
-      const contentString = JSON.stringify(userState, null, 2);
-      const encodedContent = btoa(unescape(encodeURIComponent(contentString)));
-
-      const putRes = await fetch(apiUrl, {
-        method: 'PUT',
-        headers: {
-          Authorization: `token ${githubToken}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message: 'update: Sync student completion & notes state in Git',
-          content: encodedContent,
-          sha: currentSha
-        })
-      });
-
-      if (putRes.ok) {
-        const putJson = await putRes.json();
-        userState.file_sha = putJson.content.sha;
-      }
-    } catch (err) {
-      console.warn('Could not push to GitHub API directly:', err);
-    }
-  }
-  
   renderApp();
+
+  try {
+    const putRes = await fetch(REALTIME_DB_URL, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: 'heclair_schoology_user_state',
+        data: userState
+      })
+    });
+
+    if (putRes.ok) {
+      console.log('Successfully saved server-side user state across all devices!');
+    }
+  } catch (err) {
+    console.warn('Could not sync to realtime database:', err);
+  }
 }
 
 function getStudentIdForAssignment(assignment: any): '12345' | '12346' {
@@ -230,7 +212,7 @@ function toggleAssignmentComplete(assignmentId: string) {
     }
   }
   userState.completed_assignment_ids = Array.from(set);
-  syncStateToServerInGit();
+  syncStateToServerDatabase();
 }
 
 function saveAssignmentNote(assignmentId: string, noteText: string) {
@@ -243,7 +225,7 @@ function saveAssignmentNote(assignmentId: string, noteText: string) {
     delete userState.assignment_notes[assignmentId];
   }
   editingNoteAssignmentId = null;
-  syncStateToServerInGit();
+  syncStateToServerDatabase();
 }
 
 function updateRefreshButtonUI(state: 'idle' | 'loading' | 'success') {
@@ -298,7 +280,7 @@ function renderAppLayout() {
             </svg>
             Schoology Family Dashboard
           </h1>
-          <p class="brand-subtitle" id="school-subtitle">${data.meta?.school || 'Hillview Middle School'} • Server Git Sync</p>
+          <p class="brand-subtitle" id="school-subtitle">${data.meta?.school || 'Hillview Middle School'} • Realtime Cloud Sync</p>
         </div>
         <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
           <button id="refresh-btn" class="filter-btn" style="display: inline-flex; align-items: center; gap: 6px;">
@@ -379,7 +361,7 @@ function renderAppLayout() {
 
 function renderApp() {
   const subtitle = document.querySelector('#school-subtitle');
-  if (subtitle) subtitle.textContent = `${data.meta?.school || 'Hillview Middle School'} • Server Git Sync v${data.version || '2.0'}`;
+  if (subtitle) subtitle.textContent = `${data.meta?.school || 'Hillview Middle School'} • Realtime Cloud Sync v${data.version || '2.0'}`;
 
   const timestampText = document.querySelector('#last-updated-text');
   if (timestampText) timestampText.textContent = data.meta?.last_updated_pt || 'Just now';
