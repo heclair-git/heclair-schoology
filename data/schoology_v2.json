@@ -193,7 +193,7 @@
       "course_title": "Algebra 1",
       "location": "Hillview Middle School",
       "teachers": [
-        "S**** D****"
+        "Sayre Dolan"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -211,7 +211,7 @@
       "course_title": "Chamber Orchestra",
       "location": "Music Room",
       "teachers": [
-        "R**** R****"
+        "Ricardo Rasura"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -230,8 +230,8 @@
       "course_title": "English Language Arts 8",
       "location": "Room 110",
       "teachers": [
-        "C**** B****",
-        "E**** B****"
+        "Chris Beirne",
+        "Elizabeth Boldt"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -249,7 +249,7 @@
       "course_title": "Intermediate Dance 7/8",
       "location": "Dance Studio",
       "teachers": [
-        "K**** D****"
+        "Katie Deanda"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -267,7 +267,7 @@
       "course_title": "Qu3ST 8",
       "location": "Room 116",
       "teachers": [
-        "C**** B****"
+        "Chris Beirne"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -285,7 +285,7 @@
       "course_title": "Science 8",
       "location": "Lab 5",
       "teachers": [
-        "C**** L****"
+        "Chad Lesausky"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -303,7 +303,7 @@
       "course_title": "Social Studies 8",
       "location": "Room 102",
       "teachers": [
-        "L**** K****"
+        "Lexy Keller"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -321,8 +321,8 @@
       "course_title": "WEB Leadership",
       "location": "Gym",
       "teachers": [
-        "K**** C****",
-        "Ms. W****"
+        "Kara Connelly",
+        "Ms. Wrotniewski"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -340,7 +340,7 @@
       "course_title": "WEB 2027-2028",
       "location": "Counseling",
       "teachers": [
-        "K**** C****"
+        "Kara Connelly"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -358,7 +358,11 @@
       "course_title": "7th Grade - Class of 2028",
       "location": "Homeroom",
       "teachers": [
-        "K**** S****"
+        "Kate Stickel",
+        "Christina Johnson",
+        "Christopher Gumbrecht",
+        "Meagan Cantalupi",
+        "Kellie Raczkowski"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -376,7 +380,7 @@
       "course_title": "Algebra 1",
       "location": "Room 204",
       "teachers": [
-        "Ms. H****"
+        "Ms. Hagg"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -394,7 +398,7 @@
       "course_title": "English Language Arts 7",
       "location": "Room 112",
       "teachers": [
-        "J**** R****"
+        "Jessica A Ross"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -412,7 +416,7 @@
       "course_title": "PE 78",
       "location": "Gym",
       "teachers": [
-        "N**** B****"
+        "Nika Bogoslovsky"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -430,7 +434,7 @@
       "course_title": "Qu3ST 7",
       "location": "Room 115",
       "teachers": [
-        "J**** R****"
+        "Jessica A Ross"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -448,7 +452,7 @@
       "course_title": "Science 7",
       "location": "Lab 3",
       "teachers": [
-        "J**** G****"
+        "James Green"
       ],
       "grading_periods": [
         "Tri1-2026"
@@ -466,7 +470,7 @@
       "course_title": "Social Studies 7",
       "location": "Room 101",
       "teachers": [
-        "Mr. R****"
+        "Mr. Rogers"
       ],
       "grading_periods": [
         "Tri1-2026"
