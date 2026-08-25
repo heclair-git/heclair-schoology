@@ -97,10 +97,10 @@ let activeStudentId = '12345';
 let activeFilter = 'all';
 let isFetching = false;
 
-async function loadServerData() {
+async function loadServerData(isManualClick = false) {
   try {
     isFetching = true;
-    updateRefreshButtonUI(true);
+    updateRefreshButtonUI('loading');
     
     // Fetch live JSON file with cache-busting timestamp
     const dataUrl = `./data/schoology_v2.json?t=${Date.now()}`;
@@ -111,35 +111,58 @@ async function loadServerData() {
         data = freshData as SchoologyData;
       }
     }
+    
+    if (isManualClick) {
+      updateRefreshButtonUI('success');
+      setTimeout(() => updateRefreshButtonUI('idle'), 2000);
+    } else {
+      updateRefreshButtonUI('idle');
+    }
   } catch (err) {
     console.warn('Using embedded fallback Schoology data:', err);
+    updateRefreshButtonUI('idle');
   } finally {
     isFetching = false;
-    updateRefreshButtonUI(false);
     renderApp();
   }
 }
 
-function updateRefreshButtonUI(loading: boolean) {
+function updateRefreshButtonUI(state: 'idle' | 'loading' | 'success') {
   const btn = document.querySelector<HTMLButtonElement>('#refresh-btn');
   if (!btn) return;
-  if (loading) {
+  
+  if (state === 'loading') {
     btn.disabled = true;
-    btn.innerHTML = '🔄 Syncing...';
+    btn.style.background = 'rgba(99, 102, 241, 0.4)';
+    btn.innerHTML = `
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation: spin 1s linear infinite;">
+        <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+      </svg>
+      Syncing...
+    `;
+  } else if (state === 'success') {
+    btn.disabled = false;
+    btn.style.background = 'rgba(52, 211, 153, 0.2)';
+    btn.style.borderColor = 'var(--status-success)';
+    btn.style.color = '#34d399';
+    btn.innerHTML = `✓ Updated!`;
   } else {
     btn.disabled = false;
-    btn.innerHTML = '🔄 Refresh Data';
+    btn.style.background = 'rgba(99, 102, 241, 0.2)';
+    btn.style.borderColor = 'var(--accent-primary)';
+    btn.style.color = '#fff';
+    btn.innerHTML = `
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+      </svg>
+      Refresh Data
+    `;
   }
 }
 
 function initApp() {
   renderAppLayout();
-  loadServerData();
-
-  // Auto-poll server for updates every 60 seconds
-  setInterval(() => {
-    loadServerData();
-  }, 60000);
+  loadServerData(false);
 }
 
 function renderAppLayout() {
@@ -157,11 +180,14 @@ function renderAppLayout() {
             </svg>
             Schoology Family Portal
           </h1>
-          <p class="brand-subtitle" id="school-subtitle">${data.meta.school} • Dynamic Server Sync</p>
+          <p class="brand-subtitle" id="school-subtitle">${data.meta.school} • Live Sync v${data.version}</p>
         </div>
         <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-          <button id="refresh-btn" class="filter-btn" style="background: rgba(99,102,241,0.2); border-color: var(--accent-primary); color: #fff;">
-            🔄 Refresh Data
+          <button id="refresh-btn" class="filter-btn" style="background: rgba(99,102,241,0.2); border-color: var(--accent-primary); color: #fff; display: inline-flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+            </svg>
+            Refresh Data
           </button>
           <div class="meta-timestamp">
             <span class="pulse-dot"></span>
@@ -414,9 +440,9 @@ function renderCalendar() {
 }
 
 function setupEventListeners() {
-  // Refresh Button
+  // Manual Refresh Button Click
   document.querySelector('#refresh-btn')?.addEventListener('click', () => {
-    if (!isFetching) loadServerData();
+    if (!isFetching) loadServerData(true);
   });
 
   // Student Tabs
