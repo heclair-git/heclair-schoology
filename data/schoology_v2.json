@@ -8,7 +8,7 @@
     "parent_account": "parent@example.com",
     "parent_name": "Parent",
     "school": "Hillview Middle School",
-    "children_verified": ["Louis Loose", "Charlotte Loose"],
+    "children_verified": ["Louis", "Charlotte"],
     "totals": {
       "total_upcoming": 11,
       "homework_only": 7,
@@ -20,9 +20,9 @@
   "users": [
     {
       "id": "12345",
-      "name_display": "Louis Loose",
+      "name_display": "Louis",
       "name_first": "Louis",
-      "name_last": "Loose",
+      "name_last": "",
       "primary_email": null,
       "role": "Student",
       "grade_level": "7",
@@ -31,9 +31,9 @@
     },
     {
       "id": "12346",
-      "name_display": "Charlotte Loose",
+      "name_display": "Charlotte",
       "name_first": "Charlotte",
-      "name_last": "Loose",
+      "name_last": "",
       "primary_email": null,
       "role": "Student",
       "grade_level": "8",

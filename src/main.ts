@@ -209,22 +209,22 @@ function renderAppLayout() {
 
       <!-- Widescreen Side-by-Side Layout -->
       <div class="widescreen-layout">
-        <!-- Louis Loose Column -->
+        <!-- Louis Column -->
         <section class="student-column">
           <div class="student-column-header">
             <h2 class="student-name-heading">
-              🎓 Louis Loose
+              🎓 Louis
             </h2>
             <span class="student-badge">Grade 7</span>
           </div>
           <div id="louis-assignments-list"></div>
         </section>
 
-        <!-- Charlotte Loose Column -->
+        <!-- Charlotte Column -->
         <section class="student-column">
           <div class="student-column-header">
             <h2 class="student-name-heading">
-              🎓 Charlotte Loose
+              🎓 Charlotte
             </h2>
             <span class="student-badge" style="background: #faf5ff; color: #7c3aed; border-color: #e9d5ff;">Grade 8</span>
           </div>
