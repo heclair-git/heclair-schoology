@@ -5,10 +5,13 @@
     "last_updated_pt": "2026-08-24T16:44:52-07:00",
     "timezone": "America/Los_Angeles",
     "source": "schoology_parent",
-    "parent_account": "parent@example.com",
-    "parent_name": "Parent",
+    "parent_account": "loo*****@gmail.com",
+    "parent_name": "J**** L****",
     "school": "Middle School",
-    "children_verified": ["Charlotte Loose", "Louis Loose"],
+    "children_verified": [
+      "Charlotte L****",
+      "Louis L****"
+    ],
     "totals": {
       "total_upcoming": 11,
       "homework_only": 7,
@@ -20,9 +23,9 @@
   "users": [
     {
       "id": "12345",
-      "name_display": "Louis Loose",
+      "name_display": "Louis L****",
       "name_first": "Louis",
-      "name_last": "Loose",
+      "name_last": "L****",
       "primary_email": null,
       "role": "Student",
       "grade_level": "7",
@@ -31,9 +34,9 @@
     },
     {
       "id": "12346",
-      "name_display": "Charlotte Loose",
+      "name_display": "Charlotte L****",
       "name_first": "Charlotte",
-      "name_last": "Loose",
+      "name_last": "L****",
       "primary_email": null,
       "role": "Student",
       "grade_level": "8",
@@ -42,7 +45,7 @@
     },
     {
       "id": "t_789",
-      "name_display": "Ms. Hagg",
+      "name_display": "Ms. H****",
       "role": "Teacher",
       "primary_email": null
     }
@@ -76,9 +79,15 @@
       "section_title_raw": "Algebra 1 : 4(A-B)",
       "course_title": "Algebra 1",
       "location": "Room 204",
-      "teachers": ["Ms. Hagg"],
-      "grading_periods": ["Tri1-2026"],
-      "enrolled_user_ids": ["12345"]
+      "teachers": [
+        "Ms. H****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12345"
+      ]
     },
     {
       "id": "8500088179",
@@ -88,9 +97,15 @@
       "section_title_raw": "Science 7 : 1(A-B)",
       "course_title": "Science 7",
       "location": "Lab 3",
-      "teachers": ["Ms. Keller"],
-      "grading_periods": ["Tri1-2026"],
-      "enrolled_user_ids": ["12345"]
+      "teachers": [
+        "Ms. H****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12345"
+      ]
     },
     {
       "id": "8500088180",
@@ -100,9 +115,17 @@
       "section_title_raw": "WEB : Section 1",
       "course_title": "WEB Leadership",
       "location": "Gym",
-      "teachers": ["Ms. Keller", "Ms. Connelly"],
-      "grading_periods": ["Tri1-2026"],
-      "enrolled_user_ids": ["12345", "12346"]
+      "teachers": [
+        "Ms. H****",
+        "Ms. H****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12345",
+        "12346"
+      ]
     }
   ],
   "grading_periods": [
@@ -155,7 +178,10 @@
       "web_url": "https://app.schoology.com/assignment/8516163487/info",
       "teacher_name": "Ms. Hagg",
       "student_id": "12345",
-      "attachment_ids": ["3528031067", "3529363942"]
+      "attachment_ids": [
+        "3528031067",
+        "3529363942"
+      ]
     },
     {
       "id": "8516163499",
@@ -184,7 +210,7 @@
       "is_missing": false,
       "submission_status": "not_submitted",
       "web_url": "https://app.schoology.com/assignment/8516163499/info",
-      "teacher_name": "Ms. Keller",
+      "teacher_name": "Ms. H****",
       "student_id": "12345",
       "attachment_ids": []
     },
@@ -215,7 +241,7 @@
       "is_missing": false,
       "submission_status": "not_submitted",
       "web_url": "https://app.schoology.com/assignment/8516163555/info",
-      "teacher_name": "Ms. Keller",
+      "teacher_name": "Ms. H****",
       "student_id": "12346",
       "attachment_ids": []
     }
@@ -276,13 +302,15 @@
       "section_id": "8500088178",
       "course_id": "8500088178",
       "author_id": "t_789",
-      "author_name": "Ms. Hagg",
+      "author_name": "Ms. H****",
       "author_role": "Teacher",
       "body": "Good morning and happy Monday! Here are the notes for today's lesson (1.1); please download them for class today.",
       "body_html": "<p>Good morning and happy Monday! Here are the notes for today's lesson (1.1); please download them for class today.</p>",
       "body_truncated": true,
       "created": "2026-08-24T11:25:00-07:00",
-      "attachment_ids": ["3531986838"]
+      "attachment_ids": [
+        "3531986838"
+      ]
     }
   ],
   "calendar_events": [
