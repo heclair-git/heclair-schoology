@@ -1,0 +1,304 @@
+{
+  "version": "2.0",
+  "meta": {
+    "last_updated": "2026-08-24T23:44:52Z",
+    "last_updated_pt": "2026-08-24T16:44:52-07:00",
+    "timezone": "America/Los_Angeles",
+    "source": "schoology_parent",
+    "parent_account": "parent@example.com",
+    "parent_name": "Parent",
+    "school": "Middle School",
+    "children_verified": ["Charlotte Loose", "Louis Loose"],
+    "totals": {
+      "total_upcoming": 11,
+      "homework_only": 7,
+      "web_voluntary": 4,
+      "overdue_visible": 0,
+      "overdue_hidden": 2
+    }
+  },
+  "users": [
+    {
+      "id": "12345",
+      "name_display": "Louis Loose",
+      "name_first": "Louis",
+      "name_last": "Loose",
+      "primary_email": null,
+      "role": "Student",
+      "grade_level": "7",
+      "school": "Middle School",
+      "linked_parent_id": "parent_001"
+    },
+    {
+      "id": "12346",
+      "name_display": "Charlotte Loose",
+      "name_first": "Charlotte",
+      "name_last": "Loose",
+      "primary_email": null,
+      "role": "Student",
+      "grade_level": "8",
+      "school": "Middle School",
+      "linked_parent_id": "parent_001"
+    },
+    {
+      "id": "t_789",
+      "name_display": "Ms. Hagg",
+      "role": "Teacher",
+      "primary_email": null
+    }
+  ],
+  "courses": [
+    {
+      "id": "8500088178",
+      "title": "Algebra 1",
+      "course_code": "ALG1-4AB",
+      "course_title_raw": "Algebra 1 : 4(A-B)"
+    },
+    {
+      "id": "8500088179",
+      "title": "Science 7",
+      "course_code": "SCI7-01",
+      "course_title_raw": "Science 7 : 1(A-B)"
+    },
+    {
+      "id": "8500088180",
+      "title": "WEB Leadership",
+      "course_code": "WEB-01",
+      "course_title_raw": "WEB : Section 1"
+    }
+  ],
+  "sections": [
+    {
+      "id": "8500088178",
+      "course_id": "8500088178",
+      "section_title": "Period 4(A-B)",
+      "section_code": "ALG1-04",
+      "section_title_raw": "Algebra 1 : 4(A-B)",
+      "course_title": "Algebra 1",
+      "location": "Room 204",
+      "teachers": ["Ms. Hagg"],
+      "grading_periods": ["Tri1-2026"],
+      "enrolled_user_ids": ["12345"]
+    },
+    {
+      "id": "8500088179",
+      "course_id": "8500088179",
+      "section_title": "Period 1(A-B)",
+      "section_code": "SCI7-01",
+      "section_title_raw": "Science 7 : 1(A-B)",
+      "course_title": "Science 7",
+      "location": "Lab 3",
+      "teachers": ["Ms. Keller"],
+      "grading_periods": ["Tri1-2026"],
+      "enrolled_user_ids": ["12345"]
+    },
+    {
+      "id": "8500088180",
+      "course_id": "8500088180",
+      "section_title": "Section 1",
+      "section_code": "WEB-01",
+      "section_title_raw": "WEB : Section 1",
+      "course_title": "WEB Leadership",
+      "location": "Gym",
+      "teachers": ["Ms. Keller", "Ms. Connelly"],
+      "grading_periods": ["Tri1-2026"],
+      "enrolled_user_ids": ["12345", "12346"]
+    }
+  ],
+  "grading_periods": [
+    {
+      "id": "Tri1-2026",
+      "title": "Trimester 1",
+      "start": "2026-08-20",
+      "end": "2026-11-13"
+    }
+  ],
+  "folders": [
+    {
+      "id": "f_1029722623",
+      "section_id": "8500088178",
+      "title": "Chapter 1 - Solving Linear Equations"
+    },
+    {
+      "id": "f_1029722624",
+      "section_id": "8500088179",
+      "title": "Unit 1 - Scientific Method"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "8516163487",
+      "section_id": "8500088178",
+      "course_id": "8500088178",
+      "folder_id": "f_1029722623",
+      "title": "1.1 Notes and HW",
+      "description": "Attach your completed notes with completed and corrected homework when the assignment is due. Thank you!",
+      "instructions_summary": "Attach completed notes with corrected HW",
+      "due": "2026-08-25T23:59:00-07:00",
+      "due_human_pt": "Tuesday, August 25, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-20T15:57:00-07:00",
+      "max_points": 100,
+      "grading_category": "Formative",
+      "grading_period_id": "Tri1-2026",
+      "type": "Assignment",
+      "status": "Due Tomorrow",
+      "status_detail": "hidden overdue 1 day",
+      "is_voluntary": false,
+      "is_web_voluntary": false,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": true,
+      "overdue_days": 1,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163487/info",
+      "teacher_name": "Ms. Hagg",
+      "student_id": "12345",
+      "attachment_ids": ["3528031067", "3529363942"]
+    },
+    {
+      "id": "8516163499",
+      "section_id": "8500088179",
+      "course_id": "8500088179",
+      "folder_id": "f_1029722624",
+      "title": "Lab Safety Contract & Survey",
+      "description": "Please review safety guidelines with parent/guardian and submit signed form.",
+      "instructions_summary": "Submit signed safety form",
+      "due": "2026-08-26T23:59:00-07:00",
+      "due_human_pt": "Wednesday, August 26, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-21T10:00:00-07:00",
+      "max_points": 50,
+      "grading_category": "Homework",
+      "grading_period_id": "Tri1-2026",
+      "type": "Assignment",
+      "status": "Upcoming",
+      "status_detail": "Due in 2 days",
+      "is_voluntary": false,
+      "is_web_voluntary": false,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": false,
+      "overdue_days": 0,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163499/info",
+      "teacher_name": "Ms. Keller",
+      "student_id": "12345",
+      "attachment_ids": []
+    },
+    {
+      "id": "8516163555",
+      "section_id": "8500088180",
+      "course_id": "8500088180",
+      "folder_id": null,
+      "title": "WEB Welcome Reflection & Goal Sheet",
+      "description": "Voluntary reflection activity for WEB Leaders.",
+      "instructions_summary": "Voluntary reflection activity",
+      "due": "2026-08-28T23:59:00-07:00",
+      "due_human_pt": "Friday, August 28, 2026 at 11:59 pm PT",
+      "due_has_time": true,
+      "due_tz": "America/Los_Angeles",
+      "posted_at": "2026-08-22T09:00:00-07:00",
+      "max_points": null,
+      "grading_category": "Voluntary",
+      "grading_period_id": "Tri1-2026",
+      "type": "Assignment",
+      "status": "Upcoming",
+      "status_detail": "Voluntary WEB activity",
+      "is_voluntary": true,
+      "is_web_voluntary": true,
+      "is_overdue_visible": false,
+      "is_overdue_hidden": false,
+      "overdue_days": 0,
+      "is_missing": false,
+      "submission_status": "not_submitted",
+      "web_url": "https://app.schoology.com/assignment/8516163555/info",
+      "teacher_name": "Ms. Keller",
+      "student_id": "12346",
+      "attachment_ids": []
+    }
+  ],
+  "attachments": [
+    {
+      "id": "3528031067",
+      "assignment_id": "8516163487",
+      "filename": "1_Ch1_HWAnswers.pdf",
+      "file_size": 4194304,
+      "mime_type": "application/pdf",
+      "source_url": "https://app.schoology.com/attachment/3528031067/source/02e762e8423679b8354e5051e63d8a07.pdf",
+      "docviewer_url": "https://app.schoology.com/attachment/3528031067/docviewer",
+      "material_url": "https://app.schoology.com/course/8500088178/materials/gp/8516163508"
+    },
+    {
+      "id": "3529363942",
+      "assignment_id": "8516163487",
+      "filename": "Ch1_StampSheet.pdf",
+      "file_size": 198656,
+      "mime_type": "application/pdf",
+      "source_url": "https://app.schoology.com/attachment/3529363942/source/stamp.pdf",
+      "docviewer_url": "https://app.schoology.com/attachment/3529363942/docviewer",
+      "material_url": "https://app.schoology.com/course/8500088178/materials/gp/8516163508"
+    }
+  ],
+  "grades": [
+    {
+      "section_id": "8500088178",
+      "uid": "12345",
+      "assignment_id": "8516163487",
+      "grade": null,
+      "max_points": 100,
+      "percent": null,
+      "letter": null,
+      "is_missing": false,
+      "is_excused": false,
+      "is_late": false,
+      "comment": null,
+      "graded_at": null
+    }
+  ],
+  "submissions": [
+    {
+      "id": "sub_8516163487",
+      "assignment_id": "8516163487",
+      "uid": "12345",
+      "created": null,
+      "submitted_at": null,
+      "body": null,
+      "file_ids": [],
+      "status": "not_submitted"
+    }
+  ],
+  "updates": [
+    {
+      "id": "136911845",
+      "section_id": "8500088178",
+      "course_id": "8500088178",
+      "author_id": "t_789",
+      "author_name": "Ms. Hagg",
+      "author_role": "Teacher",
+      "body": "Good morning and happy Monday! Here are the notes for today's lesson (1.1); please download them for class today.",
+      "body_html": "<p>Good morning and happy Monday! Here are the notes for today's lesson (1.1); please download them for class today.</p>",
+      "body_truncated": true,
+      "created": "2026-08-24T11:25:00-07:00",
+      "attachment_ids": ["3531986838"]
+    }
+  ],
+  "calendar_events": [
+    {
+      "id": "cal_0825",
+      "title": "Picture Day (7th Grade)",
+      "section_id": null,
+      "start": "2026-08-25T00:00:00-07:00",
+      "type": "school"
+    },
+    {
+      "id": "cal_0827",
+      "title": "Back to School Night (6:00 PM)",
+      "section_id": null,
+      "start": "2026-08-27T18:00:00-07:00",
+      "type": "school"
+    }
+  ]
+}
