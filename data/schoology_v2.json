@@ -1,8 +1,8 @@
 {
   "version": "2.0",
   "meta": {
-    "last_updated": "2026-08-25T01:07:20Z",
-    "last_updated_pt": "2026-08-24T18:07:20-07:00",
+    "last_updated": "2026-08-25T01:17:10Z",
+    "last_updated_pt": "2026-08-24T18:17:10.563815-07:00",
     "timezone": "America/Los_Angeles",
     "source": "schoology_parent",
     "parent_account": "loo*****@gmail.com",
@@ -87,16 +87,46 @@
   ],
   "courses": [
     {
-      "id": "8500088178",
+      "id": "8500088187",
       "title": "Algebra 1",
-      "course_code": "ALG1-4AB",
-      "course_title_raw": "Algebra 1 : 4(A-B)"
+      "course_code": "ALG1-5AB",
+      "course_title_raw": "Algebra 1 : 5(A-B)"
     },
     {
-      "id": "8500088179",
-      "title": "Science 7",
-      "course_code": "SCI7-01",
-      "course_title_raw": "Science 7 : 1(A-B)"
+      "id": "8500088185",
+      "title": "Chamber Orchestra",
+      "course_code": "ORCH-02",
+      "course_title_raw": "Chamber Orchestra : 2(A-B)"
+    },
+    {
+      "id": "8500088188",
+      "title": "English Language Arts 8",
+      "course_code": "ELA8-03",
+      "course_title_raw": "English Language Arts 8 : 3(A-B)"
+    },
+    {
+      "id": "8500088189",
+      "title": "Intermediate Dance 7/8",
+      "course_code": "DANCE-01",
+      "course_title_raw": "Intermediate Dance 7/8 : 1(A-B)"
+    },
+    {
+      "id": "8500088190",
+      "title": "Qu3ST 8",
+      "course_code": "QST8-07",
+      "course_title_raw": "Qu3ST 8 : 7(A-B)"
+    },
+    {
+      "id": "8500088191",
+      "title": "Science 8",
+      "course_code": "SCI8-06",
+      "course_title_raw": "Science 8 : 6(A-B)"
+    },
+    {
+      "id": "8500088192",
+      "title": "Social Studies 8",
+      "course_code": "SS8-04",
+      "course_title_raw": "Social Studies 8 : 4(A-B)"
     },
     {
       "id": "8500088180",
@@ -105,33 +135,63 @@
       "course_title_raw": "WEB : Section 1"
     },
     {
-      "id": "8500088181",
-      "title": "English 8",
-      "course_code": "ENG8-02",
-      "course_title_raw": "English 8 : 2(A-B)"
+      "id": "8500088193",
+      "title": "WEB 2027-2028",
+      "course_code": "WEB27-01",
+      "course_title_raw": "WEB 2027-2028 : Section 1"
+    },
+    {
+      "id": "8500088178",
+      "title": "Algebra 1",
+      "course_code": "ALG1-4AB",
+      "course_title_raw": "Algebra 1 : 4(A-B)"
     },
     {
       "id": "8500088182",
-      "title": "History 8",
-      "course_code": "HIST8-03",
-      "course_title_raw": "U.S. History 8 : 3(A-B)"
+      "title": "English Language Arts 7",
+      "course_code": "ELA7-03",
+      "course_title_raw": "English Language Arts 7 : 3(A-B)"
     },
     {
       "id": "8500088183",
-      "title": "Science 8",
-      "course_code": "SCI8-01",
-      "course_title_raw": "Science 8 : 1(A-B)"
+      "title": "PE 78",
+      "course_code": "PE78-01",
+      "course_title_raw": "PE 78 : 1(A-B)"
+    },
+    {
+      "id": "8500088184",
+      "title": "Qu3ST 7",
+      "course_code": "QST7-07",
+      "course_title_raw": "Qu3ST 7 : 7(A-B)"
+    },
+    {
+      "id": "8500088179",
+      "title": "Science 7",
+      "course_code": "SCI7-05",
+      "course_title_raw": "Science 7 : 5(A-B)"
+    },
+    {
+      "id": "8500088181",
+      "title": "Social Studies 7",
+      "course_code": "SS7-06",
+      "course_title_raw": "Social Studies 7 : 6(A-B)"
+    },
+    {
+      "id": "8500088186",
+      "title": "7th Grade - Class of 2028",
+      "course_code": "G7-2028-01",
+      "course_title_raw": "7th Grade - Class of 2028, Section 1"
     }
   ],
   "sections": [
     {
-      "id": "8500088178",
-      "course_id": "8500088178",
-      "section_title": "Period 4(A-B)",
-      "section_code": "ALG1-04",
-      "section_title_raw": "Algebra 1 : 4(A-B)",
+      "id": "8500088187",
+      "course_id": "8500088187",
+      "section_title": "Period 5(A-B)",
+      "section_code": "ALG1-5AB",
+      "section_title_raw": "Algebra 1 : 5(A-B)",
       "course_title": "Algebra 1",
-      "location": "Room 204",
+      "location": "Room 205",
       "teachers": [
         "Ms. H****"
       ],
@@ -139,18 +199,108 @@
         "Tri1-2026"
       ],
       "enrolled_user_ids": [
-        "12345",
         "12346"
       ]
     },
     {
-      "id": "8500088179",
-      "course_id": "8500088179",
+      "id": "8500088185",
+      "course_id": "8500088185",
+      "section_title": "Period 2(A-B)",
+      "section_code": "ORCH-02",
+      "section_title_raw": "Chamber Orchestra : 2(A-B)",
+      "course_title": "Chamber Orchestra",
+      "location": "Music Room",
+      "teachers": [
+        "Ms. S****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12346",
+        "12345"
+      ]
+    },
+    {
+      "id": "8500088188",
+      "course_id": "8500088188",
+      "section_title": "Period 3(A-B)",
+      "section_code": "ELA8-03",
+      "section_title_raw": "English Language Arts 8 : 3(A-B)",
+      "course_title": "English Language Arts 8",
+      "location": "Room 110",
+      "teachers": [
+        "Ms. J****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12346"
+      ]
+    },
+    {
+      "id": "8500088189",
+      "course_id": "8500088189",
       "section_title": "Period 1(A-B)",
-      "section_code": "SCI7-01",
-      "section_title_raw": "Science 7 : 1(A-B)",
-      "course_title": "Science 7",
-      "location": "Lab 3",
+      "section_code": "DANCE-01",
+      "section_title_raw": "Intermediate Dance 7/8 : 1(A-B)",
+      "course_title": "Intermediate Dance 7/8",
+      "location": "Dance Studio",
+      "teachers": [
+        "Ms. D****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12346"
+      ]
+    },
+    {
+      "id": "8500088190",
+      "course_id": "8500088190",
+      "section_title": "Period 7(A-B)",
+      "section_code": "QST8-07",
+      "section_title_raw": "Qu3ST 8 : 7(A-B)",
+      "course_title": "Qu3ST 8",
+      "location": "Room 116",
+      "teachers": [
+        "Mr. K****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12346"
+      ]
+    },
+    {
+      "id": "8500088191",
+      "course_id": "8500088191",
+      "section_title": "Period 6(A-B)",
+      "section_code": "SCI8-06",
+      "section_title_raw": "Science 8 : 6(A-B)",
+      "course_title": "Science 8",
+      "location": "Lab 5",
+      "teachers": [
+        "Mr. L****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12346"
+      ]
+    },
+    {
+      "id": "8500088192",
+      "course_id": "8500088192",
+      "section_title": "Period 4(A-B)",
+      "section_code": "SS8-04",
+      "section_title_raw": "Social Studies 8 : 4(A-B)",
+      "course_title": "Social Studies 8",
+      "location": "Room 102",
       "teachers": [
         "Ms. K****"
       ],
@@ -158,7 +308,7 @@
         "Tri1-2026"
       ],
       "enrolled_user_ids": [
-        "12345"
+        "12346"
       ]
     },
     {
@@ -170,69 +320,160 @@
       "course_title": "WEB Leadership",
       "location": "Gym",
       "teachers": [
-        "Ms. K****",
+        "Ms. C****",
+        "Ms. W****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12346",
+        "12345"
+      ]
+    },
+    {
+      "id": "8500088193",
+      "course_id": "8500088193",
+      "section_title": "Section 1",
+      "section_code": "WEB27-01",
+      "section_title_raw": "WEB 2027-2028 : Section 1",
+      "course_title": "WEB 2027-2028",
+      "location": "Counseling",
+      "teachers": [
         "Ms. C****"
       ],
       "grading_periods": [
         "Tri1-2026"
       ],
       "enrolled_user_ids": [
-        "12345",
         "12346"
       ]
     },
     {
-      "id": "8500088181",
-      "course_id": "8500088181",
-      "section_title": "Period 2(A-B)",
-      "section_code": "ENG8-02",
-      "section_title_raw": "English 8 : 2(A-B)",
-      "course_title": "English 8",
-      "location": "Room 112",
+      "id": "8500088178",
+      "course_id": "8500088178",
+      "section_title": "Period 4(A-B)",
+      "section_code": "ALG1-4AB",
+      "section_title_raw": "Algebra 1 : 4(A-B)",
+      "course_title": "Algebra 1",
+      "location": "Room 204",
       "teachers": [
-        "Ms. T****"
+        "Ms. H****"
       ],
       "grading_periods": [
         "Tri1-2026"
       ],
       "enrolled_user_ids": [
-        "12346"
+        "12345"
       ]
     },
     {
       "id": "8500088182",
       "course_id": "8500088182",
       "section_title": "Period 3(A-B)",
-      "section_code": "HIST8-03",
-      "section_title_raw": "U.S. History 8 : 3(A-B)",
-      "course_title": "U.S. History 8",
-      "location": "Room 110",
+      "section_code": "ELA7-03",
+      "section_title_raw": "English Language Arts 7 : 3(A-B)",
+      "course_title": "English Language Arts 7",
+      "location": "Room 112",
       "teachers": [
-        "Mr. A****"
+        "Mr. R****",
+        "Ms. R****"
       ],
       "grading_periods": [
         "Tri1-2026"
       ],
       "enrolled_user_ids": [
-        "12346"
+        "12345"
       ]
     },
     {
       "id": "8500088183",
       "course_id": "8500088183",
       "section_title": "Period 1(A-B)",
-      "section_code": "SCI8-01",
-      "section_title_raw": "Science 8 : 1(A-B)",
-      "course_title": "Science 8",
-      "location": "Lab 4",
+      "section_code": "PE78-01",
+      "section_title_raw": "PE 78 : 1(A-B)",
+      "course_title": "PE 78",
+      "location": "Gym",
       "teachers": [
-        "Ms. K****"
+        "Coach M****"
       ],
       "grading_periods": [
         "Tri1-2026"
       ],
       "enrolled_user_ids": [
-        "12346"
+        "12345"
+      ]
+    },
+    {
+      "id": "8500088184",
+      "course_id": "8500088184",
+      "section_title": "Period 7(A-B)",
+      "section_code": "QST7-07",
+      "section_title_raw": "Qu3ST 7 : 7(A-B)",
+      "course_title": "Qu3ST 7",
+      "location": "Room 115",
+      "teachers": [
+        "Ms. L****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12345"
+      ]
+    },
+    {
+      "id": "8500088179",
+      "course_id": "8500088179",
+      "section_title": "Period 5(A-B)",
+      "section_code": "SCI7-05",
+      "section_title_raw": "Science 7 : 5(A-B)",
+      "course_title": "Science 7",
+      "location": "Lab 3",
+      "teachers": [
+        "Ms. H****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12345"
+      ]
+    },
+    {
+      "id": "8500088181",
+      "course_id": "8500088181",
+      "section_title": "Period 6(A-B)",
+      "section_code": "SS7-06",
+      "section_title_raw": "Social Studies 7 : 6(A-B)",
+      "course_title": "Social Studies 7",
+      "location": "Room 101",
+      "teachers": [
+        "Mr. J****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12345"
+      ]
+    },
+    {
+      "id": "8500088186",
+      "course_id": "8500088186",
+      "section_title": "Section 1",
+      "section_code": "G7-2028-01",
+      "section_title_raw": "7th Grade - Class of 2028, Section 1",
+      "course_title": "7th Grade - Class of 2028",
+      "location": "Homeroom",
+      "teachers": [
+        "Ms. A****"
+      ],
+      "grading_periods": [
+        "Tri1-2026"
+      ],
+      "enrolled_user_ids": [
+        "12345"
       ]
     }
   ],
