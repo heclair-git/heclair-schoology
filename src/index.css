@@ -287,7 +287,7 @@ body {
   border: 1px solid var(--accent-blue-border);
 }
 
-/* Assignment Card (Clean Light Style) */
+/* Assignment Card */
 .assignment-card {
   background: #ffffff;
   border: 1px solid var(--border-subtle);
@@ -312,7 +312,7 @@ body {
 .assignment-card.is-completed {
   background: #f8fafc;
   border-color: var(--accent-emerald-border);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .assignment-card.is-completed .assignment-title {
@@ -394,6 +394,69 @@ body {
   margin-bottom: 12px;
 }
 
+/* Student Note Badge & Form */
+.student-note-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--accent-emerald-bg);
+  border: 1px solid var(--accent-emerald-border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: #065f46;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.student-note-text {
+  font-weight: 600;
+}
+
+.btn-edit-note {
+  background: none;
+  border: none;
+  color: #059669;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.note-input-box {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.note-text-field {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-strong);
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+}
+
+.note-text-field:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px var(--accent-blue-bg);
+}
+
+.btn-save-note {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--accent-blue);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
 .card-footer {
   display: flex;
   justify-content: space-between;
@@ -406,7 +469,7 @@ body {
   color: var(--text-dim);
 }
 
-/* Interactive Complete Checkbox Button */
+/* Checkbox Button */
 .btn-complete-toggle {
   display: inline-flex;
   align-items: center;
@@ -432,6 +495,20 @@ body {
   background: var(--accent-emerald-bg);
   border-color: var(--accent-emerald);
   color: var(--accent-emerald);
+}
+
+.btn-add-note {
+  background: none;
+  border: none;
+  color: var(--accent-blue);
+  font-size: 0.775rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.btn-add-note:hover {
+  text-decoration: underline;
 }
 
 .attachments-list {

@@ -96,29 +96,39 @@ let data: SchoologyData = fallbackData as unknown as SchoologyData;
 let activeFilter = 'all';
 let isFetching = false;
 
-// Completed Assignment IDs persisted in LocalStorage across server updates
-const STORAGE_KEY = 'schoology_completed_assignments_v1';
-let completedAssignmentIds: Set<string> = new Set();
+// LocalStorage Persistence Keys
+const COMPLETED_STORAGE_KEY = 'schoology_completed_assignments_v1';
+const NOTES_STORAGE_KEY = 'schoology_assignment_notes_v1';
 
-function loadCompletedState() {
+let completedAssignmentIds: Set<string> = new Set();
+let assignmentNotes: Record<string, string> = {};
+let editingNoteAssignmentId: string | null = null;
+
+function loadState() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw);
+    const rawCompleted = localStorage.getItem(COMPLETED_STORAGE_KEY);
+    if (rawCompleted) {
+      const parsed = JSON.parse(rawCompleted);
       if (Array.isArray(parsed)) {
         completedAssignmentIds = new Set(parsed);
       }
     }
+
+    const rawNotes = localStorage.getItem(NOTES_STORAGE_KEY);
+    if (rawNotes) {
+      assignmentNotes = JSON.parse(rawNotes) || {};
+    }
   } catch (err) {
-    console.warn('Could not read completed assignments from localStorage:', err);
+    console.warn('Could not read state from localStorage:', err);
   }
 }
 
-function saveCompletedState() {
+function saveState() {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(completedAssignmentIds)));
+    localStorage.setItem(COMPLETED_STORAGE_KEY, JSON.stringify(Array.from(completedAssignmentIds)));
+    localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(assignmentNotes));
   } catch (err) {
-    console.warn('Could not save completed assignments to localStorage:', err);
+    console.warn('Could not save state to localStorage:', err);
   }
 }
 
@@ -127,8 +137,24 @@ function toggleAssignmentComplete(assignmentId: string) {
     completedAssignmentIds.delete(assignmentId);
   } else {
     completedAssignmentIds.add(assignmentId);
+    // If no note exists yet when marking done, open note field automatically
+    if (!assignmentNotes[assignmentId]) {
+      editingNoteAssignmentId = assignmentId;
+    }
   }
-  saveCompletedState();
+  saveState();
+  renderApp();
+}
+
+function saveAssignmentNote(assignmentId: string, noteText: string) {
+  const trimmed = noteText.trim();
+  if (trimmed) {
+    assignmentNotes[assignmentId] = trimmed;
+  } else {
+    delete assignmentNotes[assignmentId];
+  }
+  editingNoteAssignmentId = null;
+  saveState();
   renderApp();
 }
 
@@ -194,7 +220,7 @@ function updateRefreshButtonUI(state: 'idle' | 'loading' | 'success') {
 }
 
 function initApp() {
-  loadCompletedState();
+  loadState();
   renderAppLayout();
   loadServerData(false);
 }
@@ -369,6 +395,8 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
     const attachments = data.attachments.filter(att => assignment.attachment_ids?.includes(att.id));
 
     const isCompleted = completedAssignmentIds.has(assignment.id);
+    const noteText = assignmentNotes[assignment.id] || '';
+    const isEditingNote = editingNoteAssignmentId === assignment.id;
 
     let statusClass = 'due-tomorrow';
     let statusText = assignment.status || 'Upcoming';
@@ -399,6 +427,21 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
         <h3 class="assignment-title">${assignment.title}</h3>
         <p class="assignment-desc">${assignment.instructions_summary || assignment.description}</p>
 
+        <!-- Student Note Display / Form -->
+        ${noteText && !isEditingNote ? `
+          <div class="student-note-display">
+            <span>💬 <span class="student-note-text">"${noteText}"</span></span>
+            <button class="btn-edit-note" data-assignment-id="${assignment.id}">Edit Note</button>
+          </div>
+        ` : ''}
+
+        ${isEditingNote ? `
+          <div class="note-input-box">
+            <input type="text" class="note-text-field" id="note-input-${assignment.id}" value="${noteText}" placeholder="Add a note e.g. 'Done on paper', 'Submitted in class'..." />
+            <button class="btn-save-note" data-assignment-id="${assignment.id}">Save Note</button>
+          </div>
+        ` : ''}
+
         ${attachments.length > 0 ? `
           <div class="attachments-list">
             ${attachments.map(att => `
@@ -416,8 +459,10 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
             </svg>
             ${assignment.due_human_pt}
           </div>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            ${assignment.teacher_name ? `<span>Teacher: <strong>${assignment.teacher_name}</strong></span>` : ''}
+          <div style="display: flex; align-items: center; gap: 8px;">
+            ${!noteText && !isEditingNote ? `
+              <button class="btn-add-note" data-assignment-id="${assignment.id}">+ Note</button>
+            ` : ''}
             <button class="btn-complete-toggle ${isCompleted ? 'is-checked' : ''}" data-assignment-id="${assignment.id}">
               ${isCompleted ? '✓ Done' : '◯ Mark Done'}
             </button>
@@ -504,11 +549,45 @@ function setupEventListeners() {
 
   // Toggle Completion Click (Event Delegation)
   document.addEventListener('click', (e) => {
-    const target = (e.target as HTMLElement).closest('.btn-complete-toggle');
-    if (!target) return;
-    const assignmentId = target.getAttribute('data-assignment-id');
-    if (assignmentId) {
-      toggleAssignmentComplete(assignmentId);
+    const completeBtn = (e.target as HTMLElement).closest('.btn-complete-toggle');
+    if (completeBtn) {
+      const assignmentId = completeBtn.getAttribute('data-assignment-id');
+      if (assignmentId) toggleAssignmentComplete(assignmentId);
+      return;
+    }
+
+    const addNoteBtn = (e.target as HTMLElement).closest('.btn-add-note') || (e.target as HTMLElement).closest('.btn-edit-note');
+    if (addNoteBtn) {
+      const assignmentId = addNoteBtn.getAttribute('data-assignment-id');
+      if (assignmentId) {
+        editingNoteAssignmentId = assignmentId;
+        renderApp();
+        setTimeout(() => {
+          document.querySelector<HTMLInputElement>(`#note-input-${assignmentId}`)?.focus();
+        }, 50);
+      }
+      return;
+    }
+
+    const saveNoteBtn = (e.target as HTMLElement).closest('.btn-save-note');
+    if (saveNoteBtn) {
+      const assignmentId = saveNoteBtn.getAttribute('data-assignment-id');
+      if (assignmentId) {
+        const input = document.querySelector<HTMLInputElement>(`#note-input-${assignmentId}`);
+        if (input) saveAssignmentNote(assignmentId, input.value);
+      }
+      return;
+    }
+  });
+
+  // Enter key in note input
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const target = e.target as HTMLInputElement;
+      if (target && target.classList.contains('note-text-field')) {
+        const assignmentId = target.id.replace('note-input-', '');
+        if (assignmentId) saveAssignmentNote(assignmentId, target.value);
+      }
     }
   });
 
