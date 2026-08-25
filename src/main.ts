@@ -1,5 +1,5 @@
 import './index.css';
-import rawData from '../data/schoology_v2.json';
+import fallbackData from '../data/schoology_v2.json';
 
 interface SchoologyData {
   version: string;
@@ -92,13 +92,57 @@ interface SchoologyData {
   }>;
 }
 
-const data = rawData as unknown as SchoologyData;
+let data: SchoologyData = fallbackData as unknown as SchoologyData;
+let activeStudentId = '12345';
+let activeFilter = 'all';
+let isFetching = false;
 
-// App State
-let activeStudentId = data.users.find(u => u.role === 'Student')?.id || '12345';
-let activeFilter = 'all'; // 'all' | 'homework' | 'voluntary' | 'overdue'
+async function loadServerData() {
+  try {
+    isFetching = true;
+    updateRefreshButtonUI(true);
+    
+    // Fetch live JSON file with cache-busting timestamp
+    const dataUrl = `./data/schoology_v2.json?t=${Date.now()}`;
+    const response = await fetch(dataUrl);
+    if (response.ok) {
+      const freshData = await response.json();
+      if (freshData && freshData.version) {
+        data = freshData as SchoologyData;
+      }
+    }
+  } catch (err) {
+    console.warn('Using embedded fallback Schoology data:', err);
+  } finally {
+    isFetching = false;
+    updateRefreshButtonUI(false);
+    renderApp();
+  }
+}
+
+function updateRefreshButtonUI(loading: boolean) {
+  const btn = document.querySelector<HTMLButtonElement>('#refresh-btn');
+  if (!btn) return;
+  if (loading) {
+    btn.disabled = true;
+    btn.innerHTML = '🔄 Syncing...';
+  } else {
+    btn.disabled = false;
+    btn.innerHTML = '🔄 Refresh Data';
+  }
+}
 
 function initApp() {
+  renderAppLayout();
+  loadServerData();
+
+  // Auto-poll server for updates every 60 seconds
+  setInterval(() => {
+    loadServerData();
+  }, 60000);
+}
+
+function renderAppLayout() {
   const app = document.querySelector<HTMLDivElement>('#app');
   if (!app) return;
 
@@ -113,33 +157,21 @@ function initApp() {
             </svg>
             Schoology Family Portal
           </h1>
-          <p class="brand-subtitle">${data.meta.school} • Live Sync v${data.version}</p>
+          <p class="brand-subtitle" id="school-subtitle">${data.meta.school} • Dynamic Server Sync</p>
         </div>
-        <div class="meta-timestamp">
-          <span class="pulse-dot"></span>
-          Last Updated: <strong>${data.meta.last_updated_pt}</strong>
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+          <button id="refresh-btn" class="filter-btn" style="background: rgba(99,102,241,0.2); border-color: var(--accent-primary); color: #fff;">
+            🔄 Refresh Data
+          </button>
+          <div class="meta-timestamp">
+            <span class="pulse-dot"></span>
+            Last Updated: <strong id="last-updated-text">${data.meta.last_updated_pt}</strong>
+          </div>
         </div>
       </header>
 
       <!-- Totals Grid -->
-      <section class="totals-grid">
-        <div class="total-card">
-          <div class="total-value">${data.meta.totals.total_upcoming}</div>
-          <div class="total-label">Total Upcoming</div>
-        </div>
-        <div class="total-card">
-          <div class="total-value" style="color: #38bdf8;">${data.meta.totals.homework_only}</div>
-          <div class="total-label">Homework Only</div>
-        </div>
-        <div class="total-card">
-          <div class="total-value" style="color: #c084fc;">${data.meta.totals.web_voluntary}</div>
-          <div class="total-label">Voluntary WEB</div>
-        </div>
-        <div class="total-card alert-card">
-          <div class="total-value" style="color: #f43f5e;">${data.meta.totals.overdue_hidden}</div>
-          <div class="total-label">Hidden Overdue</div>
-        </div>
-      </section>
+      <section class="totals-grid" id="totals-grid"></section>
 
       <!-- Navigation & Filter Toolbar -->
       <div class="toolbar">
@@ -148,13 +180,12 @@ function initApp() {
           <button class="filter-btn active" data-filter="all">All Items</button>
           <button class="filter-btn" data-filter="homework">Homework Only</button>
           <button class="filter-btn" data-filter="voluntary">Voluntary & Activities</button>
-          <button class="filter-btn" data-filter="overdue">Overdue Items (${data.meta.totals.overdue_hidden})</button>
+          <button class="filter-btn" data-filter="overdue" id="overdue-filter-btn">Overdue Items (${data.meta.totals.overdue_hidden})</button>
         </div>
       </div>
 
       <!-- Main Grid -->
       <div class="dashboard-grid">
-        <!-- Main Column: Assignments -->
         <main>
           <div class="section-header">
             <h2 class="section-title" id="assignment-section-title">Upcoming Assignments</h2>
@@ -162,21 +193,17 @@ function initApp() {
           <div id="assignment-list"></div>
         </main>
 
-        <!-- Sidebar Column: Classes, Updates, Events -->
         <aside>
-          <!-- Courses Sidebar -->
           <div class="sidebar-panel">
             <h3 class="section-title" style="font-size: 1.05rem; margin-bottom: 14px;">Classes & Sections</h3>
             <div id="course-list"></div>
           </div>
 
-          <!-- Updates Sidebar -->
           <div class="sidebar-panel">
             <h3 class="section-title" style="font-size: 1.05rem; margin-bottom: 14px;">Teacher Updates</h3>
             <div id="updates-list"></div>
           </div>
 
-          <!-- Calendar Sidebar -->
           <div class="sidebar-panel">
             <h3 class="section-title" style="font-size: 1.05rem; margin-bottom: 14px;">Upcoming Events</h3>
             <div id="calendar-list"></div>
@@ -186,13 +213,49 @@ function initApp() {
     </div>
   `;
 
+  setupEventListeners();
+}
+
+function renderApp() {
+  const subtitle = document.querySelector('#school-subtitle');
+  if (subtitle) subtitle.textContent = `${data.meta.school} • Live Sync v${data.version}`;
+
+  const timestampText = document.querySelector('#last-updated-text');
+  if (timestampText) timestampText.textContent = data.meta.last_updated_pt;
+
+  const overdueBtn = document.querySelector('#overdue-filter-btn');
+  if (overdueBtn) overdueBtn.textContent = `Overdue Items (${data.meta.totals.overdue_hidden})`;
+
+  renderTotalsGrid();
   renderStudentTabs();
   renderCourses();
   renderUpdates();
   renderCalendar();
   renderAssignments();
+}
 
-  setupEventListeners();
+function renderTotalsGrid() {
+  const container = document.querySelector('#totals-grid');
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="total-card">
+      <div class="total-value">${data.meta.totals.total_upcoming}</div>
+      <div class="total-label">Total Upcoming</div>
+    </div>
+    <div class="total-card">
+      <div class="total-value" style="color: #38bdf8;">${data.meta.totals.homework_only}</div>
+      <div class="total-label">Homework Only</div>
+    </div>
+    <div class="total-card">
+      <div class="total-value" style="color: #c084fc;">${data.meta.totals.web_voluntary}</div>
+      <div class="total-label">Voluntary WEB</div>
+    </div>
+    <div class="total-card alert-card">
+      <div class="total-value" style="color: #f43f5e;">${data.meta.totals.overdue_hidden}</div>
+      <div class="total-label">Hidden Overdue</div>
+    </div>
+  `;
 }
 
 function renderStudentTabs() {
@@ -200,6 +263,10 @@ function renderStudentTabs() {
   if (!tabsContainer) return;
 
   const students = data.users.filter(u => u.role === 'Student');
+  if (!students.some(s => s.id === activeStudentId) && students[0]) {
+    activeStudentId = students[0].id;
+  }
+
   tabsContainer.innerHTML = students.map(student => `
     <button class="student-tab ${student.id === activeStudentId ? 'active' : ''}" data-student-id="${student.id}">
       🎓 ${student.name_display} ${student.grade_level ? `(Grade ${student.grade_level})` : ''}
@@ -347,7 +414,12 @@ function renderCalendar() {
 }
 
 function setupEventListeners() {
-  // Student Switching
+  // Refresh Button
+  document.querySelector('#refresh-btn')?.addEventListener('click', () => {
+    if (!isFetching) loadServerData();
+  });
+
+  // Student Tabs
   document.querySelector('#student-tabs')?.addEventListener('click', (e) => {
     const target = (e.target as HTMLElement).closest('.student-tab');
     if (!target) return;
