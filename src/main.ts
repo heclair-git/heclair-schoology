@@ -1,5 +1,6 @@
 import './index.css';
 import fallbackData from '../data/schoology_v2.json';
+import fallbackUserState from '../data/schoology_user_state.json';
 
 interface SchoologyData {
   version: string;
@@ -92,83 +93,46 @@ interface SchoologyData {
   }>;
 }
 
+interface UserStateData {
+  version: string;
+  last_updated: string;
+  completed_assignment_ids: string[];
+  assignment_notes: Record<string, string>;
+  file_sha?: string;
+}
+
 let data: SchoologyData = fallbackData as unknown as SchoologyData;
+let userState: UserStateData = fallbackUserState as unknown as UserStateData;
+
 let activeFilter = 'all';
 let isFetching = false;
-
-// LocalStorage Persistence Keys
-const COMPLETED_STORAGE_KEY = 'schoology_completed_assignments_v1';
-const NOTES_STORAGE_KEY = 'schoology_assignment_notes_v1';
-
-let completedAssignmentIds: Set<string> = new Set();
-let assignmentNotes: Record<string, string> = {};
 let editingNoteAssignmentId: string | null = null;
 
-function loadState() {
-  try {
-    const rawCompleted = localStorage.getItem(COMPLETED_STORAGE_KEY);
-    if (rawCompleted) {
-      const parsed = JSON.parse(rawCompleted);
-      if (Array.isArray(parsed)) {
-        completedAssignmentIds = new Set(parsed);
-      }
-    }
-
-    const rawNotes = localStorage.getItem(NOTES_STORAGE_KEY);
-    if (rawNotes) {
-      assignmentNotes = JSON.parse(rawNotes) || {};
-    }
-  } catch (err) {
-    console.warn('Could not read state from localStorage:', err);
-  }
-}
-
-function saveState() {
-  try {
-    localStorage.setItem(COMPLETED_STORAGE_KEY, JSON.stringify(Array.from(completedAssignmentIds)));
-    localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(assignmentNotes));
-  } catch (err) {
-    console.warn('Could not save state to localStorage:', err);
-  }
-}
-
-function toggleAssignmentComplete(assignmentId: string) {
-  if (completedAssignmentIds.has(assignmentId)) {
-    completedAssignmentIds.delete(assignmentId);
-  } else {
-    completedAssignmentIds.add(assignmentId);
-    // If no note exists yet when marking done, open note field automatically
-    if (!assignmentNotes[assignmentId]) {
-      editingNoteAssignmentId = assignmentId;
-    }
-  }
-  saveState();
-  renderApp();
-}
-
-function saveAssignmentNote(assignmentId: string, noteText: string) {
-  const trimmed = noteText.trim();
-  if (trimmed) {
-    assignmentNotes[assignmentId] = trimmed;
-  } else {
-    delete assignmentNotes[assignmentId];
-  }
-  editingNoteAssignmentId = null;
-  saveState();
-  renderApp();
-}
+// GitHub API configuration for committing user state updates back to Git
+let githubToken = localStorage.getItem('gh_pat_token') || '';
 
 async function loadServerData(isManualClick = false) {
   try {
     isFetching = true;
     updateRefreshButtonUI('loading');
     
-    const dataUrl = `./data/schoology_v2.json?t=${Date.now()}`;
-    const response = await fetch(dataUrl);
-    if (response.ok) {
-      const freshData = await response.json();
-      if (freshData && freshData.version) {
-        data = freshData as SchoologyData;
+    // 1. Fetch raw Schoology scrape from Git
+    const scrapeUrl = `./data/schoology_v2.json?t=${Date.now()}`;
+    const scrapeResponse = await fetch(scrapeUrl);
+    if (scrapeResponse.ok) {
+      const freshScrape = await scrapeResponse.json();
+      if (freshScrape && freshScrape.version) {
+        data = freshScrape as SchoologyData;
+      }
+    }
+
+    // 2. Fetch server-side student completions & notes JSON from Git
+    const stateUrl = `./data/schoology_user_state.json?t=${Date.now()}`;
+    const stateResponse = await fetch(stateUrl);
+    if (stateResponse.ok) {
+      const freshState = await stateResponse.json();
+      if (freshState && Array.isArray(freshState.completed_assignment_ids)) {
+        userState = freshState as UserStateData;
       }
     }
     
@@ -179,12 +143,89 @@ async function loadServerData(isManualClick = false) {
       updateRefreshButtonUI('idle');
     }
   } catch (err) {
-    console.warn('Using embedded fallback data:', err);
+    console.warn('Using fallback data:', err);
     updateRefreshButtonUI('idle');
   } finally {
     isFetching = false;
     renderApp();
   }
+}
+
+async function syncStateToServerInGit() {
+  userState.last_updated = new Date().toISOString();
+  
+  // If GitHub token is present, commit data/schoology_user_state.json directly to Git via GitHub API
+  if (githubToken) {
+    try {
+      const apiUrl = 'https://api.github.com/repos/heclair-git/heclair-schoology/contents/data/schoology_user_state.json';
+      
+      // Get latest SHA
+      let currentSha = userState.file_sha || '';
+      if (!currentSha) {
+        const getRes = await fetch(apiUrl, {
+          headers: { Authorization: `token ${githubToken}` }
+        });
+        if (getRes.ok) {
+          const getJson = await getRes.json();
+          currentSha = getJson.sha;
+        }
+      }
+
+      const contentString = JSON.stringify(userState, null, 2);
+      // UTF-8 Base64 encoding
+      const encodedContent = btoa(unescape(encodeURIComponent(contentString)));
+
+      const putRes = await fetch(apiUrl, {
+        method: 'PUT',
+        headers: {
+          Authorization: `token ${githubToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: 'update: Sync student completion & notes state in Git',
+          content: encodedContent,
+          sha: currentSha
+        })
+      });
+
+      if (putRes.ok) {
+        const putJson = await putRes.json();
+        userState.file_sha = putJson.content.sha;
+        console.log('Successfully committed user state to Git on server!');
+      }
+    } catch (err) {
+      console.warn('Could not push to GitHub API directly:', err);
+    }
+  }
+  
+  renderApp();
+}
+
+function toggleAssignmentComplete(assignmentId: string) {
+  const set = new Set(userState.completed_assignment_ids || []);
+  if (set.has(assignmentId)) {
+    set.delete(assignmentId);
+  } else {
+    set.add(assignmentId);
+    if (!userState.assignment_notes[assignmentId]) {
+      editingNoteAssignmentId = assignmentId;
+    }
+  }
+  userState.completed_assignment_ids = Array.from(set);
+  syncStateToServerInGit();
+}
+
+function saveAssignmentNote(assignmentId: string, noteText: string) {
+  const trimmed = noteText.trim();
+  if (!userState.assignment_notes) userState.assignment_notes = {};
+  
+  if (trimmed) {
+    userState.assignment_notes[assignmentId] = trimmed;
+  } else {
+    delete userState.assignment_notes[assignmentId];
+  }
+  editingNoteAssignmentId = null;
+  syncStateToServerInGit();
 }
 
 function updateRefreshButtonUI(state: 'idle' | 'loading' | 'success') {
@@ -220,7 +261,6 @@ function updateRefreshButtonUI(state: 'idle' | 'loading' | 'success') {
 }
 
 function initApp() {
-  loadState();
   renderAppLayout();
   loadServerData(false);
 }
@@ -240,7 +280,7 @@ function renderAppLayout() {
             </svg>
             Schoology Family Dashboard
           </h1>
-          <p class="brand-subtitle" id="school-subtitle">${data.meta.school} • Live Sync</p>
+          <p class="brand-subtitle" id="school-subtitle">${data.meta.school} • Server Git Sync</p>
         </div>
         <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
           <button id="refresh-btn" class="filter-btn" style="display: inline-flex; align-items: center; gap: 6px;">
@@ -321,13 +361,14 @@ function renderAppLayout() {
 
 function renderApp() {
   const subtitle = document.querySelector('#school-subtitle');
-  if (subtitle) subtitle.textContent = `${data.meta.school} • Live Sync v${data.version}`;
+  if (subtitle) subtitle.textContent = `${data.meta.school} • Server Git Sync v${data.version}`;
 
   const timestampText = document.querySelector('#last-updated-text');
   if (timestampText) timestampText.textContent = data.meta.last_updated_pt;
 
+  const completedSet = new Set(userState.completed_assignment_ids || []);
   const completedBtn = document.querySelector('#completed-filter-btn');
-  if (completedBtn) completedBtn.textContent = `Completed (${completedAssignmentIds.size})`;
+  if (completedBtn) completedBtn.textContent = `Completed (${completedSet.size})`;
 
   renderTotalsGrid();
   renderStudentAssignments('12345', '#louis-assignments-list');
@@ -341,8 +382,9 @@ function renderTotalsGrid() {
   const container = document.querySelector('#totals-grid');
   if (!container) return;
 
-  const activeUpcoming = data.assignments.filter(a => !completedAssignmentIds.has(a.id)).length;
-  const activeOverdue = data.assignments.filter(a => a.is_overdue_hidden && !completedAssignmentIds.has(a.id)).length;
+  const completedSet = new Set(userState.completed_assignment_ids || []);
+  const activeUpcoming = data.assignments.filter(a => !completedSet.has(a.id)).length;
+  const activeOverdue = data.assignments.filter(a => a.is_overdue_hidden && !completedSet.has(a.id)).length;
 
   container.innerHTML = `
     <div class="total-card">
@@ -354,7 +396,7 @@ function renderTotalsGrid() {
       <div class="total-label">Homework Only</div>
     </div>
     <div class="total-card">
-      <div class="total-value" style="color: #059669;">${completedAssignmentIds.size}</div>
+      <div class="total-value" style="color: #059669;">${completedSet.size}</div>
       <div class="total-label">Marked Completed</div>
     </div>
     <div class="total-card alert-card">
@@ -368,6 +410,9 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
   const container = document.querySelector(containerSelector);
   if (!container) return;
 
+  const completedSet = new Set(userState.completed_assignment_ids || []);
+  const notesMap = userState.assignment_notes || {};
+
   let filtered = data.assignments.filter(a => a.student_id === studentId);
 
   if (activeFilter === 'homework') {
@@ -375,9 +420,9 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
   } else if (activeFilter === 'voluntary') {
     filtered = filtered.filter(a => a.is_voluntary || a.is_web_voluntary);
   } else if (activeFilter === 'overdue') {
-    filtered = filtered.filter(a => (a.is_overdue_hidden || a.overdue_days > 0) && !completedAssignmentIds.has(a.id));
+    filtered = filtered.filter(a => (a.is_overdue_hidden || a.overdue_days > 0) && !completedSet.has(a.id));
   } else if (activeFilter === 'completed') {
-    filtered = filtered.filter(a => completedAssignmentIds.has(a.id));
+    filtered = filtered.filter(a => completedSet.has(a.id));
   }
 
   if (filtered.length === 0) {
@@ -394,8 +439,8 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
     const folder = data.folders.find(f => f.id === assignment.folder_id);
     const attachments = data.attachments.filter(att => assignment.attachment_ids?.includes(att.id));
 
-    const isCompleted = completedAssignmentIds.has(assignment.id);
-    const noteText = assignmentNotes[assignment.id] || '';
+    const isCompleted = completedSet.has(assignment.id);
+    const noteText = notesMap[assignment.id] || '';
     const isEditingNote = editingNoteAssignmentId === assignment.id;
 
     let statusClass = 'due-tomorrow';
