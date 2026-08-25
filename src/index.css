@@ -28,6 +28,7 @@
 
   --accent-emerald: #059669;
   --accent-emerald-bg: #ecfdf5;
+  --accent-emerald-border: #a7f3d0;
 
   --radius-lg: 12px;
   --radius-md: 8px;
@@ -214,6 +215,12 @@ body {
   color: #ffffff;
 }
 
+.filter-btn.active-success {
+  background: var(--accent-emerald);
+  border-color: var(--accent-emerald);
+  color: #ffffff;
+}
+
 /* Side-by-Side Widescreen Layout */
 .widescreen-layout {
   display: grid;
@@ -287,7 +294,7 @@ body {
   border-radius: var(--radius-md);
   padding: 18px 20px;
   margin-bottom: 16px;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
   position: relative;
 }
 
@@ -299,6 +306,18 @@ body {
 .assignment-card.overdue-hidden {
   border-left: 4px solid var(--accent-rose);
   background: #fff8f8;
+}
+
+/* Completed Card Styling */
+.assignment-card.is-completed {
+  background: #f8fafc;
+  border-color: var(--accent-emerald-border);
+  opacity: 0.85;
+}
+
+.assignment-card.is-completed .assignment-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
 }
 
 .card-top {
@@ -355,6 +374,12 @@ body {
   border: 1px solid var(--accent-purple-border);
 }
 
+.status-badge.completed-badge {
+  background: var(--accent-emerald-bg);
+  color: var(--accent-emerald);
+  border: 1px solid var(--accent-emerald-border);
+}
+
 .assignment-title {
   font-size: 1.05rem;
   font-weight: 700;
@@ -375,18 +400,38 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  padding-top: 10px;
+  padding-top: 12px;
   border-top: 1px solid #f1f5f9;
   font-size: 0.8rem;
   color: var(--text-dim);
 }
 
-.due-time {
-  display: flex;
+/* Interactive Complete Checkbox Button */
+.btn-complete-toggle {
+  display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.775rem;
+  font-weight: 700;
+  border: 1px solid var(--border-strong);
+  background: #ffffff;
   color: var(--text-muted);
-  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-complete-toggle:hover {
+  background: var(--accent-emerald-bg);
+  border-color: var(--accent-emerald);
+  color: var(--accent-emerald);
+}
+
+.btn-complete-toggle.is-checked {
+  background: var(--accent-emerald-bg);
+  border-color: var(--accent-emerald);
+  color: var(--accent-emerald);
 }
 
 .attachments-list {

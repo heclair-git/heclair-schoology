@@ -96,6 +96,42 @@ let data: SchoologyData = fallbackData as unknown as SchoologyData;
 let activeFilter = 'all';
 let isFetching = false;
 
+// Completed Assignment IDs persisted in LocalStorage across server updates
+const STORAGE_KEY = 'schoology_completed_assignments_v1';
+let completedAssignmentIds: Set<string> = new Set();
+
+function loadCompletedState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        completedAssignmentIds = new Set(parsed);
+      }
+    }
+  } catch (err) {
+    console.warn('Could not read completed assignments from localStorage:', err);
+  }
+}
+
+function saveCompletedState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(completedAssignmentIds)));
+  } catch (err) {
+    console.warn('Could not save completed assignments to localStorage:', err);
+  }
+}
+
+function toggleAssignmentComplete(assignmentId: string) {
+  if (completedAssignmentIds.has(assignmentId)) {
+    completedAssignmentIds.delete(assignmentId);
+  } else {
+    completedAssignmentIds.add(assignmentId);
+  }
+  saveCompletedState();
+  renderApp();
+}
+
 async function loadServerData(isManualClick = false) {
   try {
     isFetching = true;
@@ -158,6 +194,7 @@ function updateRefreshButtonUI(state: 'idle' | 'loading' | 'success') {
 }
 
 function initApp() {
+  loadCompletedState();
   renderAppLayout();
   loadServerData(false);
 }
@@ -204,6 +241,7 @@ function renderAppLayout() {
           <button class="filter-btn" data-filter="homework">Homework Only (${data.meta.totals.homework_only})</button>
           <button class="filter-btn" data-filter="voluntary">Voluntary & Activities (${data.meta.totals.web_voluntary})</button>
           <button class="filter-btn" data-filter="overdue" id="overdue-filter-btn">Overdue Items (${data.meta.totals.overdue_hidden})</button>
+          <button class="filter-btn" data-filter="completed" id="completed-filter-btn">Completed (0)</button>
         </div>
       </div>
 
@@ -262,6 +300,9 @@ function renderApp() {
   const timestampText = document.querySelector('#last-updated-text');
   if (timestampText) timestampText.textContent = data.meta.last_updated_pt;
 
+  const completedBtn = document.querySelector('#completed-filter-btn');
+  if (completedBtn) completedBtn.textContent = `Completed (${completedAssignmentIds.size})`;
+
   renderTotalsGrid();
   renderStudentAssignments('12345', '#louis-assignments-list');
   renderStudentAssignments('12346', '#charlotte-assignments-list');
@@ -274,21 +315,24 @@ function renderTotalsGrid() {
   const container = document.querySelector('#totals-grid');
   if (!container) return;
 
+  const activeUpcoming = data.assignments.filter(a => !completedAssignmentIds.has(a.id)).length;
+  const activeOverdue = data.assignments.filter(a => a.is_overdue_hidden && !completedAssignmentIds.has(a.id)).length;
+
   container.innerHTML = `
     <div class="total-card">
-      <div class="total-value">${data.meta.totals.total_upcoming}</div>
-      <div class="total-label">Total Upcoming</div>
+      <div class="total-value">${activeUpcoming}</div>
+      <div class="total-label">Pending Upcoming</div>
     </div>
     <div class="total-card">
       <div class="total-value" style="color: #2563eb;">${data.meta.totals.homework_only}</div>
       <div class="total-label">Homework Only</div>
     </div>
     <div class="total-card">
-      <div class="total-value" style="color: #7c3aed;">${data.meta.totals.web_voluntary}</div>
-      <div class="total-label">Voluntary WEB</div>
+      <div class="total-value" style="color: #059669;">${completedAssignmentIds.size}</div>
+      <div class="total-label">Marked Completed</div>
     </div>
     <div class="total-card alert-card">
-      <div class="total-value">${data.meta.totals.overdue_hidden}</div>
+      <div class="total-value">${activeOverdue}</div>
       <div class="total-label">Hidden Overdue</div>
     </div>
   `;
@@ -305,7 +349,9 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
   } else if (activeFilter === 'voluntary') {
     filtered = filtered.filter(a => a.is_voluntary || a.is_web_voluntary);
   } else if (activeFilter === 'overdue') {
-    filtered = filtered.filter(a => a.is_overdue_hidden || a.overdue_days > 0);
+    filtered = filtered.filter(a => (a.is_overdue_hidden || a.overdue_days > 0) && !completedAssignmentIds.has(a.id));
+  } else if (activeFilter === 'completed') {
+    filtered = filtered.filter(a => completedAssignmentIds.has(a.id));
   }
 
   if (filtered.length === 0) {
@@ -322,10 +368,15 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
     const folder = data.folders.find(f => f.id === assignment.folder_id);
     const attachments = data.attachments.filter(att => assignment.attachment_ids?.includes(att.id));
 
+    const isCompleted = completedAssignmentIds.has(assignment.id);
+
     let statusClass = 'due-tomorrow';
     let statusText = assignment.status || 'Upcoming';
 
-    if (assignment.is_overdue_hidden) {
+    if (isCompleted) {
+      statusClass = 'completed-badge';
+      statusText = '✓ Completed';
+    } else if (assignment.is_overdue_hidden) {
       statusClass = 'overdue';
       statusText = `⚠️ Overdue (${assignment.overdue_days}d hidden)`;
     } else if (assignment.is_voluntary) {
@@ -334,7 +385,7 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
     }
 
     return `
-      <article class="assignment-card ${assignment.is_overdue_hidden ? 'overdue-hidden' : ''}">
+      <article class="assignment-card ${isCompleted ? 'is-completed' : ''} ${assignment.is_overdue_hidden && !isCompleted ? 'overdue-hidden' : ''}">
         <div class="card-top">
           <div>
             <span class="course-badge">
@@ -365,8 +416,11 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
             </svg>
             ${assignment.due_human_pt}
           </div>
-          <div>
-            ${assignment.teacher_name ? `Teacher: <strong>${assignment.teacher_name}</strong>` : ''}
+          <div style="display: flex; align-items: center; gap: 12px;">
+            ${assignment.teacher_name ? `<span>Teacher: <strong>${assignment.teacher_name}</strong></span>` : ''}
+            <button class="btn-complete-toggle ${isCompleted ? 'is-checked' : ''}" data-assignment-id="${assignment.id}">
+              ${isCompleted ? '✓ Done' : '◯ Mark Done'}
+            </button>
           </div>
         </div>
       </article>
@@ -438,10 +492,23 @@ function setupEventListeners() {
     const filter = target.getAttribute('data-filter');
     if (filter) {
       activeFilter = filter;
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active', 'active-warning'));
-      target.classList.add(filter === 'overdue' ? 'active-warning' : 'active');
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active', 'active-warning', 'active-success'));
+      if (filter === 'overdue') target.classList.add('active-warning');
+      else if (filter === 'completed') target.classList.add('active-success');
+      else target.classList.add('active');
+
       renderStudentAssignments('12345', '#louis-assignments-list');
       renderStudentAssignments('12346', '#charlotte-assignments-list');
+    }
+  });
+
+  // Toggle Completion Click (Event Delegation)
+  document.addEventListener('click', (e) => {
+    const target = (e.target as HTMLElement).closest('.btn-complete-toggle');
+    if (!target) return;
+    const assignmentId = target.getAttribute('data-assignment-id');
+    if (assignmentId) {
+      toggleAssignmentComplete(assignmentId);
     }
   });
 
