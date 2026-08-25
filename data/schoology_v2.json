@@ -1,10 +1,10 @@
 {
   "version": "2.0",
   "meta": {
-    "last_updated": "2026-08-25T01:31:50Z",
-    "last_updated_pt": "2026-08-24T18:31:50-07:00",
+    "last_updated": "2026-08-25T01:37:18.212083Z",
+    "last_updated_pt": "2026-08-24T18:37:18.212083-07:00",
     "timezone": "America/Los_Angeles",
-    "source": "schoology_parent_live_website_only",
+    "source": "schoology_parent",
     "parent_account": "loo*****@gmail.com",
     "parent_name": "J**** L****",
     "school": "Hillview Middle School",
@@ -22,7 +22,7 @@
       "louis_count": 6
     },
     "scientific_method_found": false,
-    "note": "Clean scrape \u2013 only website-visible assignments, no hallucinated scientific method"
+    "note": "Clean scrape \u2013 only website-visible assignments, no hallucinated scientific method. Teachers unmasked (public), students masked."
   },
   "users": [
     {
@@ -32,7 +32,8 @@
       "name_last": "L****",
       "role": "Student",
       "grade_level": "8",
-      "school": "Hillview Middle School"
+      "school": "Hillview Middle School",
+      "primary_email": null
     },
     {
       "id": "louis",
@@ -41,7 +42,8 @@
       "name_last": "L****",
       "role": "Student",
       "grade_level": "7",
-      "school": "Hillview Middle School"
+      "school": "Hillview Middle School",
+      "primary_email": null
     },
     {
       "id": "chad_lesausky",
@@ -66,6 +68,36 @@
       "name_display": "Mr. Rogers",
       "role": "Teacher",
       "course": "Social Studies 7"
+    },
+    {
+      "id": "ricardo_rasura",
+      "name_display": "Ricardo Rasura",
+      "role": "Teacher",
+      "course": "Chamber Orchestra"
+    },
+    {
+      "id": "lexy_keller",
+      "name_display": "Lexy Keller",
+      "role": "Teacher",
+      "course": "Social Studies 8"
+    },
+    {
+      "id": "kara_connelly",
+      "name_display": "Kara Connelly",
+      "role": "Teacher",
+      "course": "WEB"
+    },
+    {
+      "id": "ms_wrotniewski",
+      "name_display": "Ms. Wrotniewski",
+      "role": "Teacher",
+      "course": "WEB"
+    },
+    {
+      "id": "sayre_dolan",
+      "name_display": "Sayre Dolan",
+      "role": "Teacher",
+      "course": "Algebra 1"
     }
   ],
   "courses": [
@@ -80,7 +112,8 @@
       "id": "8500088701",
       "title": "Chamber Orchestra",
       "section": "2(A-B)",
-      "url": "https://app.schoology.com/course/8500088701"
+      "url": "https://app.schoology.com/course/8500088701",
+      "teacher": "Ricardo Rasura"
     },
     {
       "id": "8500087574",
@@ -112,13 +145,15 @@
       "id": "8500088236",
       "title": "Social Studies 8",
       "section": "4(A-B)",
-      "url": "https://app.schoology.com/course/8500088236"
+      "url": "https://app.schoology.com/course/8500088236",
+      "teacher": "Lexy Keller"
     },
     {
       "id": "8354061423",
       "title": "WEB",
       "section": "Section 1",
-      "url": "https://app.schoology.com/course/8354061423"
+      "url": "https://app.schoology.com/course/8354061423",
+      "teacher": "Kara Connelly"
     },
     {
       "id": "8283152613",
@@ -297,6 +332,8 @@
       "url": "https://app.schoology.com/course/8500088925"
     }
   ],
+  "grading_periods": [],
+  "folders": [],
   "assignments": [
     {
       "id": "live_8500088236_1",
@@ -440,9 +477,15 @@
       "due_human_pt": "2026-08-25T15:05:00",
       "source": "Materials",
       "status": "Upcoming",
-      "teacher": "James Green"
+      "teacher": "James Green",
+      "teacher_name": "James Green"
     }
   ],
+  "attachments": [],
+  "grades": [],
+  "submissions": [],
+  "updates": [],
+  "calendar_events": [],
   "assignments_visible_now": [
     {
       "child": "Charlotte L****",
