@@ -1,8 +1,8 @@
 {
   "version": "2.0",
   "meta": {
-    "last_updated": "2026-08-25T14:48:44.786Z",
-    "last_updated_pt": "2026-08-25T07:48:44.786-07:00",
+    "last_updated": "2026-08-26T00:34:21.000Z",
+    "last_updated_pt": "2026-08-25T17:34:21.000-07:00",
     "timezone": "America/Los_Angeles",
     "source": "schoology_parent",
     "parent_account": "loo*****@gmail.com",
@@ -22,7 +22,7 @@
       "louis_count": 6
     },
     "scientific_method_found": false,
-    "note": "Clean scrape – only website-visible assignments, no hallucinated scientific method. Teachers unmasked (public), students masked."
+    "note": "Clean scrape \u2013 only website-visible assignments, no hallucinated scientific method. Teachers unmasked (public), students masked."
   },
   "users": [
     {
