@@ -118,11 +118,14 @@ let isFetching = false;
 let editingNoteAssignmentId: string | null = null;
 let lastCheckedAt: Date | null = null;
 
+const PST_LOCALE_OPTS: Intl.DateTimeFormatOptions = { timeZone: 'America/Los_Angeles' };
+
 function formatScraperDate(isoStr: string | undefined): string {
   if (!isoStr) return 'Unknown';
   try {
     const d = new Date(isoStr);
     return d.toLocaleString('en-US', {
+      ...PST_LOCALE_OPTS,
       month: 'short', day: 'numeric',
       hour: 'numeric', minute: '2-digit',
       hour12: true, timeZoneName: 'short'
@@ -136,7 +139,54 @@ function formatLastChecked(date: Date): string {
   if (diffSec < 60) return `${diffSec}s ago`;
   const diffMin = Math.floor(diffSec / 60);
   if (diffMin < 60) return `${diffMin}m ago`;
-  return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+  return date.toLocaleTimeString('en-US', { ...PST_LOCALE_OPTS, hour: 'numeric', minute: '2-digit', hour12: true });
+}
+
+function formatDuePST(isoStr: string | null | undefined): string {
+  if (!isoStr) return 'No due date';
+  try {
+    const d = new Date(isoStr);
+    return d.toLocaleString('en-US', {
+      ...PST_LOCALE_OPTS,
+      weekday: 'short', month: 'short', day: 'numeric',
+      hour: 'numeric', minute: '2-digit', hour12: true
+    });
+  } catch { return isoStr; }
+}
+
+// Returns: 'completed' | 'overdue' | 'due-soon' | 'due-tomorrow' | 'upcoming' | 'voluntary'
+function getDueUrgency(assignment: any, isCompleted: boolean): { cls: string; label: string } {
+  if (isCompleted) return { cls: 'completed-badge', label: '✓ Completed' };
+  
+  const courseTitle = String(assignment.course_title || '');
+  if (assignment.is_voluntary || assignment.is_web_voluntary || courseTitle.toLowerCase().includes('web')) {
+    return { cls: 'voluntary', label: 'Voluntary / WEB' };
+  }
+
+  const dueIso = assignment.due_iso || assignment.due || assignment.due_human_pt;
+  if (assignment.is_overdue_hidden || (assignment.overdue_days && assignment.overdue_days > 0)) {
+    return { cls: 'overdue', label: `⚠️ Past Due (${assignment.overdue_days || 1}d)` };
+  }
+
+  if (dueIso) {
+    const dueMs = new Date(dueIso).getTime();
+    const nowMs = Date.now();
+    const diffMs = dueMs - nowMs;
+    if (diffMs < 0) {
+      return { cls: 'overdue', label: '⚠️ Past Due' };
+    }
+    if (diffMs < 6 * 60 * 60 * 1000) { // under 6 hours
+      return { cls: 'due-soon', label: '🔴 Due Very Soon' };
+    }
+    if (diffMs < 24 * 60 * 60 * 1000) { // under 24 hours
+      return { cls: 'due-tomorrow', label: '🟠 Due Tomorrow' };
+    }
+    if (diffMs < 48 * 60 * 60 * 1000) { // under 48 hours
+      return { cls: 'due-upcoming', label: '📅 In 2 Days' };
+    }
+  }
+
+  return { cls: 'upcoming', label: assignment.status || 'Upcoming' };
 }
 
 async function loadServerData(isManualClick = false) {
@@ -504,21 +554,8 @@ function renderStudentAssignments(studentId: string, containerSelector: string) 
     const noteText = notesMap[assignment.id] || '';
     const isEditingNote = editingNoteAssignmentId === assignment.id;
 
-    let statusClass = 'due-tomorrow';
-    let statusText = assignment.status || 'Upcoming';
-
-    if (isCompleted) {
-      statusClass = 'completed-badge';
-      statusText = '✓ Completed';
-    } else if (assignment.is_overdue_hidden) {
-      statusClass = 'overdue';
-      statusText = `⚠️ Overdue (${assignment.overdue_days || 1}d hidden)`;
-    } else if (assignment.is_voluntary || assignment.is_web_voluntary || String(courseTitle).toLowerCase().includes('web')) {
-      statusClass = 'voluntary';
-      statusText = 'Voluntary WEB';
-    }
-
-    const dueDisplay = assignment.due_human_pt || assignment.due || assignment.due_iso || 'Upcoming';
+    const { cls: statusClass, label: statusText } = getDueUrgency(assignment, isCompleted);
+    const dueDisplay = formatDuePST(assignment.due_iso || assignment.due || assignment.due_human_pt);
 
     return `
       <article class="assignment-card ${isCompleted ? 'is-completed' : ''} ${assignment.is_overdue_hidden && !isCompleted ? 'overdue-hidden' : ''}">
