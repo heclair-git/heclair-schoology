@@ -144,21 +144,28 @@ async function loadServerData(isManualClick = false) {
     isFetching = true;
     updateRefreshButtonUI('loading');
     
-    // 1. Fetch raw Schoology scrape from Git
-    const scrapeUrl = `./data/schoology_v2.json?t=${Date.now()}`;
-    const scrapeResponse = await fetch(scrapeUrl);
+    // 1. Fetch raw Schoology scrape — force full cache bypass on browser AND CDN
+    const scrapeUrl = `./data/schoology_v2.json`;
+    const scrapeResponse = await fetch(scrapeUrl, {
+      cache: 'no-store',
+      headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' }
+    });
     if (scrapeResponse.ok) {
       const freshScrape = await scrapeResponse.json();
+      console.log('[Refresh] Fetched schoology_v2.json — meta.last_updated:', freshScrape?.meta?.last_updated);
       if (freshScrape && freshScrape.assignments) {
         data = freshScrape as SchoologyData;
       }
+    } else {
+      console.warn('[Refresh] schoology_v2.json fetch failed:', scrapeResponse.status, scrapeResponse.statusText);
     }
 
     // 2. Fetch live real-time server database state (shared across all devices)
     try {
-      const dbResponse = await fetch(REALTIME_DB_URL);
+      const dbResponse = await fetch(REALTIME_DB_URL, { cache: 'no-store' });
       if (dbResponse.ok) {
         const dbJson = await dbResponse.json();
+        console.log('[Refresh] Cloud DB fetched — completions:', dbJson?.data?.completed_assignment_ids?.length ?? 0);
         if (dbJson && dbJson.data && Array.isArray(dbJson.data.completed_assignment_ids)) {
           userState = dbJson.data as UserStateData;
         }
