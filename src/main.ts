@@ -116,6 +116,28 @@ let userState: UserStateData = fallbackUserState as unknown as UserStateData;
 let activeFilter = 'all';
 let isFetching = false;
 let editingNoteAssignmentId: string | null = null;
+let lastCheckedAt: Date | null = null;
+
+function formatScraperDate(isoStr: string | undefined): string {
+  if (!isoStr) return 'Unknown';
+  try {
+    const d = new Date(isoStr);
+    return d.toLocaleString('en-US', {
+      month: 'short', day: 'numeric',
+      hour: 'numeric', minute: '2-digit',
+      hour12: true, timeZoneName: 'short'
+    });
+  } catch { return isoStr; }
+}
+
+function formatLastChecked(date: Date): string {
+  const diffSec = Math.floor((Date.now() - date.getTime()) / 1000);
+  if (diffSec < 10) return 'just now';
+  if (diffSec < 60) return `${diffSec}s ago`;
+  const diffMin = Math.floor(diffSec / 60);
+  if (diffMin < 60) return `${diffMin}m ago`;
+  return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+}
 
 async function loadServerData(isManualClick = false) {
   try {
@@ -145,6 +167,8 @@ async function loadServerData(isManualClick = false) {
       console.warn('Realtime database fetch fallback to local JSON:', dbErr);
     }
     
+    lastCheckedAt = new Date();
+
     if (isManualClick) {
       updateRefreshButtonUI('success');
       setTimeout(() => updateRefreshButtonUI('idle'), 2000);
@@ -153,6 +177,7 @@ async function loadServerData(isManualClick = false) {
     }
   } catch (err) {
     console.warn('Using fallback data:', err);
+    lastCheckedAt = new Date();
     updateRefreshButtonUI('idle');
   } finally {
     isFetching = false;
@@ -289,9 +314,12 @@ function renderAppLayout() {
             </svg>
             Refresh Data
           </button>
-          <div class="meta-timestamp">
-            <span class="pulse-dot"></span>
-            Last Updated: <strong id="last-updated-text">${data.meta?.last_updated_pt || 'Just now'}</strong>
+          <div class="meta-timestamp" style="flex-direction: column; align-items: flex-end; gap: 2px;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span class="pulse-dot"></span>
+              <span>Scraper: <strong id="last-updated-text">—</strong></span>
+            </div>
+            <div style="font-size:0.75rem; color: var(--text-dim);">Checked: <span id="last-checked-text">—</span></div>
           </div>
         </div>
       </header>
@@ -364,7 +392,10 @@ function renderApp() {
   if (subtitle) subtitle.textContent = `${data.meta?.school || 'Hillview Middle School'} • Realtime Cloud Sync v${data.version || '2.0'}`;
 
   const timestampText = document.querySelector('#last-updated-text');
-  if (timestampText) timestampText.textContent = data.meta?.last_updated_pt || 'Just now';
+  if (timestampText) timestampText.textContent = formatScraperDate(data.meta?.last_updated_pt || data.meta?.last_updated);
+
+  const checkedText = document.querySelector('#last-checked-text');
+  if (checkedText) checkedText.textContent = lastCheckedAt ? formatLastChecked(lastCheckedAt) : '—';
 
   const completedSet = new Set(userState.completed_assignment_ids || []);
   
