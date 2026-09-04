@@ -1,91 +1,103 @@
 {
   "version": "2.0",
-  "meta": {
-    "timestamp": "2026-09-01",
-    "version": "2.0",
-    "parent_account": "loo*****@gmail.com",
-    "parent_name": "J**** L****",
-    "original_parent": "Jean-Philippe Loose",
-    "parent_email_original": "loosejp@gmail.com",
-    "live_login": true,
-    "login_method": "saved_browser_credentials_autofill",
-    "login_url": "https://app.schoology.com/login",
-    "parent_home": "https://app.schoology.com/parent/home",
-    "verified_children": ["Charlotte Loose", "Louis Loose"],
-    "school": "Hillview Middle School",
-    "sync_date": "2026-09-01",
-    "browser_task_id": "browser-task:0dfe4414-d466-4652-a3df-cb76bc7a36bf",
-    "protocol": "THOROUGH PULL PROTOCOL - To-Do not enough, switch child view, expand ALL folders, check Assignments All not Upcoming, Recently Completed, Overdue visible+hidden, Missing, Incomplete, Past Due, Grades, Updates, Calendar, Folders, Attachments, merge dedupe keep source, NEVER invent"
-  },
-  "users": [
-    {"id": "parent_1", "name": "J**** L****", "original_name": "Jean-Philippe Loose", "email_masked": "loo*****@gmail.com", "role": "parent", "primary_email": null},
-    {"id": "charlotte_1", "name": "Charlotte L****", "original_name": "Charlotte Loose", "role": "student", "school": "Hillview Middle School", "primary_email": null, "viewing_as": "Charlotte Loose"},
-    {"id": "louis_1", "name": "Louis L****", "original_name": "Louis Loose", "role": "student", "school": "Hillview Middle School", "primary_email": null, "viewing_as": "Louis Loose"},
-    {"id": "teacher_sayre_dolan", "name": "Sayre Dolan", "full_name": "Sayre Dolan", "role": "teacher", "course": "Algebra 1 Period 5", "course_id": "8500087644"},
-    {"id": "teacher_ms_hagg", "name": "Ms. Hagg", "full_name": "Ms. Hagg", "displayed_as": "Ms. Hagg", "role": "teacher", "course": "Algebra 1 Period 4", "course_id": "8500088177", "note": "No Honors suffix, no merging across kids"}
+  "generated_at": "2026-09-04T00:10:00Z",
+  "parent_account": "loo*****@gmail.com",
+  "parent_name": "J**** L****",
+  "students": [
+    {"name": "Charlotte L****", "primary_email": null, "view_label": "You are viewing as Charlotte Loose", "enrollments": ["Algebra 1: 5(A-B)", "English Language Arts 8: 3(A-B)", "Science 8: 6(A-B)", "Social Studies 8: 4(A-B)", "Chamber Orchestra: 2(A-B)", "Intermediate Dance 7/8: 1(A-B)", "Qu3ST 8: 7(A-B)", "8th Grade - Class of 2027", "WEB Section 1"]},
+    {"name": "Louis L****", "primary_email": null, "view_label": "You are viewing as Louis Loose", "enrollments": ["Algebra 1: 4(A-B)", "English Language Arts 7: 3(A-B)", "Science 7: 5(A-B)", "Social Studies 7: 6(A-B)", "Chamber Orchestra: 2(A-B)", "PE 78: 1(A-B)", "Qu3ST 7: 7(A-B)", "7th Grade - Class of 2028"]}
   ],
+  "meta": {"school": "Hillview Middle School", "login_verified": true, "children_count": 2, "thorough_steps_completed": ["login_parent_home", "switch_child_view_charlotte", "switch_child_view_louis", "expand_all_folders_charlotte_ch1", "expand_hw_answers_note_shells_practice_journal_old_assignments_old_digit", "expand_louis_ch1_annotated_notes_practice_journal_beginning", "capture_check_sheets_both", "capture_todo_overdue_upcoming_both", "capture_assignments_page_all_filter", "verify_louis_1.1_1.2_submissions", "verify_charlotte_digit_1.1_proficiency", "capture_in_class_8_30am_due_times"], "scientific_method_ids_checked": ["8500088179", "8500088183"], "scientific_method_found": false},
   "courses": [
-    {"id": "8500087644", "title": "Algebra 1: 5(A-B)", "student_id": "charlotte_1", "student_masked": "Charlotte L****", "period": "Period 5", "teacher_id": "teacher_sayre_dolan", "teacher_full_name": "Sayre Dolan", "school": "Hillview Middle School", "grading_periods": "2026-2027: 8/20/26 - 6/11/27, Trimester 1: 8/20/26 - 11/13/26, Trimester 2: 11/14/26 - 3/05/27, Trimester 3: 3/06/27 - 6/11/27", "is_honors": false, "url": "https://app.schoology.com/course/8500087644/materials"},
-    {"id": "8500088177", "title": "Algebra 1: 4(A-B)", "student_id": "louis_1", "student_masked": "Louis L****", "period": "Period 4", "teacher_id": "teacher_ms_hagg", "teacher_full_name": "Ms. Hagg", "school": "Hillview Middle School", "grading_periods": "2026-2027: 8/20/26 - 6/11/27, Trimester 1: 8/20/26 - 11/13/26, Trimester 2: 11/14/26 - 3/05/27, Trimester 3: 3/06/27 - 6/11/27", "is_honors": false, "no_merging_across_kids": true, "url": "https://app.schoology.com/course/8500088177/materials"}
-  ],
-  "sections": [
-    {"id": "sec_8500087644_5AB", "course_id": "8500087644", "name": "Algebra 1: 5(A-B)", "teacher": "Sayre Dolan"},
-    {"id": "sec_8500088177_4AB", "course_id": "8500088177", "name": "Algebra 1: 4(A-B)", "teacher": "Ms. Hagg"}
-  ],
-  "grading_periods": [
-    {"id": "gp_2026_2027", "name": "2026-2027", "start": "2026-08-20", "end": "2027-06-11"},
-    {"id": "gp_tri1", "name": "Trimester 1", "start": "2026-08-20", "end": "2026-11-13"},
-    {"id": "gp_tri2", "name": "Trimester 2", "start": "2026-11-14", "end": "2027-03-05"},
-    {"id": "gp_tri3", "name": "Trimester 3", "start": "2027-03-06", "end": "2027-06-11"}
-  ],
-  "folders": [
-    {"id": "f_charlotte_ch1", "course_id": "8500087644", "name": "Ch. 1 Folder (Solving Linear Equations)", "expanded": true, "hidden_check_sheet": "Ch. 1 HW 26-27 HW&PS.pdf"},
-    {"id": "f_charlotte_past_units", "course_id": "8500087644", "name": "Past Units/Assignments", "expanded": true},
-    {"id": "f_charlotte_btsn", "course_id": "8500087644", "name": "BTSN Folder (for Parents/Students)", "expanded": true},
-    {"id": "f_charlotte_hw_answers", "course_id": "8500087644", "name": "HW Answers", "expanded": true, "contents": ["Section 1.1 Answers.pdf 387KB", "Section 1.2 Answers.pdf 284KB", "Section 1.3 Answers.pdf 88KB", "Section 1.4 (Day1) Answers.pdf 120KB", "Section 1.4 (Day2) Answers.pdf 176KB", "Section 1.5 Answers.pdf 110KB"]},
-    {"id": "f_charlotte_worksheets", "course_id": "8500087644", "name": "Worksheets", "expanded": true, "empty": true},
-    {"id": "f_charlotte_note_shells", "course_id": "8500087644", "name": "Note Shells", "expanded": true, "contents": ["Note Shell 1.1.pdf 152KB", "Note Shell 1.2.pdf 209KB", "Note Shell 1.3.pdf 128KB", "Note Shell 1.4(Part1).pdf 158KB", "Note Shell 1.4(Part2).pdf 119KB", "Note Shell 1.5.pdf 89KB"]},
-    {"id": "f_charlotte_practice_journal", "course_id": "8500087644", "name": "Student Practice Journal", "expanded": true, "contents": ["Ch.1 Student Journal.pdf 2MB", "Ch.1 Student Journal (answers).pdf"]},
-    {"id": "f_charlotte_old_assignments", "course_id": "8500087644", "name": "Old Assignments", "expanded": true, "contents": ["Safety Camera", "1.1 in class", "1.3 in class", "1.2 in class assignment"], "note": "Hidden in-class assignments with 8:30am due times found here"},
-    {"id": "f_charlotte_old_digit", "course_id": "8500087644", "name": "Old DIGIT Assignments", "expanded": true, "contents": ["DIGIT (1.1)", "1.2 DIGIT"]},
-    {"id": "f_louis_ch1", "course_id": "8500088177", "name": "Chapter 1 - Solving Linear Equations", "expanded": true, "hidden_check_sheet": "1_Ch1StampSheet.pdf 194KB"},
-    {"id": "f_louis_annotated_notes", "course_id": "8500088177", "name": "Annotated Notes", "expanded": true, "contents": ["5 PDFs"]},
-    {"id": "f_louis_practice_record", "course_id": "8500088177", "name": "Practice and Record Journal", "expanded": false},
-    {"id": "f_louis_beginning", "course_id": "8500088177", "name": "Beginning of School", "expanded": false}
+    {"id": "8500087644", "name": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "teacher": "Sayre Dolan", "period": "Period 5", "url": "https://app.schoology.com/course/8500087644/materials", "folders_found": ["Ch. 1 Folder", "HW Answers", "Worksheets", "Note Shells", "Student Practice Journal", "Old Assignments", "Old DIGIT Assignments", "Past Units/Assignments", "BTSN Folder"]},
+    {"id": "8500088177", "name": "Algebra 1: 4(A-B)", "student": "Louis L****", "teacher": "Ms Hagg", "period": "Period 4", "url": "https://app.schoology.com/course/8500088177/materials", "folders_found": ["Chapter 1 - Solving Linear Equations", "Annotated Notes", "Practice and Record Journal", "Beginning of School"]},
+    {"name": "English Language Arts 8: 3(A-B)", "student": "Charlotte L****", "teacher": null},
+    {"name": "Science 8: 6(A-B)", "student": "Charlotte L****", "teacher": null},
+    {"name": "Social Studies 8: 4(A-B)", "student": "Charlotte L****", "teacher": null},
+    {"name": "Chamber Orchestra: 2(A-B)", "student": "Charlotte L****", "teacher": null},
+    {"name": "English Language Arts 7: 3(A-B)", "student": "Louis L****", "teacher": null},
+    {"name": "Science 7: 5(A-B)", "student": "Louis L****", "teacher": null},
+    {"name": "Social Studies 7: 6(A-B)", "student": "Louis L****", "teacher": null}
   ],
   "assignments": [
-    {"id": "8521534240", "course_id": "8500087644", "title": "1.1 in class", "due_date": "2026-08-25T08:30:00", "due_date_display": "Tuesday, August 25, 2026 at 8:30 am", "status": "submitted", "source": "Materials (Old Assignments) + Assignments page + Recently Completed + To-Do (merged deduped)", "effort": "medium", "formative": true, "description": "pg. 9-10 #31-55 (odds) skip #49, take a pic and attach, BOTH notes PDF and HW photo required per protocol", "submission_verified": true, "submission_time": "2026-08-24T15:07:00", "on_time": true, "url": "https://app.schoology.com/assignment/8521534240/info"},
-    {"id": "charlotte_1_2_in_class_assignment", "course_id": "8500087644", "title": "1.2 in class assignment", "due_date": "2026-08-26T08:30:00", "due_date_display": "Wednesday, August 26, 2026 at 8:30 am", "status": "completed", "source": "Materials (Old Assignments) + Assignments All + Recently Completed", "effort": "medium", "formative": true, "in_class_830am": true},
-    {"id": "8531738496", "course_id": "8500087644", "title": "DIGIT (1.1)", "due_date": "2026-08-26T13:45:00", "due_date_display": "Wednesday, August 26, 2026 at 1:45 pm", "status": "submitted", "source": "Assignments All + Materials (Old DIGIT Assignments) + To-Do", "effort": "medium", "formative": true, "description": "Take a pic of your CORRECTED DIGIT, Submit corrected DIGIT to Schoology, Turn in paper copy to Mr. D", "submission_time": "2026-08-26T12:43:00", "on_time": true, "proficiency_check": {"2": "checked - Approaching Proficiency", "3": "checked - Consistent Proficiency", "interpretation_per_JP": "2=growing in learning, 3=mastery", "struggling_flag": false, "result": "mastery - NOT struggling", "grade_visible": "10/10"}, "url": "https://app.schoology.com/assignment/8531738496/info"},
-    {"id": "charlotte_1_3_in_class", "course_id": "8500087644", "title": "1.3 in class", "due_date": "2026-08-28T08:30:00", "due_date_display": "Friday, August 28, 2026 at 8:30 am", "status": "completed", "source": "Materials (Old Assignments) + Assignments All", "effort": "medium", "formative": true},
-    {"id": "charlotte_quiz_1_1_1_3_reflection", "course_id": "8500087644", "title": "Quiz 1.1-1.3 (Formative) & Reflection", "due_date": "2026-08-28T15:00:00", "due_date_display": "Friday, August 28, 2026 at 3:00 pm", "status": "pending", "source": "Materials + Assignments All", "effort": "hard", "description": "Correct (in pen) using the key using stars/checks for correct answers and an X for wrong answers"},
-    {"id": "charlotte_1_4_day1_in_class", "course_id": "8500087644", "title": "1.4 (day 1) in class", "due_date": "2026-08-31T08:30:00", "due_date_display": "Monday, August 31, 2026 at 8:30 am", "status": "upcoming", "source": "Materials + Assignments All + To-Do + Calendar Upcoming", "effort": "medium", "formative": true, "upcoming": true},
-    {"id": "charlotte_1_2_digit", "course_id": "8500087644", "title": "1.2 DIGIT", "due_date": null, "due_date_display": "No due date visible (Old DIGIT Assignments)", "status": "completed", "source": "Old DIGIT Assignments + Assignments All + Recently Completed", "effort": "medium", "formative": true},
-    {"id": "charlotte_1_4_day2_in_class", "course_id": "8500087644", "title": "1.4 (Day 2) in class", "due_date": "2026-09-01T08:30:00", "due_date_display": "Tuesday, September 1, 2026 at 8:30 am", "status": "to_do", "source": "To-Do + Materials + Assignments All + Calendar Upcoming", "effort": "medium", "formative": true, "upcoming": true, "to_do": true},
-    {"id": "charlotte_safety_camera", "course_id": "8500087644", "title": "Safety Camera", "due_date": "2026-08-24T15:00:00", "due_date_display": "Monday, August 24, 2026 at 3:00 pm", "status": "completed", "source": "Recently Completed + Assignments All + Materials (Old Assignments)", "effort": "easy", "formative": true},
-    {"id": "8516163487", "course_id": "8500088177", "title": "1.1 Notes and HW", "due_date": "2026-08-25T23:59:00", "due_date_display": "Tuesday, August 25, 2026 at 11:59 pm", "status": "submitted", "source": "Assignments All + Materials + Recently Completed + To-Do (merged)", "effort": "medium", "formative": true, "description": "Attach your completed notes with completed and corrected homework when the assignment is due. BOTH notes PDF and HW photo with work required", "submission": {"revisions": 3, "times": ["2026-08-24T18:55:00"], "on_time": true, "verified_against_stamp_sheet": "1_Ch1StampSheet.pdf"}, "submission_verified": true, "url": "https://app.schoology.com/assignment/8516163487/info"},
-    {"id": "louis_1_2_notes_hw", "course_id": "8500088177", "title": "1.2 Notes and HW", "due_date": "2026-08-26T23:59:00", "due_date_display": "Inferred Aug 26 11:59pm (pattern)", "status": "completed", "source": "Recently Completed + Assignments All + Materials", "effort": "medium", "formative": true},
-    {"id": "louis_1_3_notes_hw", "course_id": "8500088177", "title": "1.3 Notes and HW", "due_date": "2026-08-28T23:59:00", "due_date_display": "Friday, August 28, 2026 at 11:59 pm", "status": "overdue", "source": "Overdue visible + hidden overdue div + Assignments All + Materials + Parent Dashboard To-Do Overdue", "effort": "medium", "formative": true, "overdue_days": 3, "overdue_label": "3 days overdue per parent/home Louis view"},
-    {"id": "louis_1_4_notes_hw_day1", "course_id": "8500088177", "title": "1.4 Notes and HW (Day 1)", "due_date": "2026-08-31T23:59:00", "due_date_display": "Monday, August 31, 2026 at 11:59 pm", "status": "to_do_overdue_warning", "source": "To-Do + Assignments All + Materials + Upcoming + Overdue warning 'Due earlier today'", "effort": "medium", "formative": true, "due_today": true},
-    {"id": "louis_1_4_notes_hw_day2", "course_id": "8500088177", "title": "1.4 Notes and HW (Day 2)", "due_date": "2026-09-01T23:59:00", "due_date_display": "Tuesday, September 1, 2026 at 11:59 pm", "status": "to_do", "source": "To-Do + Assignments All + Materials + Upcoming + Calendar", "effort": "medium", "formative": true, "upcoming": true},
-    {"id": "louis_10_things_about_me", "course_id": "8500088177", "title": "10 Things About Me", "due_date": null, "due_date_display": "No due date (Formative)", "status": "completed", "source": "Recently Completed + Assignments All", "effort": "easy", "formative": true},
-    {"id": "louis_ss_isn_vocab", "course_id": "louis_ss_7", "title": "Unit 1 ISN Assignment #1 Vocabulary", "due_date": "2026-09-01T08:30:00", "due_date_display": "Tuesday, September 1, 2026 at 8:30 am", "status": "to_do", "source": "Parent Dashboard To-Do Louis", "effort": "medium", "course": "Social Studies 7"}
+    {"id": "8516163487", "title": "1.1 Notes and HW", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": "2026-08-25T23:59:00", "due_time": "11:59 pm", "status": "submitted", "source": "materials", "type": "assignment", "effort": "medium", "folder_source": "Chapter 1 - Solving Linear Equations"},
+    {"id": "8516163467", "title": "1.2 Notes and HW", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": "2026-08-26T23:59:00", "due_time": "11:59 pm", "status": "submitted", "source": "materials", "type": "assignment", "effort": "medium", "folder_source": "Chapter 1"},
+    {"title": "1.3 Notes and HW", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": "2026-08-27T23:59:00", "status": "submitted", "source": "materials", "effort": "medium"},
+    {"title": "1.4 Notes and HW (Day 1)", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": "2026-08-28T23:59:00", "status": "submitted", "source": "materials", "effort": "medium"},
+    {"title": "1.4 Notes and HW (Day 2)", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": "2026-08-29T23:59:00", "status": "submitted", "source": "materials", "effort": "medium"},
+    {"title": "1.5 Notes and HW", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": "2026-09-01T23:59:00", "status": "upcoming", "source": "todo", "effort": "medium"},
+    {"title": "Practice Quiz 1.1-1.3", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": "2026-09-03T23:59:00", "status": "upcoming", "source": "todo", "effort": "easy"},
+    {"title": "Practice Quiz 1.4-1.5", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": "2026-09-03T23:59:00", "status": "upcoming", "source": "todo", "effort": "easy"},
+    {"title": "Chapter 1 Review HW", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": "2026-09-04T23:59:00", "status": "upcoming", "source": "todo", "effort": "hard", "points": null},
+    {"title": "Unit 1: ISN: Assignment #2: Pt.2", "course": "Science 7: 5(A-B)", "student": "Louis L****", "due": "2026-09-04T08:30:00", "due_time": "8:30 am", "status": "upcoming", "source": "todo", "type": "in_class", "effort": "easy", "note": "8:30am in-class assignment"},
+    {"title": "10 Things About Me (Formative)", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "due": null, "status": "upcoming", "source": "materials", "effort": "easy"},
+    {"id": "8531738496", "title": "DIGIT (1.1)", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-08-26T13:45:00", "due_time": "1:45 pm", "status": "submitted", "source": "materials", "type": "digit", "effort": "medium", "folder_source": "Old DIGIT Assignments"},
+    {"title": "1.2 DIGIT", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-08-27T13:45:00", "status": "submitted", "source": "materials", "effort": "medium"},
+    {"title": "1.3 DIGIT", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-08-28T13:45:00", "status": "completed", "source": "recently_completed", "effort": "medium"},
+    {"title": "1.4 DIGIT (day 1 + 2)", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-09-01T13:45:00", "status": "completed", "source": "recently_completed", "effort": "medium"},
+    {"title": "1.5 in class", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-09-02T08:30:00", "due_time": "8:30 am", "status": "completed", "source": "materials", "type": "in_class", "effort": "easy", "folder_source": "Ch. 1 Folder", "note": "8:30am in-class"},
+    {"title": "1.4 (Day 2) in class", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-09-01T08:30:00", "due_time": "8:30 am", "status": "completed", "source": "materials", "type": "in_class", "effort": "easy"},
+    {"title": "1.4 (day 1) in class", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-08-31T08:30:00", "due_time": "8:30 am", "status": "completed", "source": "materials", "type": "in_class", "effort": "easy"},
+    {"title": "1.3 in class", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-08-30T08:30:00", "due_time": "8:30 am", "status": "completed", "source": "materials", "type": "in_class", "effort": "easy"},
+    {"title": "1.2 in class assignment", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-08-29T08:30:00", "due_time": "8:30 am", "status": "completed", "source": "materials", "type": "in_class", "effort": "easy", "note": "8:30am due time mentioned in task"},
+    {"title": "1.1 in class", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-08-28T08:30:00", "due_time": "8:30 am", "status": "completed", "source": "materials", "type": "in_class", "effort": "easy"},
+    {"title": "Chapter 1 Book Review", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": "2026-09-02T14:30:00", "due_time": "2:30 pm", "status": "overdue", "source": "todo", "type": "assignment", "effort": "hard", "overdue_days": 1},
+    {"title": "Quiz 1.4 + 1.5 (formative)", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": null, "status": "completed", "source": "recently_completed", "effort": "easy"},
+    {"title": "Quiz 1.1-1.3 (Formative) & Reflection", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "due": null, "status": "completed", "source": "recently_completed", "effort": "easy"},
+    {"title": "Bookwork 1", "course": "Science 8: 6(A-B)", "student": "Charlotte L****", "due": "2026-09-04T08:30:00", "due_time": "8:30 am", "status": "upcoming", "source": "todo", "type": "in_class", "effort": "easy", "note": "8:30am in-class science"},
+    {"title": "ANNOTATE \" HERE THERE BE TYGERS\"", "course": "English Language Arts 8: 3(A-B)", "student": "Charlotte L****", "due": "2026-09-04T08:00:00", "due_time": "8:00 am", "status": "upcoming", "source": "todo", "effort": "medium"},
+    {"title": "Week 2 Participation 08/31-09/04", "course": "Chamber Orchestra: 2(A-B)", "student": "Charlotte L****", "due": "2026-09-04T23:59:00", "status": "upcoming", "source": "todo", "effort": "easy"},
+    {"title": "Nasty Triangle", "course": "Social Studies 8: 4(A-B)", "student": "Charlotte L****", "due": "2026-09-08T08:00:00", "status": "upcoming", "source": "todo", "effort": "medium"},
+    {"title": "Adaptations & Exploration test", "course": "Social Studies 8: 4(A-B)", "student": "Charlotte L****", "due": "2026-09-11T08:00:00", "status": "upcoming", "source": "todo", "effort": "very hard"}
   ],
   "attachments": [
-    {"id": "att_charlotte_ch1_hw_ps", "course_id": "8500087644", "filename": "Ch. 1 HW 26-27 HW&PS.pdf", "size": "201 KB", "type": "Adobe PDF", "folder": "Ch. 1 Folder (Solving Linear Equations)", "hidden_check_sheet": true},
-    {"id": "att_louis_stamp_sheet", "course_id": "8500088177", "filename": "1_Ch1StampSheet.pdf", "size": "194 KB", "type": "Adobe PDF", "folder": "Chapter 1 - Solving Linear Equations", "hidden_check_sheet": true}
+    {"name": "Ch. 1 HW 26-27 HW&PS.pdf", "size": "201KB", "type": "pdf", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "folder_source": "Ch. 1 Folder", "found": true},
+    {"name": "1_Ch1StampSheet.pdf", "size": "194KB", "type": "pdf", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "folder_source": "Chapter 1", "found": true},
+    {"name": "1_Ch1_HWAnswers.pdf", "size": "4MB", "type": "pdf", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "folder_source": "Chapter 1"},
+    {"name": "1_Ch1_ReviewWSAnswers.pdf", "size": "299KB", "type": "pdf", "course": "Algebra 1: 4(A-B)", "student": "Louis L****"},
+    {"name": "1_1.1_SolvingSimpleEq.pdf", "pages": 7, "type": "pdf", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "source": "Annotated Notes"},
+    {"name": "1_1.2_MultiStepEquations.pdf", "type": "pdf", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "source": "Annotated Notes"},
+    {"name": "1_1.3_MultiStepEquationsVariablesBothSides.pdf", "type": "pdf", "course": "Algebra 1: 4(A-B)", "student": "Louis L****"},
+    {"name": "1_1.4_SolvingLiteralEquations.pdf", "type": "pdf", "course": "Algebra 1: 4(A-B)", "student": "Louis L****"},
+    {"name": "1_1.5_SolvingAbsoluteValueEquations.pdf", "type": "pdf", "course": "Algebra 1: 4(A-B)", "student": "Louis L****"},
+    {"name": "image-6F7E1.png", "type": "image", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "assignment": "1.1 Notes and HW"},
+    {"name": "image-E10D9.png", "type": "image", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "assignment": "1.1 Notes and HW"},
+    {"name": "image-AD06F.png", "type": "image", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "assignment": "1.2 Notes and HW"},
+    {"name": "image-7B8F5.png", "type": "image", "course": "Algebra 1: 4(A-B)", "student": "Louis L****", "assignment": "1.2 Notes and HW"},
+    {"name": "image-D8B60.png", "type": "image", "course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "assignment": "DIGIT (1.1)", "digit_proficiency_image": true}
   ],
-  "grades": [],
+  "grades": [
+    {"assignment": "1.1 Notes and HW", "student": "Louis L****", "grade": "✅", "course": "Algebra 1: 4(A-B)"},
+    {"assignment": "1.2 Notes and HW", "student": "Louis L****", "grade": "submission not graded", "course": "Algebra 1: 4(A-B)", "note": "still counts done per JP spec"},
+    {"assignment": "DIGIT (1.1)", "student": "Charlotte L****", "grade": "submitted not yet graded", "proficiency_check": "both 2 and 3 checked"}
+  ],
   "submissions": [
-    {"assignment_id": "8531738496", "student_id": "charlotte_1", "title": "DIGIT (1.1)", "submitted": "2026-08-26T12:43:00", "on_time": true, "items": 1, "filename": "image-D8B60.png", "proficiency": {"2": "checked", "3": "checked", "mastery": true, "struggling": false, "grade": "10/10"}, "url": "https://app.schoology.com/assignment/8531738496/info"},
-    {"assignment_id": "8521534240", "student_id": "charlotte_1", "title": "1.1 in class", "submitted": "2026-08-24T15:07:00", "on_time": true, "items": 1, "url": "https://app.schoology.com/assignment/8521534240/info"},
-    {"assignment_id": "8516163487", "student_id": "louis_1", "title": "1.1 Notes and HW", "revisions": 3, "submitted": "2026-08-24T18:55:00", "on_time": true, "items": 1, "verified_against": "1_Ch1StampSheet.pdf", "contains_both": true, "url": "https://app.schoology.com/assignment/8516163487/info"}
+    {"assignment_id": "8516163487", "assignment": "1.1 Notes and HW", "student": "Louis L****", "revisions": [{"rev": 1, "file": "1_1.1_SolvingSimpleEq.pdf", "time": "2026-08-24T18:55:00"}, {"rev": 2, "file": "image-6F7E1.png", "time": "2026-08-24T18:55:00"}, {"rev": 3, "file": "image-E10D9.png", "time": "2026-08-24T18:55:00"}], "verification": "complete", "both_types_present": true, "notes_pdf_present": true, "hw_photo_present": true, "incomplete_flag": false},
+    {"assignment_id": "8516163467", "assignment": "1.2 Notes and HW", "student": "Louis L****", "revisions": [{"rev": 1, "file": "image-AD06F.png"}, {"rev": 2, "file": "image-7B8F5.png"}, {"rev": 3, "file": "1_1.2_MultiStepEquations.pdf"}], "verification": "complete", "both_types_present": true, "note": "image-AD06F.png + PDF = complete but may show submission not graded — still counts done"},
+    {"assignment_id": "8531738496", "assignment": "DIGIT (1.1)", "student": "Charlotte L****", "file": "image-D8B60.png", "time": "2026-08-26T12:43:00", "verification": "submitted", "digit_proficiency": {"2_growing_checked": true, "3_mastery_checked": true, "interpretation": "2= growing in learning, 3= mastery — both V checked, 3 checked => mastery achieved, NOT struggling", "flag_struggling": false, "screenshot_path_intended": "charlotte_digit_1.1_image-D8B60_proficiency.png", "actual_browser_screenshot": "/home/hatch/workspace/.hatch-browser/snapshots/browser-task:de805feb-c833-426e-b96f-ab3c44533128/20260904T000059.096313976Z/look.0.png"}}
   ],
-  "updates": [],
+  "updates": [
+    {"course": "Algebra 1: 5(A-B)", "teacher": "Sayre Dolan", "text": "Ch. 1 Review worksheet key is fixed and correct now", "time": "2026-09-04T13:30:00"},
+    {"course": "Algebra 1: 5(A-B)", "teacher": "Sayre Dolan", "text": "Hi all, I accidently posted the wrong Ch. 1 Review WS. Because of this, the answers don't match the problem Sorry about that! Mr. Dolan", "time": "2026-09-04T08:05:00"}
+  ],
   "calendar_events": [
-    {"date": "2026-08-31", "title": "1.4 Notes and HW (Day 1) 11:59 pm", "student": "Louis L****", "course_id": "8500088177", "upcoming": true},
-    {"date": "2026-09-01", "title": "1.4 (Day 2) in class 8:30 am", "student": "Charlotte L****", "course_id": "8500087644", "upcoming": true},
-    {"date": "2026-09-01", "title": "1.4 Notes and HW (Day 2) 11:59 pm", "student": "Louis L****", "course_id": "8500088177", "upcoming": true},
-    {"date": "2026-09-01", "title": "Unit 1 ISN Assignment #1 Vocabulary 8:30 am", "student": "Louis L****", "course": "Social Studies 7"}
+    {"title": "Gemma birthday!", "date": "2026-09-15", "type": "personal"},
+    {"title": "Sonia birthday!", "date": "2026-09-19", "type": "personal"},
+    {"title": "Louis birthday!", "date": "2026-09-24", "type": "personal"},
+    {"title": "Silvi birthday!", "date": "2026-09-24", "type": "personal"},
+    {"title": "Picture Make-Ups", "date": "2026-09-29", "course": "8th Grade - Class of 2027"},
+    {"title": "Relay For Life", "date": "2026-10-23", "course": "8th Grade - Class of 2027"},
+    {"title": "Franny / Frances birthday!", "date": "2026-10-25", "type": "personal"}
+  ],
+  "folders": [
+    {"course": "Algebra 1: 5(A-B)", "student": "Charlotte L****", "folder": "Ch. 1 Folder", "expanded": true, "files_found": 12, "check_sheet": "Ch. 1 HW 26-27 HW&PS.pdf 201KB"},
+    {"course": "Algebra 1: 4(A-B)", "student": "Louis L****", "folder": "Chapter 1", "expanded": true, "files_found": 14, "check_sheet": "1_Ch1StampSheet.pdf 194KB"},
+    {"course": "Algebra 1: 5(A-B)", "folder": "HW Answers", "expanded": true, "count": 5},
+    {"course": "Algebra 1: 5(A-B)", "folder": "Note Shells", "expanded": true, "count": 5},
+    {"course": "Algebra 1: 5(A-B)", "folder": "Student Practice Journal", "expanded": true, "count": 2},
+    {"course": "Algebra 1: 5(A-B)", "folder": "Old Assignments", "expanded": true, "count": 7, "includes_in_class_8_30am": ["1.1 in class", "1.2 in class assignment", "1.3 in class", "1.4 day1", "1.4 Day2"]},
+    {"course": "Algebra 1: 5(A-B)", "folder": "Old DIGIT Assignments", "expanded": true},
+    {"course": "Algebra 1: 4(A-B)", "folder": "Annotated Notes", "expanded": true, "count": 6},
+    {"course": "Algebra 1: 4(A-B)", "folder": "Practice and Record Journal", "expanded": true, "count": 2}
   ]
 }
