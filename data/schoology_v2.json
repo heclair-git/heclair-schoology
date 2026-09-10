@@ -1,35 +1,35 @@
 {
   "version": "2.0",
-  "generated_at": "2026-09-10T03:06:00Z",
+  "generated_at": "2026-09-10T07:42:00-07:00",
   "parent_account": "loo*****@gmail.com",
   "parent_name": "J**** L****",
   "students": [
     {
       "name": "Charlotte L****",
       "primary_email": null,
-      "view_label": "You are viewing as Charlotte Loose",
+      "view_label": "You are viewing as Charlotte",
       "enrollments": [
-        "Algebra 1: 5(A-B)",
+        "Algebra 1: 5(A-B) Period 5 (Sayre Dolan)",
         "English Language Arts 8: 3(A-B)",
-        "Science 8: 6(A-B)",
-        "Social Studies 8: 4(A-B)",
+        "Science 8: 6(A-B) (Chad Lesausky)",
+        "Social Studies 8: 4(A-B) (Elizabeth Boldt / Lexy Keller)",
         "Chamber Orchestra: 2(A-B)",
-        "Intermediate Dance 7/8: 1(A-B)",
-        "Qu3ST 8: 7(A-B)",
-        "8th Grade - Class of 2027",
-        "WEB Section 1"
+        "Intermediate Dance 7/8",
+        "Qu3ST 8",
+        "WEB Section 1",
+        "8th Grade - Class of 2027"
       ]
     },
     {
       "name": "Louis L****",
       "primary_email": null,
-      "view_label": "You are viewing as Louis Loose",
+      "view_label": "You are viewing as Louis",
       "enrollments": [
-        "Algebra 1: 4(A-B)",
-        "ELA 7",
+        "Algebra 1: 4(A-B) Period 4 (Ms. Hagg)",
+        "ELA 7 (Jessica A Ross)",
         "Science 7",
-        "Social Studies 7",
-        "Chamber Orchestra",
+        "Social Studies 7 (Mr. Rogers)",
+        "Chamber Orchestra (Ricardo Rasura)",
         "PE 78",
         "Qu3ST 7",
         "7th Grade - Class of 2027"
@@ -40,7 +40,8 @@
     "school": "Hillview Middle School",
     "login_verified": true,
     "children_count": 2,
-    "audit_date": "2026-09-09",
+    "audit_date": "2026-09-10",
+    "run_window_pt": "2026-09-10 07:16-07:40 PDT",
     "read_only": true,
     "thorough_steps_completed": [
       "login_parent_home",
@@ -51,16 +52,31 @@
       "assignments_page_all_filter",
       "expand_all_materials_folders_both",
       "verify_all_math_submissions_vs_stamp_sheets",
-      "charlotte_digit_1.1_1.2_1.3_1.4_proficiency_verified",
+      "charlotte_digit_1.1_1.2_1.3_1.4_2.1_proficiency_verified",
       "capture_check_sheets_both"
     ],
     "digit_rule": "corrected 2026-09-08 per JP: each DIGIT has one type-2 (basic) and one type-3 (mastery) question; a checked box means she cleared that level. Both 2 and 3 checked = mastered, do NOT flag. Only 2 checked = growing, flag. Neither checked = not understood, flag strongly.",
-    "screenshots_note": "Screenshots captured and visually verified live during the audit, but the browser could not return file save paths this run, so no image artifacts are attached. All findings below were confirmed by opening each submission.",
-    "scientific_method_ids_checked": [
-      "8500088179",
-      "8500088183"
+    "key_contradictions": [
+      "Louis 1.5 Notes and HW: gradebook Missing vs 3 on-time Sep 1 files (notes PDF + 2 HW photos) with work. Teacher gradebook error; consider emailing Ms. Hagg.",
+      "Louis 2.1 Notes and HW: only HW photo present; the 2.1 notes PDF was uploaded to the WRONG assignment (1.1 Rev4, late). Louis must resubmit notes PDF to 2.1.",
+      "Louis Questions-Trophic Levels due Tue Sep 15 11:59pm, NOT Fri Sep 11 as previously reported.",
+      "Charlotte 2.1 in class: gradebook Missing badge vs actual late submission (Sep 9 12:28pm) with completed work.",
+      "'1 - Far Below Expectations' appears as a placeholder on ungraded/submitted items across courses (both kids); do not read as real grades without teacher confirmation. Exceptions: Louis About Me Email (graded 1, confirmed) and My Social Media Life (graded 1, submitted on time).",
+      "Louis 'Scientific Method Task 1', 'Narrative Final', 'Reading Log', 'Planner - Week One' do NOT render on any course page opened; treat as not real."
     ],
-    "scientific_method_found": false
+    "pages_not_opened": [
+      "Science 7 Day 1-7 subfolders individually",
+      "ELA 7 Conventions/Family Resources/Flex folders",
+      "Charlotte's Dance/Qu3ST 8/WEB/homeroom detail"
+    ],
+    "known_flags": [
+      "Louis Chapter 1 Review HW: Missing, 6 days overdue, no submission of any kind.",
+      "Louis Unit 1 ISN Check: Missing.",
+      "Louis About Me Email: submitted, graded 1 - Far Below Expectations (confirmed).",
+      "Charlotte FAQ 1: 1 - Far Below Expectations in gradebook but 'submitted but not yet graded' elsewhere; likely placeholder.",
+      "Louis Summer Reading: Late; 'Missing log (no signatures)'. Log submitted 9/4. Reading log needs JP parent signature.",
+      "Charlotte Quiz 1.4+1.5: formative grade field BLANK (no 0s shown); no online submission."
+    ]
   },
   "courses": [
     {
@@ -74,42 +90,58 @@
     {
       "id": null,
       "name": "English Language Arts 8: 3(A-B)",
-      "student": "Charlotte L****"
+      "student": "Charlotte L****",
+      "teacher": null,
+      "period": null
     },
     {
       "id": null,
       "name": "Science 8: 6(A-B)",
-      "student": "Charlotte L****"
+      "student": "Charlotte L****",
+      "teacher": "Chad Lesausky",
+      "period": null
     },
     {
       "id": null,
       "name": "Social Studies 8: 4(A-B)",
-      "student": "Charlotte L****"
+      "student": "Charlotte L****",
+      "teacher": "Elizabeth Boldt / Lexy Keller",
+      "period": null
     },
     {
       "id": null,
       "name": "Chamber Orchestra: 2(A-B)",
-      "student": "Charlotte L****"
+      "student": "Charlotte L****",
+      "teacher": null,
+      "period": null
     },
     {
       "id": null,
       "name": "Intermediate Dance 7/8: 1(A-B)",
-      "student": "Charlotte L****"
+      "student": "Charlotte L****",
+      "teacher": null,
+      "period": null
     },
     {
       "id": null,
       "name": "Qu3ST 8: 7(A-B)",
-      "student": "Charlotte L****"
+      "student": "Charlotte L****",
+      "teacher": null,
+      "period": null
     },
     {
       "id": null,
       "name": "8th Grade - Class of 2027",
-      "student": "Charlotte L****"
+      "student": "Charlotte L****",
+      "teacher": null,
+      "period": null
     },
     {
       "id": null,
       "name": "WEB Section 1",
-      "student": "Charlotte L****"
+      "student": "Charlotte L****",
+      "teacher": null,
+      "period": null
     },
     {
       "id": "8500088177",
@@ -123,54 +155,375 @@
       "id": null,
       "name": "ELA 7",
       "student": "Louis L****",
-      "teacher": "Ms. Ross"
+      "teacher": "Jessica A Ross",
+      "period": null
     },
     {
       "id": null,
       "name": "Science 7",
-      "student": "Louis L****"
+      "student": "Louis L****",
+      "teacher": null,
+      "period": null
     },
     {
       "id": null,
       "name": "Social Studies 7",
-      "student": "Louis L****"
+      "student": "Louis L****",
+      "teacher": "Mr. Rogers",
+      "period": null
     },
     {
       "id": null,
       "name": "Chamber Orchestra",
-      "student": "Louis L****"
+      "student": "Louis L****",
+      "teacher": "Ricardo Rasura",
+      "period": null
     },
     {
       "id": null,
       "name": "PE 78",
-      "student": "Louis L****"
+      "student": "Louis L****",
+      "teacher": null,
+      "period": null
     },
     {
       "id": null,
       "name": "Qu3ST 7",
-      "student": "Louis L****"
+      "student": "Louis L****",
+      "teacher": null,
+      "period": null
     },
     {
       "id": null,
       "name": "7th Grade - Class of 2027",
-      "student": "Louis L****"
+      "student": "Louis L****",
+      "teacher": null,
+      "period": null
     }
   ],
   "assignments": [
+    {
+      "id": "8516163487",
+      "title": "1.1 Notes and HW",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-08-25T23:59:00",
+      "status": "submitted",
+      "submitted": "2026-08-24T00:00:00",
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "medium",
+      "note": "Notes PDF + 2 HW photos all on time with work present. FLAG: Rev4 Sep 9 8:17pm LATE attached WRONG FILE (2.1_WriteGraphInequalities.pdf belongs to 2.1 assignment)."
+    },
+    {
+      "id": "8516163467",
+      "title": "1.2 Notes and HW",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-08-27T23:59:00",
+      "status": "submitted",
+      "submitted": "2026-08-25T00:00:00",
+      "grade": null,
+      "source": "submission_page",
+      "effort": "easy",
+      "note": "Complete, all revisions on time."
+    },
+    {
+      "id": "8516163451",
+      "title": "1.3 Notes and HW",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-08-28T23:59:00",
+      "status": "submitted",
+      "submitted": "2026-08-31T20:22:00",
+      "grade": null,
+      "source": "submission_page",
+      "effort": "medium",
+      "note": "Notes PDF + HW photo both present, both LATE (Aug 31)."
+    },
+    {
+      "id": "8516163434",
+      "title": "1.4 Notes and HW (Day 1)",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-08-31T23:59:00",
+      "status": "submitted",
+      "submitted": "2026-08-31T00:00:00",
+      "grade": null,
+      "source": "submission_page",
+      "effort": "easy",
+      "note": "Notes + HW photo on time, complete."
+    },
+    {
+      "id": "8516163399",
+      "title": "1.4 Notes and HW (Day 2)",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-09-01T23:59:00",
+      "status": "submitted",
+      "submitted": "2026-09-01T00:00:00",
+      "grade": null,
+      "source": "submission_page",
+      "effort": "easy",
+      "note": "Notes + HW photo on time, complete."
+    },
+    {
+      "id": "8516163380",
+      "title": "1.5 Notes and HW",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-09-03T23:59:00",
+      "status": "missing_gradebook_error",
+      "submitted": "2026-09-01T14:51:00",
+      "grade": "Missing",
+      "source": "grade_report+submission_page",
+      "effort": "medium",
+      "note": "GRADEBOOK ERROR: 3 files all ON TIME Sep 1 (notes PDF 11:55am, HW photo 2:50pm, HW photo 2:51pm) with work present. Teacher must clear Missing flag; consider emailing Ms. Hagg."
+    },
+    {
+      "id": "8516163321",
+      "title": "Chapter 1 Review HW",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-09-04T23:59:00",
+      "status": "missing_overdue",
+      "submitted": null,
+      "grade": "Missing",
+      "source": "home+grade_report",
+      "effort": "medium/hard",
+      "note": "6 days overdue. Submissions section EMPTY - no submission of any kind. Truly missing."
+    },
+    {
+      "id": null,
+      "title": "2.1 Notes and HW",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-09-10T23:59:00",
+      "status": "submitted_incomplete",
+      "submitted": "2026-09-09T20:16:00",
+      "grade": null,
+      "source": "submission_page",
+      "effort": "medium",
+      "note": "FLAG: only HW photo present (work present, on time). Notes PDF MISSING from 2.1 - the 2.1 notes PDF was uploaded to the WRONG assignment (1.1 Rev4). Louis must resubmit the notes PDF to the 2.1 assignment."
+    },
+    {
+      "id": null,
+      "title": "2.2 Notes and HW",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-09-11T23:59:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+home",
+      "effort": "medium",
+      "note": "Teacher posted 2.2_SolvingInequalitiesAddSub.pdf (64KB) Sep 9 10:30am."
+    },
+    {
+      "id": null,
+      "title": "About Me Email to Ms. Ross's and Mr. Thompson's Inboxes",
+      "course": "ELA 7",
+      "student": "Louis L****",
+      "due": "2026-09-09T11:15:00",
+      "status": "submitted_graded",
+      "submitted": "2026-09-09T00:00:00",
+      "grade": "1 - Far Below Expectations",
+      "source": "grade_report+assignment_page",
+      "effort": "easy",
+      "note": "Submitted; grade confirmed 1. May need redoing."
+    },
+    {
+      "id": null,
+      "title": "Bring your IRB to ELA on block day",
+      "course": "ELA 7",
+      "student": "Louis L****",
+      "due": "2026-09-09T14:00:00",
+      "status": "in_class_no_online_submission",
+      "submitted": null,
+      "grade": null,
+      "source": "assignment_page",
+      "effort": "easy",
+      "note": "In-class book check; no online submission section, grade blank."
+    },
+    {
+      "id": null,
+      "title": "1 PASSED iReady lesson",
+      "course": "ELA 7",
+      "student": "Louis L****",
+      "due": "2026-09-11T15:00:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "home",
+      "effort": "easy",
+      "note": "1 passed lesson required."
+    },
+    {
+      "id": null,
+      "title": "Summer Reading",
+      "course": "ELA 7",
+      "student": "Louis L****",
+      "due": null,
+      "status": "submitted_late",
+      "submitted": "2026-08-31T00:00:00",
+      "grade": "Late",
+      "source": "grade_report",
+      "effort": "medium",
+      "note": "Teacher comment: 'missing - turn in ASAP. Project submitted 8/31. Missing log (no signatures). Log submitted 9/4'. Reading log needs JP parent signature."
+    },
+    {
+      "id": null,
+      "title": "My Social Media Life Reading/Questions",
+      "course": "Science 7",
+      "student": "Louis L****",
+      "due": "2026-09-09T23:59:00",
+      "status": "submitted_graded",
+      "submitted": "2026-09-08T12:34:00",
+      "grade": "1 - Far Below Expectations",
+      "source": "grade_report+assignment_page",
+      "effort": "medium",
+      "note": "Submitted on time; graded 1. May need redoing."
+    },
+    {
+      "id": null,
+      "title": "Questions-Trophic Levels",
+      "course": "Science 7",
+      "student": "Louis L****",
+      "due": "2026-09-15T23:59:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "assignment_page",
+      "effort": "easy/medium",
+      "note": "Posted Sep 4. Due Tue Sep 15 11:59pm (NOT Fri Sep 11)."
+    },
+    {
+      "id": null,
+      "title": "Modeling Mono Lake Trophic Levels",
+      "course": "Science 7",
+      "student": "Louis L****",
+      "due": "2026-09-15T23:59:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": "1 (placeholder)",
+      "source": "home+assignment_page",
+      "effort": "medium/hard",
+      "note": "'1' shown is a placeholder, not a real grade."
+    },
+    {
+      "id": "8536920978",
+      "title": "Unit 1 ISN Check",
+      "course": "Social Studies 7",
+      "student": "Louis L****",
+      "due": "2026-09-04T15:10:00",
+      "status": "missing",
+      "submitted": null,
+      "grade": "Missing",
+      "source": "grade_report+assignment_page",
+      "effort": "medium",
+      "note": "In-class checklist, no submission. Missing."
+    },
+    {
+      "id": null,
+      "title": "Unit 2 ISN: Assignment #1: Geo Challenge",
+      "course": "Social Studies 7",
+      "student": "Louis L****",
+      "due": "2026-09-10T08:30:00",
+      "status": "due_today",
+      "submitted": null,
+      "grade": null,
+      "source": "home+assignment_page",
+      "effort": "medium",
+      "note": "In-class ISN: label/draw/color the map, due Block Day. No online submission section."
+    },
+    {
+      "id": null,
+      "title": "Unit 2 TEST",
+      "course": "Social Studies 7",
+      "student": "Louis L****",
+      "due": "2026-09-18T00:00:00",
+      "status": "upcoming_event",
+      "submitted": null,
+      "grade": null,
+      "source": "calendar",
+      "effort": "hard",
+      "note": "Upcoming test event."
+    },
+    {
+      "id": "8549610075",
+      "title": "Week 2 Participation 08/31-09/04",
+      "course": "Chamber Orchestra",
+      "student": "Louis L****",
+      "due": "2026-09-04T23:59:00",
+      "status": "completed",
+      "submitted": null,
+      "grade": "3 - Met Expectations",
+      "source": "grade_report",
+      "effort": "easy",
+      "note": "Completed."
+    },
+    {
+      "id": null,
+      "title": "Week 3 Participation 09/08-09/11",
+      "course": "Chamber Orchestra",
+      "student": "Louis L****",
+      "due": "2026-09-11T23:59:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials",
+      "effort": "easy",
+      "note": "'1' shown is a placeholder, not a real grade."
+    },
+    {
+      "id": null,
+      "title": "Week 4 Participation 09/14-09/18",
+      "course": "Chamber Orchestra",
+      "student": "Louis L****",
+      "due": "2026-09-18T23:59:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials",
+      "effort": "easy"
+    },
+    {
+      "id": null,
+      "title": "Week 5 Participation 09/21-09/25",
+      "course": "Chamber Orchestra",
+      "student": "Louis L****",
+      "due": "2026-09-25T23:59:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials",
+      "effort": "easy"
+    },
+    {
+      "id": null,
+      "title": "Week 6 Participation 09/28-10/02",
+      "course": "Chamber Orchestra",
+      "student": "Louis L****",
+      "due": "2026-10-02T23:59:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials",
+      "effort": "easy"
+    },
     {
       "id": "8531738496",
       "title": "DIGIT 1.1",
       "course": "Algebra 1: 5(A-B)",
       "student": "Charlotte L****",
       "due": "2026-08-26T13:45:00",
-      "due_time": "1:45 pm",
       "status": "submitted",
       "submitted": "2026-08-26T12:43:00",
       "grade": "2/2",
       "source": "grade_report",
       "type": "digit",
       "effort": "easy",
-      "note": "2 checked and 3 checked = mastered, not flagged"
+      "note": "type-2 checked (\"2 - Approaching Proficiency\") + type-3 checked (\"3 - Consistent Proficiency\") = MASTERED (10/10). Do NOT flag."
     },
     {
       "id": "8536972371",
@@ -179,11 +532,12 @@
       "student": "Charlotte L****",
       "due": null,
       "status": "submitted",
-      "submitted": "2026-08-28T12:12:00",
+      "submitted": null,
+      "grade": null,
       "source": "grade_report",
       "type": "digit",
       "effort": "easy",
-      "note": "2 checked and 3 checked = mastered, not flagged"
+      "note": "type-2 checked + type-3 checked = MASTERED. Do NOT flag."
     },
     {
       "id": "8543876232",
@@ -192,24 +546,40 @@
       "student": "Charlotte L****",
       "due": null,
       "status": "submitted",
-      "submitted": "2026-09-01T12:17:00",
+      "submitted": null,
+      "grade": null,
       "source": "grade_report",
       "type": "digit",
       "effort": "easy",
-      "note": "2 checked and 3 checked = mastered, not flagged"
+      "note": "type-2 checked + type-3 checked = MASTERED. Do NOT flag."
     },
     {
       "id": "8549612461",
-      "title": "1.4 DIGIT Day 1+2",
+      "title": "1.4 DIGIT",
       "course": "Algebra 1: 5(A-B)",
       "student": "Charlotte L****",
       "due": null,
       "status": "submitted",
       "submitted": "2026-09-02T12:47:00",
-      "source": "grade_report",
+      "grade": null,
+      "source": "grade_report+submission_page",
       "type": "digit",
       "effort": "easy",
-      "note": "mastery 3-boxes checked = mastered, not flagged"
+      "note": "Different sheet format (no explicit type-2/type-3 boxes); both '3 - Create, solve, and manipulate...' standard boxes CHECKED = mastery-level. Do NOT flag."
+    },
+    {
+      "id": null,
+      "title": "2.1 DIGIT",
+      "course": "Algebra 1: 5(A-B)",
+      "student": "Charlotte L****",
+      "due": "2026-09-11T15:00:00",
+      "status": "submitted",
+      "submitted": "2026-09-09T13:24:00",
+      "grade": null,
+      "source": "home+submission_page",
+      "type": "digit",
+      "effort": "easy",
+      "note": "Submitted ON TIME Sep 9 1:24pm, not graded. type-2 checked ('2 Approaching Proficiency') + type-3 checked = MASTERED. Do NOT flag."
     },
     {
       "id": "8557233367",
@@ -217,841 +587,410 @@
       "course": "Algebra 1: 5(A-B)",
       "student": "Charlotte L****",
       "due": "2026-09-09T08:30:00",
-      "due_time": "8:30 am",
-      "status": "submitted_late",
+      "status": "missing_badge_but_submitted",
       "submitted": "2026-09-09T12:28:00",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "was flagged Missing, resolved same day; file renders"
-    },
-    {
-      "id": null,
-      "title": "1.4 Notes and HW Day 2",
-      "course": "Algebra 1: 5(A-B)",
-      "student": "Charlotte L****",
-      "due": null,
-      "status": "submitted_late",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "submitted late per 2026-09-09 audit"
-    },
-    {
-      "id": null,
-      "title": "Ch. 1 Book Review",
-      "course": "Algebra 1: 5(A-B)",
-      "student": "Charlotte L****",
-      "due": null,
-      "status": "submitted_late",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "submitted late per 2026-09-09 audit"
+      "grade": "Missing",
+      "source": "grade_report+submission_page",
+      "effort": "easy/medium",
+      "note": "Gradebook shows Missing badge BUT late submission exists (image-B41C0.png, Sep 9 12:28pm) with completed 2.1 work and corrections. Not yet graded; badge should clear on grading."
     },
     {
       "id": null,
       "title": "2.2 in class",
       "course": "Algebra 1: 5(A-B)",
       "student": "Charlotte L****",
-      "due": null,
+      "due": "2026-09-11T08:30:00",
       "status": "submitted",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "submitted early per 2026-09-09 audit"
+      "submitted": "2026-09-09T13:02:00",
+      "grade": null,
+      "source": "home+submission_page",
+      "effort": "easy/medium",
+      "note": "Submitted ON TIME Sep 9 1:02pm (Image-E4A14.png, completed 2.2 inequalities). Not yet graded."
     },
     {
       "id": null,
-      "title": "2.1 DIGIT",
+      "title": "Quiz 1.4+1.5",
       "course": "Algebra 1: 5(A-B)",
       "student": "Charlotte L****",
       "due": null,
       "status": "submitted",
+      "submitted": null,
+      "grade": null,
       "source": "grade_report",
-      "type": "digit",
-      "effort": "easy",
-      "note": "submitted early per 2026-09-09 audit"
+      "effort": "medium",
+      "note": "Formative grade field BLANK (no 0s shown); no online submission. Earlier 0-grade concern resolved."
+    },
+    {
+      "id": null,
+      "title": "Quiz 1.1-1.3",
+      "course": "Algebra 1: 5(A-B)",
+      "student": "Charlotte L****",
+      "due": null,
+      "status": "submitted",
+      "submitted": null,
+      "grade": null,
+      "source": "grade_report",
+      "effort": "medium",
+      "note": "Submitted."
+    },
+    {
+      "id": null,
+      "title": "Chapter 1 Book Review",
+      "course": "Algebra 1: 5(A-B)",
+      "student": "Charlotte L****",
+      "due": null,
+      "status": "submitted",
+      "submitted": null,
+      "grade": null,
+      "source": "grade_report",
+      "effort": "medium",
+      "note": "Submitted."
     },
     {
       "id": null,
       "title": "WS - Chapter 1 Review",
       "course": "Algebra 1: 5(A-B)",
       "student": "Charlotte L****",
-      "due": "2026-09-08T08:30:00",
-      "due_time": "8:30 am",
-      "status": "submitted",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "4 revisions (9/4 5:05pm, 9/4 9:07pm, 9/7 7:58pm, 9/7 8:00pm); latest rendered blank on 9/7; not flagged missing in 9/9 audit"
-    },
-    {
-      "id": "8516163487",
-      "title": "1.1 Notes and HW",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-08-25T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted",
-      "source": "materials",
-      "type": "assignment",
-      "effort": "medium",
-      "folder_source": "Chapter 1 - Solving Linear Equations",
-      "note": "notes PDF + HW photo both present, on time"
-    },
-    {
-      "id": "8516163467",
-      "title": "1.2 Notes and HW",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-08-27T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted",
-      "source": "materials",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "notes PDF + HW photo both present, on time"
-    },
-    {
-      "id": "8516162618",
-      "title": "10 Things About Me",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-08-27T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted",
-      "source": "materials",
-      "type": "assignment",
-      "effort": "easy",
-      "note": "submissions panel empty; teacher marked complete (green check)"
-    },
-    {
-      "id": "8516163451",
-      "title": "1.3 Notes and HW",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-08-28T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted_late",
-      "source": "materials",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "both components present; submitted 8/31, 3 days late"
-    },
-    {
-      "id": "8516163434",
-      "title": "1.4 Notes and HW (Day 1)",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-08-31T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted",
-      "source": "materials",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "notes PDF + HW photo both present, on time"
-    },
-    {
-      "id": "8516163399",
-      "title": "1.4 Notes and HW (Day 2)",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-09-01T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted",
-      "source": "materials",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "notes PDF + HW photo both present, on time"
-    },
-    {
-      "id": "8516163380",
-      "title": "1.5 Notes and HW",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-09-03T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted",
-      "grade": "Missing",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "3 revisions submitted ON TIME (9/1); gradebook 'Missing' is a teacher error — parent should email Ms. Hagg"
-    },
-    {
-      "id": "8516163419",
-      "title": "Practice Quiz 1.1-1.3",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-09-03T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted",
-      "source": "grade_report",
-      "type": "quiz",
-      "effort": "easy",
-      "note": "in-class practice; teacher marked complete"
-    },
-    {
-      "id": "8516163351",
-      "title": "Practice Quiz 1.4-1.5",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-09-03T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted",
-      "source": "grade_report",
-      "type": "quiz",
-      "effort": "easy",
-      "note": "in-class practice; teacher marked complete"
-    },
-    {
-      "id": "8516163321",
-      "title": "Chapter 1 Review HW",
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "due": "2026-09-04T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "missing",
-      "grade": "Missing",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": "medium",
-      "note": "CONFIRMED MISSING: submissions panel empty; 5 days overdue as of 9/9"
-    },
-    {
-      "id": "8536920978",
-      "title": "Unit 1 ISN Check",
-      "course": "Social Studies 7",
-      "student": "Louis L****",
-      "due": "2026-09-04T15:10:00",
-      "due_time": "3:10 pm",
-      "status": "missing",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": null,
-      "note": "no submission rendered (2026-09-09 audit)"
-    },
-    {
-      "id": "8549610075",
-      "title": "Week 2 Participation 08/31-09/04",
-      "course": "Chamber Orchestra",
-      "student": "Louis L****",
-      "due": "2026-09-04T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "overdue",
-      "source": "home_dashboard",
-      "type": "assignment",
-      "effort": "easy",
-      "note": "no submission rendered 2026-09-08; submission mechanism unclear in parent view; not re-flagged in 9/9 audit"
-    },
-    {
-      "id": null,
-      "title": "Summer Reading log",
-      "course": "ELA 7",
-      "student": "Louis L****",
       "due": null,
       "status": "submitted",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": "easy",
-      "note": "submitted 9/4 WITHOUT parent signatures — needs parent signature"
-    },
-    {
-      "id": null,
-      "title": "About Me Email",
-      "course": "ELA 7",
-      "student": "Louis L****",
-      "due": "2026-09-04T11:15:00",
-      "due_time": "11:15 am",
-      "status": "submitted_unverified",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": "easy",
-      "note": "sent via email to jross@mpcsd.org, not verifiable in Schoology — check sent mail"
-    },
-    {
-      "id": "8548490950",
-      "title": "Modeling Mono Lake Food Web",
-      "course": "Science 7",
-      "student": "Louis L****",
-      "due": "2026-09-04T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "submitted",
-      "submitted": "2026-09-02T13:40:00",
-      "source": "grade_report",
-      "type": "assignment",
+      "submitted": null,
+      "grade": null,
+      "source": "recently_completed",
       "effort": "medium",
-      "note": "3-page PDF renders in viewer; currently ungraded"
+      "note": "Submitted but not yet graded. No notes PDF requirement confirmed."
     },
     {
       "id": null,
-      "title": "My Social Media Life",
-      "course": "Science 7",
-      "student": "Louis L****",
+      "title": "Nasty Triangle",
+      "course": "Social Studies 8: 4(A-B)",
+      "student": "Charlotte L****",
+      "due": "2026-09-08T08:00:00",
+      "status": "completed_no_submission_needed",
+      "submitted": null,
+      "grade": null,
+      "source": "assignment_page",
+      "effort": "easy",
+      "note": "'No need to submit. Just bring your notebook tomorrow!' No online submission, grade blank."
+    },
+    {
+      "id": null,
+      "title": "Adaptations & Exploration test",
+      "course": "Social Studies 8: 4(A-B)",
+      "student": "Charlotte L****",
+      "due": "2026-09-11T08:00:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "home+assignment_page",
+      "effort": "hard",
+      "note": "In-class test; study guide PDF (52KB) attached. Study tonight."
+    },
+    {
+      "id": null,
+      "title": "My-Story",
+      "course": "Social Studies 8: 4(A-B)",
+      "student": "Charlotte L****",
+      "due": null,
+      "status": "submitted_graded",
+      "submitted": null,
+      "grade": "4 - Deeper Application",
+      "source": "grade_report",
+      "effort": "easy",
+      "note": "Graded Sep 8 8:27am."
+    },
+    {
+      "id": null,
+      "title": "Energy Thief Lab",
+      "course": "Science 8: 6(A-B)",
+      "student": "Charlotte L****",
+      "due": "2026-09-11T15:30:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "home+assignment_page",
+      "effort": "medium",
+      "note": "NOT submitted yet. Instructions: photo handout pages 1-2 into Notability and link."
+    },
+    {
+      "id": null,
+      "title": "FAQ 1",
+      "course": "Science 8: 6(A-B)",
+      "student": "Charlotte L****",
+      "due": null,
+      "status": "submitted_graded_placeholder",
+      "submitted": null,
+      "grade": "1 - Far Below Expectations",
+      "source": "grade_report",
+      "effort": "medium",
+      "note": "Gradebook shows 1 - Far Below Expectations but Recently Completed says 'submitted but not yet graded'. Likely placeholder; do not read as real grade."
+    },
+    {
+      "id": null,
+      "title": "Bookwork 1",
+      "course": "Science 8: 6(A-B)",
+      "student": "Charlotte L****",
       "due": null,
       "status": "submitted",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": null,
-      "note": "feed shows submitted 9/8; grade report stale as of 9/9"
+      "submitted": null,
+      "grade": null,
+      "source": "recently_completed",
+      "effort": "easy",
+      "note": "Submitted."
     },
     {
       "id": null,
-      "title": "Unit 1: Assignment #3: Short Answer",
-      "course": "Social Studies 7",
-      "student": "Louis L****",
-      "due": "2026-09-04T15:10:00",
-      "due_time": "3:10 pm",
-      "status": "submitted",
-      "source": "grade_report",
-      "type": "assignment",
-      "effort": null,
-      "note": "done on paper IN CLASS; no online submission mechanism"
-    },
-    {
-      "id": null,
-      "title": "Week 3 Participation",
-      "course": "Chamber Orchestra",
-      "student": "Louis L****",
-      "due": "2026-09-11T23:59:00",
-      "due_time": "11:59 pm",
+      "title": "IRU/ AR READING TRIMESTER 1",
+      "course": "English Language Arts 8: 3(A-B)",
+      "student": "Charlotte L****",
+      "due": "2026-11-06T15:00:00",
       "status": "upcoming",
-      "source": "home_dashboard",
-      "type": "assignment",
-      "effort": "easy"
-    },
-    {
-      "id": null,
-      "title": "Week 4 Participation",
-      "course": "Chamber Orchestra",
-      "student": "Louis L****",
-      "due": "2026-09-18T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "upcoming",
-      "source": "home_dashboard",
-      "type": "assignment",
-      "effort": "easy"
-    },
-    {
-      "id": null,
-      "title": "Week 5 Participation",
-      "course": "Chamber Orchestra",
-      "student": "Louis L****",
-      "due": "2026-09-25T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "upcoming",
-      "source": "home_dashboard",
-      "type": "assignment",
-      "effort": "easy"
-    },
-    {
-      "id": null,
-      "title": "Week 6 Participation",
-      "course": "Chamber Orchestra",
-      "student": "Louis L****",
-      "due": "2026-10-02T23:59:00",
-      "due_time": "11:59 pm",
-      "status": "upcoming",
-      "source": "home_dashboard",
-      "type": "assignment",
-      "effort": "easy"
-    },
-    {
-      "id": null,
-      "title": "Unit 2: Fall of Rome",
-      "course": "Social Studies 7",
-      "student": "Louis L****",
-      "due": "2026-09-08T23:00:00",
-      "due_time": "11:00 pm",
-      "status": "upcoming",
-      "source": "home_dashboard",
-      "type": "assignment",
-      "effort": null
-    },
-    {
-      "id": null,
-      "title": "**Unit 2 TEST**",
-      "course": "Social Studies 7",
-      "student": "Louis L****",
-      "due": "2026-09-18T23:00:00",
-      "due_time": "11:00 pm",
-      "status": "upcoming",
-      "source": "home_dashboard",
-      "type": "test",
-      "effort": "hard"
+      "submitted": null,
+      "grade": null,
+      "source": "home",
+      "effort": "medium",
+      "note": "Several '1 - Far Below Expectations' entries in ELA 8 are likely ungraded placeholders."
     }
   ],
   "attachments": [
     {
       "name": "Ch. 1 HW 26-27 HW&PS.pdf",
-      "size": "201KB",
-      "type": "pdf",
-      "course": "Algebra 1: 5(A-B)",
+      "size_kb": 201,
       "student": "Charlotte L****",
-      "folder_source": "Ch. 1 Folder",
-      "found": true
-    },
-    {
-      "name": "ch. 2 HW 26-27 HW&PS.pdf",
-      "size": "201KB",
-      "type": "pdf",
       "course": "Algebra 1: 5(A-B)",
-      "student": "Charlotte L****",
-      "folder_source": "Materials",
-      "found": true
+      "role": "check_sheet"
     },
     {
       "name": "1_Ch1StampSheet.pdf",
-      "size": "194KB",
-      "type": "pdf",
-      "course": "Algebra 1: 4(A-B)",
+      "size_kb": 194,
       "student": "Louis L****",
-      "folder_source": "Chapter 1",
-      "found": true
+      "course": "Algebra 1: 4(A-B)",
+      "role": "check_sheet"
     },
     {
-      "name": "1_Ch1_HWAnswers.pdf",
-      "size": "4MB",
-      "type": "pdf",
-      "course": "Algebra 1: 4(A-B)",
+      "name": "2_Ch2StampSheet",
+      "size_kb": 166,
       "student": "Louis L****",
-      "folder_source": "Materials",
-      "found": true
+      "course": "Algebra 1: 4(A-B)",
+      "role": "check_sheet"
     },
     {
-      "name": "1_Ch1_ReviewWSAnswers.pdf",
-      "size": "299KB",
-      "type": "pdf",
-      "course": "Algebra 1: 4(A-B)",
+      "name": "2.2_SolvingInequalitiesAddSub.pdf",
+      "size_kb": 64,
       "student": "Louis L****",
-      "folder_source": "Materials",
-      "found": true
-    },
-    {
-      "name": "Chapter_1_Review_WS.pdf",
-      "size": "2MB",
-      "type": "pdf",
       "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "folder_source": "Materials",
-      "found": true,
-      "note": "teacher worksheet for the missing Chapter 1 Review HW"
+      "role": "materials_posted_2026-09-09"
     }
   ],
   "grades": [
     {
-      "assignment": "DIGIT 1.1",
-      "student": "Charlotte L****",
-      "grade": "2/2",
-      "course": "Algebra 1: 5(A-B)"
-    },
-    {
-      "assignment": "1.5 Notes and HW",
       "student": "Louis L****",
-      "grade": "Missing",
       "course": "Algebra 1: 4(A-B)",
-      "note": "gradebook error; 3 on-time files submitted 9/1"
+      "title": "1.5 Notes and HW",
+      "grade": "Missing",
+      "note": "GRADEBOOK ERROR: 3 on-time Sep 1 files with work present."
     },
     {
-      "assignment": "Who am I Project",
       "student": "Louis L****",
-      "grade": "3 - Met Expectations",
-      "course": "Science 7"
+      "course": "Algebra 1: 4(A-B)",
+      "title": "Chapter 1 Review HW",
+      "grade": "Missing",
+      "note": "6 days overdue; no submission."
     },
     {
-      "assignment": "Questions: Mono Lake",
       "student": "Louis L****",
-      "grade": "3 - Met Expectations",
-      "course": "Science 7"
+      "course": "ELA 7",
+      "title": "About Me Email",
+      "grade": "1 - Far Below Expectations",
+      "note": "Confirmed graded; submitted."
     },
     {
-      "assignment": "Levels of Organization Card Sort",
       "student": "Louis L****",
-      "grade": "3 - Met Expectations",
-      "course": "Science 7"
+      "course": "Science 7",
+      "title": "My Social Media Life Reading/Questions",
+      "grade": "1 - Far Below Expectations",
+      "note": "Submitted on time Sep 8 12:34pm."
     },
     {
-      "assignment": "Week 1 Participation-08/20-08/28",
       "student": "Louis L****",
-      "grade": "3 - Met Expectations",
-      "course": "Chamber Orchestra"
+      "course": "Social Studies 7",
+      "title": "Unit 1 ISN Check",
+      "grade": "Missing",
+      "note": "In-class checklist."
+    },
+    {
+      "student": "Louis L****",
+      "course": "Chamber Orchestra",
+      "title": "Week 1 Participation",
+      "grade": "3 - Met Expectations"
+    },
+    {
+      "student": "Louis L****",
+      "course": "Chamber Orchestra",
+      "title": "Week 2 Participation",
+      "grade": "3 - Met Expectations"
+    },
+    {
+      "student": "Charlotte L****",
+      "course": "Social Studies 8: 4(A-B)",
+      "title": "My-Story",
+      "grade": "4 - Deeper Application"
+    },
+    {
+      "student": "Charlotte L****",
+      "course": "Science 8: 6(A-B)",
+      "title": "FAQ 1",
+      "grade": "1 - Far Below Expectations",
+      "note": "Likely placeholder; shows 'submitted but not yet graded' elsewhere."
+    },
+    {
+      "student": "Charlotte L****",
+      "course": "Algebra 1: 5(A-B)",
+      "title": "2.1 in class",
+      "grade": "Missing (badge)",
+      "note": "Late submission exists (Sep 9 12:28pm) with completed work; ungraded."
     }
   ],
   "submissions": [
     {
-      "assignment_id": "8516163487",
-      "assignment": "1.1 Notes and HW",
       "student": "Louis L****",
-      "revisions": [
-        {
-          "rev": 1,
-          "file": "1_1.1_SolvingSimpleEq.pdf",
-          "time": "2026-08-24T18:55:00"
-        },
-        {
-          "rev": 2,
-          "file": "image-6F7E1.png",
-          "time": "2026-08-24T18:55:00"
-        },
-        {
-          "rev": 3,
-          "file": "image-E10D9.png",
-          "time": "2026-08-24T18:55:00"
-        }
+      "title": "1.5 Notes and HW",
+      "files": [
+        "1_1.5_RewritingEqFormulas.pdf (Sep 1 11:55am, ON TIME)",
+        "image-5B757.png (Sep 1 2:50pm, ON TIME)",
+        "image-2B1F2.png (Sep 1 2:51pm, ON TIME)"
       ],
-      "verification": "complete",
-      "both_types_present": true,
-      "notes_pdf_present": true,
-      "hw_photo_present": true,
-      "incomplete_flag": false
+      "verdict": "COMPLETE but gradebook says Missing. Teacher must clear flag."
     },
     {
-      "assignment_id": "8516163467",
-      "assignment": "1.2 Notes and HW",
       "student": "Louis L****",
-      "revisions": [
-        {
-          "rev": 1,
-          "file": "image-AD06F.png",
-          "time": "2026-08-25T16:41:00"
-        },
-        {
-          "rev": 2,
-          "file": "image-7B8F5.png",
-          "time": "2026-08-25T16:46:00"
-        },
-        {
-          "rev": 3,
-          "file": "1_1.2_MultiStepEquations.pdf",
-          "time": "2026-08-25T16:47:00"
-        }
+      "title": "1.1 Notes and HW",
+      "files": [
+        "1_1.1_SolvingSimpleEq.pdf (notes, on time)",
+        "image-6F7E1.png (HW, on time)",
+        "image-E10D9.png (HW, on time)",
+        "2.1_WriteGraphInequalities.pdf (Rev4 Sep 9 8:17pm LATE - WRONG ASSIGNMENT)"
       ],
-      "verification": "complete",
-      "both_types_present": true,
-      "notes_pdf_present": true,
-      "hw_photo_present": true,
-      "incomplete_flag": false
+      "verdict": "Complete for 1.1; Rev4 file belongs to 2.1 and is late/misfiled."
     },
     {
-      "assignment_id": "8516163451",
-      "assignment": "1.3 Notes and HW",
       "student": "Louis L****",
-      "revisions": [
-        {
-          "rev": 1,
-          "file": "image-26394.png",
-          "time": "2026-08-31T20:21:00"
-        },
-        {
-          "rev": 2,
-          "file": "1_1.3_EquationsVariablesBothSides.pdf",
-          "time": "2026-08-31T20:22:00"
-        }
+      "title": "2.1 Notes and HW",
+      "files": [
+        "image-4B206.png (HW photo, Sep 9 8:16pm, on time, work present)"
       ],
-      "verification": "complete_late",
-      "both_types_present": true,
-      "notes_pdf_present": true,
-      "hw_photo_present": true,
-      "incomplete_flag": false,
-      "note": "submitted 3 days late"
+      "verdict": "INCOMPLETE: notes PDF missing from 2.1 submission; the notes PDF was uploaded to 1.1 by mistake."
     },
     {
-      "assignment_id": "8516163434",
-      "assignment": "1.4 Notes and HW (Day 1)",
-      "student": "Louis L****",
-      "revisions": [
-        {
-          "rev": 1,
-          "file": "1_1.4_AbsoluteValueEquations.pdf",
-          "time": "2026-08-31T20:22:00"
-        },
-        {
-          "rev": 2,
-          "file": "image-36E9F.png",
-          "time": "2026-08-31T20:23:00"
-        }
-      ],
-      "verification": "complete",
-      "both_types_present": true,
-      "notes_pdf_present": true,
-      "hw_photo_present": true,
-      "incomplete_flag": false
-    },
-    {
-      "assignment_id": "8516163399",
-      "assignment": "1.4 Notes and HW (Day 2)",
-      "student": "Louis L****",
-      "revisions": [
-        {
-          "rev": 1,
-          "file": "1_1.4_AbsoluteValueEquations2.pdf",
-          "time": "2026-08-31T20:23:00"
-        },
-        {
-          "rev": 2,
-          "file": "1_1.4_AbsoluteValueEquations2.pdf",
-          "time": "2026-09-01T14:51:00"
-        },
-        {
-          "rev": 3,
-          "file": "image-B1354.png",
-          "time": "2026-09-01T14:53:00"
-        }
-      ],
-      "verification": "complete",
-      "both_types_present": true,
-      "notes_pdf_present": true,
-      "hw_photo_present": true,
-      "incomplete_flag": false
-    },
-    {
-      "assignment_id": "8516163380",
-      "assignment": "1.5 Notes and HW",
-      "student": "Louis L****",
-      "revisions": [
-        {
-          "rev": 1,
-          "file": "1_1.5_RewritingEqFormulas.pdf",
-          "time": "2026-09-01T11:55:00"
-        },
-        {
-          "rev": 2,
-          "file": "image-5B757.png",
-          "time": "2026-09-01T14:50:00"
-        },
-        {
-          "rev": 3,
-          "file": "image-2B1F2.png",
-          "time": "2026-09-01T14:51:00"
-        }
-      ],
-      "verification": "complete",
-      "both_types_present": true,
-      "notes_pdf_present": true,
-      "hw_photo_present": true,
-      "incomplete_flag": false,
-      "note": "submitted on time; gradebook 'Missing' is a teacher error"
-    },
-    {
-      "assignment_id": "8531738496",
-      "assignment": "DIGIT 1.1",
       "student": "Charlotte L****",
-      "submitted": "2026-08-26T12:43:00",
-      "proficiency": [
-        {
-          "row": "I can solve linear equations using multiplication and division.",
-          "checked": 2
-        },
-        {
-          "row": "I can use linear equations to solve real-life problems.",
-          "checked": 3
-        }
+      "title": "2.1 in class",
+      "files": [
+        "image-B41C0.png (Sep 9 12:28pm, Late, completed 2.1 work with corrections)"
       ],
-      "mastery": true,
-      "flagged": false
+      "verdict": "Submitted (late) with completed work; awaiting grade."
     },
     {
-      "assignment_id": "8536972371",
-      "assignment": "1.2 DIGIT",
       "student": "Charlotte L****",
-      "submitted": "2026-08-28T12:12:00",
-      "proficiency": [
-        {
-          "row": "I can solve multi-step linear equations using inverse operations.",
-          "checked": 2
-        },
-        {
-          "row": "I can use multi-step linear equations to solve real-life problems.",
-          "checked": 3
-        }
+      "title": "2.2 in class",
+      "files": [
+        "Image-E4A14.png (Sep 9 1:02pm, on time, completed 2.2 inequalities)"
       ],
-      "mastery": true,
-      "flagged": false
+      "verdict": "Submitted on time; awaiting grade."
     },
     {
-      "assignment_id": "8543876232",
-      "assignment": "1.3 DIGIT",
       "student": "Charlotte L****",
-      "submitted": "2026-09-01T12:17:00",
-      "proficiency": [
-        {
-          "row": "I can solve and check solutions for linear equations that have variables on both sides.",
-          "checked": 2
-        },
-        {
-          "row": "I can use linear equations to solve real-life problems.",
-          "checked": 3
-        }
+      "title": "2.1 DIGIT",
+      "files": [
+        "submission image (Sep 9 1:24pm, on time)"
       ],
-      "mastery": true,
-      "flagged": false
-    },
-    {
-      "assignment_id": "8549612461",
-      "assignment": "1.4 DIGIT Day 1+2",
-      "student": "Charlotte L****",
-      "submitted": "2026-09-02T12:47:00",
-      "proficiency": [
-        {
-          "row": "I can solve absolute value equations and when applicable, identify special solutions of absolute value equations.",
-          "checked": 3
-        }
-      ],
-      "mastery": true,
-      "flagged": false,
-      "note": "single proficiency row visible; mastery box checked"
+      "verdict": "Submitted on time; type-2 and type-3 checked = MASTERED."
     }
   ],
   "updates": [
     {
-      "course": "Algebra 1: 5(A-B)",
-      "teacher": "Sayre Dolan",
-      "text": "Ch. 1 Review worksheet key is fixed and correct now",
-      "time": "2026-09-04T13:30:00"
+      "student": "Louis L****",
+      "title": "My Social Media Life Reading/Questions",
+      "event": "submitted",
+      "at": "2026-09-08T12:34:00"
     },
     {
-      "course": "Algebra 1: 5(A-B)",
-      "teacher": "Sayre Dolan",
-      "text": "Hi all, I accidently posted the wrong Ch. 1 Review WS. Because of this, the answers don't match the problem Sorry about that! Mr. Dolan",
-      "time": "2026-09-04T08:05:00"
+      "student": "Louis L****",
+      "title": "1.1 Notes and HW Rev4",
+      "event": "late file attached (wrong assignment)",
+      "at": "2026-09-09T20:17:00"
+    },
+    {
+      "student": "Louis L****",
+      "title": "2.1 Notes and HW",
+      "event": "HW photo submitted (notes missing)",
+      "at": "2026-09-09T20:16:00"
+    },
+    {
+      "student": "Charlotte L****",
+      "title": "2.1 in class",
+      "event": "late submission with completed work",
+      "at": "2026-09-09T12:28:00"
+    },
+    {
+      "student": "Charlotte L****",
+      "title": "2.1 DIGIT",
+      "event": "submitted on time",
+      "at": "2026-09-09T13:24:00"
+    },
+    {
+      "student": "Charlotte L****",
+      "title": "2.2 in class",
+      "event": "submitted on time",
+      "at": "2026-09-09T13:02:00"
     }
   ],
   "calendar_events": [
     {
-      "title": "Gemma birthday!",
-      "date": "2026-09-15",
-      "type": "personal"
-    },
-    {
-      "title": "Sonia birthday!",
-      "date": "2026-09-19",
-      "type": "personal"
-    },
-    {
-      "title": "Louis birthday!",
-      "date": "2026-09-24",
-      "type": "personal"
-    },
-    {
-      "title": "Silvi birthday!",
-      "date": "2026-09-24",
-      "type": "personal"
-    },
-    {
-      "title": "Picture Make-Ups",
-      "date": "2026-09-29",
-      "course": "8th Grade - Class of 2027"
-    },
-    {
-      "title": "Relay For Life",
-      "date": "2026-10-23",
-      "course": "8th Grade - Class of 2027"
-    },
-    {
-      "title": "Franny / Frances birthday!",
-      "date": "2026-10-25",
-      "type": "personal"
-    },
-    {
-      "title": "Unit 2: Fall of Rome",
-      "date": "2026-09-08",
-      "course": "Social Studies 7",
-      "student": "Louis L****"
-    },
-    {
-      "title": "Review Energy Pyramid Material",
-      "date": "2026-09-08",
-      "course": "Science 7",
-      "student": "Louis L****"
-    },
-    {
-      "title": "Unit 2 TEST",
-      "date": "2026-09-18",
-      "course": "Social Studies 7",
+      "title": "Unit 2 TEST (Social Studies 7)",
       "student": "Louis L****",
-      "effort": "hard"
-    },
-    {
-      "title": "NO SCHOOL (Staff Day)",
-      "date": "2026-10-12",
-      "type": "school"
-    },
-    {
-      "title": "Minimum Day 11:45am dismissal (Conferences)",
-      "date": "2026-10-13",
-      "type": "school"
-    },
-    {
-      "title": "Minimum Day 11:45am dismissal (Conferences)",
-      "date": "2026-10-14",
-      "type": "school"
+      "date": "2026-09-18",
+      "note": "upcoming event"
     }
   ],
   "folders": [
     {
-      "course": "Algebra 1: 5(A-B)",
       "student": "Charlotte L****",
-      "folder": "Ch. 1 Folder",
-      "expanded": true,
-      "files_found": 12,
-      "check_sheet": "Ch. 1 HW 26-27 HW&PS.pdf 201KB"
-    },
-    {
-      "course": "Algebra 1: 4(A-B)",
-      "student": "Louis L****",
-      "folder": "Chapter 1",
-      "expanded": true,
-      "files_found": 14,
-      "check_sheet": "1_Ch1StampSheet.pdf 194KB"
-    },
-    {
       "course": "Algebra 1: 5(A-B)",
-      "folder": "HW Answers",
-      "expanded": true,
-      "count": 5
-    },
-    {
-      "course": "Algebra 1: 5(A-B)",
-      "folder": "Note Shells",
-      "expanded": true,
-      "count": 5
-    },
-    {
-      "course": "Algebra 1: 5(A-B)",
-      "folder": "Student Practice Journal",
-      "expanded": true,
-      "count": 2
-    },
-    {
-      "course": "Algebra 1: 5(A-B)",
-      "folder": "Old Assignments",
-      "expanded": true,
-      "count": 7,
-      "includes_in_class_8_30am": [
-        "1.1 in class",
-        "1.2 in class assignment",
-        "1.3 in class",
-        "1.4 day1",
-        "1.4 Day2"
+      "expanded": [
+        "Past Units/Assignments > Ch. 1 Folder",
+        "Chapter 2 folder",
+        "HW Answers",
+        "Worksheets",
+        "Note Shells",
+        "Practice Journal",
+        "Old Assignments",
+        "Old DIGIT Assignments"
       ]
     },
     {
-      "course": "Algebra 1: 5(A-B)",
-      "folder": "Old DIGIT Assignments",
-      "expanded": true
+      "student": "Louis L****",
+      "course": "Algebra 1: 4(A-B)",
+      "expanded": [
+        "Chapter 2 (2.1/2.2 Notes and HW, Ch2 HW Answers, Ch2 Book, Annotated Notes, Practice Journal)",
+        "Chapter 1 (all 1.x Notes and HW, HW answers, textbook)",
+        "Beginning of School"
+      ]
     },
     {
-      "course": "Algebra 1: 4(A-B)",
-      "folder": "Annotated Notes",
-      "expanded": true,
-      "count": 6
-    },
-    {
-      "course": "Algebra 1: 4(A-B)",
-      "folder": "Practice and Record Journal",
-      "expanded": true,
-      "count": 2
+      "student": "Louis L****",
+      "course": "ELA 7",
+      "expanded": [
+        "Independent Reading",
+        "T1 Independent Reading",
+        "iReady",
+        "Conventions",
+        "Family Resources",
+        "Misc"
+      ],
+      "not_individually_expanded": [
+        "Conventions",
+        "Family Resources",
+        "Flex"
+      ]
     }
   ]
 }
