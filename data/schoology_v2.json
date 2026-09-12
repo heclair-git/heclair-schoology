@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated_at": "2026-09-11T02:22:56Z",
+  "generated_at": "2026-09-12T05:30:00Z",
   "parent_account": "loo*****@gmail.com",
   "parent_name": "J**** L****",
   "students": [
@@ -11,16 +11,16 @@
     "school": "Hillview Middle School",
     "login_verified": true,
     "children_count": 2,
-    "audit_date": "2026-09-10",
-    "run_window_pt": "2026-09-10 ~19:00-19:22 PDT",
+    "audit_date": "2026-09-11",
+    "run_window_pt": "2026-09-11 ~21:51-22:30 PDT",
     "read_only": true,
     "thorough_steps_completed": [
-      "parent dashboard + per-child 'viewing as' banners verified",
+      "parent dashboard + per-child 'viewing as' banners verified (never reset)",
       "Home To-Do (Upcoming, Overdue incl. hidden expander check), Recently Completed, Updates feed",
       "Grades page per child",
       "Assignments page with filter All",
       "every course Materials page with ALL folders expanded",
-      "submissions opened and compared against stamp sheets (Charlotte Ch. 1 HW 26-27 HW&PS.pdf 201KB; Louis 1_Ch1StampSheet.pdf 194KB)",
+      "submissions opened and compared against stamp sheets (Charlotte Ch. 1 HW 26-27 HW&PS.pdf 201KB + ch. 2 HW 26-27 HW&PS.pdf 201KB; Louis 1_Ch1StampSheet.pdf 167/194KB + 2_Ch2StampSheet.pdf 166KB)",
       "Charlotte DIGIT proficiency checkmarks read per corrected Sep 8 rule"
     ],
     "digit_rule": "Each DIGIT has one type-2 (basic) and one type-3 (mastery) question; a checked box means cleared. Both checked = mastered, do NOT flag. Only type-2 checked = growing, flag. Neither checked = not understood, flag strongly.",
@@ -37,10 +37,14 @@
       "Chamber Orchestra": "Ricardo Rasura"
     },
     "key_contradictions": [
-      "Charlotte 2.1 in class: gradebook Missing vs verified rendered submission - needs Sayre Dolan correction.",
+      "Louis Chapter 1 Review HW: submitted Sep 11 4:14pm (7 days late) but assignment page still shows 'Grade: Missing' while the Algebra gradebook row shows no badge - badge likely not cleared.",
       "Louis 1.5 Notes and HW: gradebook Missing vs 3 on-time rendered files - Ms. Hagg follow-up still needed.",
-      "Louis 1.1 Notes and HW Rev 4 (Sep 9 8:17pm, Late): wrong file (2.1_WriteGraphInequalities.pdf) attached to the 1.1 assignment.",
-      "Louis Unit 1 ISN Check: genuinely missing but does NOT appear in To-Do Overdue (only Chapter 1 Review HW shows) - easy to overlook."
+      "Louis 2.2 Notes and HW: notes PDF only, NO HW PHOTO (due Sep 11 11:59pm) - incomplete.",
+      "Louis 1.1 Notes and HW Rev 4 (Sep 9 8:17pm, Late): wrong file (2.1_WriteGraphInequalities.pdf) still attached to 1.1; the 2.1 notes PDF is now correctly on 2.1 (Rev 2, Sep 10 10:29am).",
+      "Louis Unit 1 ISN Check: genuinely missing but does NOT appear in To-Do Overdue - easy to overlook.",
+      "Charlotte 2.1 in class: gradebook Missing vs verified rendered submission (Rev 1 image-B41C0.png, full page of completed checkmarked inequality work) - needs Sayre Dolan correction.",
+      "Charlotte CER Formative Assessment + Graphing PE and KE: listed in Recently Completed as submitted, but gradebook shows pre-entry grades (2 / 3) and no submission on the assignment pages - unclear, needs re-check.",
+      "Pre-entered '1 - Far Below Expectations' (and one '2') scores on not-yet-due, unsubmitted items in both gradebooks (Louis Science Trophic Levels x2, ELA About Me Email, Orchestra Weeks 3-6; Charlotte Science CER Formative, ELA several, Orchestra Weeks 3-6) - likely teacher placeholders, read as failing scores."
     ],
     "delta_vs_2026_09_09": {
       "charlotte": [
@@ -58,6 +62,23 @@
         "2.1 Notes and HW complete (notes + HW photo).",
         "2.2 Notes and HW: notes submitted, HW photo still needed by tomorrow.",
         "3 items due tomorrow (Sep 11) + 2.2 HW photo due tomorrow."
+      ]
+    },
+    "delta_vs_2026_09_10": {
+      "charlotte": [
+        "Energy Thief Lab (due Sep 11 3:30pm) went OVERDUE with no submission.",
+        "2.1 in class Missing badge STILL not cleared despite verified late submission.",
+        "Chapter 1 Test submitted Sep 11 (score-sheet + reflection photos), not graded.",
+        "All 5 DIGITs confirmed mastered (2.1 DIGIT images re-viewed: type-2 and type-3 both checked).",
+        "New upcoming: 2.3 in class (due Mon Sep 14 8:30am); CER Formative Assessment (due Mon Sep 14 3:30pm); Graphing PE and KE (due Tue Sep 15 3:30pm)."
+      ],
+      "louis": [
+        "Chapter 1 Review HW SUBMITTED Sep 11 4:14pm (7 days late) - assignment page still shows Missing badge, gradebook row does not.",
+        "2.2 Notes and HW still INCOMPLETE (notes PDF only, no HW photo) - due Sep 11 11:59pm.",
+        "2.3 Notes and HW complete and submitted early (Sep 11 11:53am/11:54am).",
+        "2.1 notes PDF now correctly on 2.1; misfiled copy still lingers as 1.1 Rev4.",
+        "1.5 gradebook error persists; Unit 1 ISN Check still genuinely missing.",
+        "New upcoming: Chapter 1 Practice Test (due Mon Sep 14 11:59pm); Unit 2 Video Engineering-Rome Assign #3 (due Tue Sep 15 3:10pm); Modeling Mono Lake Trophic Levels + Questions-Trophic Levels (due Tue Sep 15 11:59pm); 2.4 Notes and HW (due Wed Sep 16 11:59pm)."
       ]
     }
   },
@@ -139,7 +160,7 @@
       "grade": null,
       "source": "materials+submission_page",
       "effort": "easy",
-      "note": "Submitted Sep 9 1:02pm, on time. VERIFIED RENDERS (image-E4A14.png, notebook, teacher checkmarks)."
+      "note": "Submitted Sep 9 1:02pm, on time. Not yet graded. Gradebook: no badge."
     },
     {
       "id": "8521534240",
@@ -282,7 +303,7 @@
       "grade": null,
       "source": "materials+submission_page",
       "effort": "medium",
-      "note": "NEW since Sep 9 audit. Submitted Sep 9 1:24pm, on time. Type-2 check AND type-3 check both present -> MASTERED (image-30700.png). All 5 DIGITs now mastered."
+      "note": "Submitted Sep 9 1:24pm, on time. Type-2 check AND type-3 check both present -> MASTERED (re-verified Sep 11). All 5 DIGITs mastered."
     },
     {
       "id": "8557598983",
@@ -381,12 +402,12 @@
       "course": "Science 8: 6(A-B)",
       "student": "Charlotte L****",
       "due": "2026-09-11T15:30:00",
-      "status": "upcoming",
+      "status": "overdue_unsubmitted",
       "submitted": null,
       "grade": null,
       "source": "materials+submission_page",
       "effort": "medium",
-      "note": "Due tomorrow (Sep 11)."
+      "note": "OVERDUE since Sep 11 3:30pm - no submission rendered. No gradebook badge yet. Lab write-up, effort medium."
     },
     {
       "id": null,
@@ -394,12 +415,12 @@
       "course": "Social Studies 8: 4(A-B)",
       "student": "Charlotte L****",
       "due": "2026-09-11T08:00:00",
-      "status": "upcoming",
+      "status": "completed_no_submission_needed",
       "submitted": null,
       "grade": null,
       "source": "materials+submission_page",
       "effort": "medium",
-      "note": "Due tomorrow (Sep 11)."
+      "note": "Test taken Sep 11 8:00am; no badge or score yet."
     },
     {
       "id": null,
@@ -438,7 +459,7 @@
       "grade": null,
       "source": "materials+submission_page",
       "effort": null,
-      "note": "Rev 1 notes PDF (1_1.1_SolvingSimpleEq.pdf) Aug 24 6:55pm on time - RENDERS. Rev 2 HW photo (image-6F7E1.png) Aug 24 6:55pm on time - RENDERS. FLAG: Rev 4 (Sep 9 8:17pm, Late) attached WRONG FILE (2.1_WriteGraphInequalities.pdf belongs to the 2.1 assignment) - does not erase the on-time verified components."
+      "note": "Rev 1 notes PDF (1_1.1_SolvingSimpleEq.pdf) Aug 24 6:55pm on time - RENDERS. Rev 2/3 HW photos Aug 24 on time - RENDERS. FLAG persists: Rev 4 (Sep 9 8:17pm, Late) still attaches WRONG FILE (2.1_WriteGraphInequalities.pdf belongs to 2.1)."
     },
     {
       "id": "8516163467",
@@ -503,7 +524,7 @@
       "grade": null,
       "source": "materials+submission_page",
       "effort": null,
-      "note": "Gradebook says Missing, but Rev 1 notes PDF (1_1.5_RewritingEqFormulas.pdf) Sep 1 11:55am on time - RENDERS, and Rev 3 HW photo (image-2B1F2.png) Sep 1 2:51pm on time - RENDERS. Teacher/gradebook error persists - Ms. Hagg follow-up still needed."
+      "note": "Gradebook STILL shows Missing + 'submission not graded' on Sep 11 audit, but Rev 1 notes PDF (1_1.5_RewritingEqFormulas.pdf) Sep 1 11:55am on time - RENDERS, Rev 2/3 HW photos Sep 1 2:50/2:51pm on time - RENDERS. Teacher/gradebook error persists - Ms. Hagg follow-up still needed."
     },
     {
       "id": "8516163321",
@@ -511,12 +532,12 @@
       "course": "Algebra 1: 4(A-B)",
       "student": "Louis L****",
       "due": "2026-09-04T23:59:00",
-      "status": "missing_overdue",
-      "submitted": null,
+      "status": "submitted_late_gradebook_error",
+      "submitted": "2026-09-11T16:14:00",
       "grade": null,
       "source": "materials+submission_page",
       "effort": null,
-      "note": "GENUINELY MISSING - no submission rendered. 6 days overdue. Shown in To-Do Overdue."
+      "note": "Submitted Sep 11 4:14pm LATE (7 days late). Rev1: image-E3341.png (HW photo of review worksheet). CONTRADICTION: assignment page shows 'Grade: Missing' badge, but the Algebra gradebook row shows no badge. Badge has likely NOT cleared - teacher action still needed."
     },
     {
       "id": "8516164719",
@@ -529,7 +550,7 @@
       "grade": null,
       "source": "materials+submission_page",
       "effort": null,
-      "note": "Due today (Sep 10). Rev 1 HW photo (image-4B206.png) Sep 9 8:16pm on time - RENDERS. Rev 2 notes PDF (2.1_WriteGraphInequalities.pdf) Sep 10 10:29am on time - RENDERS. Complete."
+      "note": "Due Sep 10. COMPLETE: Rev 1 HW photo (image-4B206.png) Sep 9 8:16pm on time - RENDERS. Rev 2 notes PDF (2.1_WriteGraphInequalities.pdf) Sep 10 10:29am on time - RENDERS. Notes PDF now correctly on 2.1 (misfiled copy remains as 1.1 Rev4)."
     },
     {
       "id": "8516164709",
@@ -542,7 +563,7 @@
       "grade": null,
       "source": "materials+submission_page",
       "effort": "easy",
-      "note": "Rev 1 notes PDF (2.2_SolvingInequalitiesAddSub.pdf) Sep 10 11:10am on time - RENDERS. HW photo NOT YET SUBMITTED - due tomorrow (Sep 11)."
+      "note": "INCOMPLETE: Rev1 notes PDF (2.2_SolvingInequalitiesAddSub.pdf) Sep 10 11:10am on time - RENDERS; Rev2 same notes PDF resubmitted Sep 11 11:54am. NO HW PHOTO with work. Due Sep 11 11:59pm."
     },
     {
       "id": null,
@@ -576,12 +597,12 @@
       "course": "ELA 7",
       "student": "Louis L****",
       "due": "2026-09-11T08:00:00",
-      "status": "upcoming",
+      "status": "overdue_unsubmitted",
       "submitted": null,
       "grade": null,
       "source": "materials+submission_page",
       "effort": "easy",
-      "note": "Due tomorrow (Sep 11). Gradebook shows '1 - Far Below Expectations' tooltip, likely a placeholder."
+      "note": "Was due Sep 11 8:00am - no submission. Gradebook shows '1 - Far Below Expectations' pre-entry, likely a placeholder."
     },
     {
       "id": null,
@@ -589,12 +610,12 @@
       "course": "ELA 7",
       "student": "Louis L****",
       "due": "2026-09-11T15:00:00",
-      "status": "upcoming",
-      "submitted": null,
+      "status": "submitted",
+      "submitted": "2026-09-11T00:00:00",
       "grade": null,
       "source": "materials+submission_page",
       "effort": "easy",
-      "note": "Due tomorrow (Sep 11)."
+      "note": "1 passed iReady lesson submitted before the 3:00pm deadline Sep 11."
     },
     {
       "id": null,
@@ -686,6 +707,175 @@
       "source": "materials+submission_page",
       "effort": null,
       "note": "Due Fri Sep 18."
+    },
+    {
+      "id": null,
+      "title": "Chapter 1 Test (Solving Equations)",
+      "course": "Algebra 1: 5(A-B)",
+      "student": "Charlotte L****",
+      "due": "2026-09-11T15:00:00",
+      "status": "submitted",
+      "submitted": "2026-09-11T00:00:00",
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "easy",
+      "note": "Summative. Submitted Sep 11 (score-sheet photo + reflection sheet photo), not graded."
+    },
+    {
+      "id": null,
+      "title": "2.3 in class",
+      "course": "Algebra 1: 5(A-B)",
+      "student": "Charlotte L****",
+      "due": "2026-09-14T08:30:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "easy",
+      "note": "Due Mon Sep 14 8:30am. No submission yet."
+    },
+    {
+      "id": null,
+      "title": "CER Formative Assessment",
+      "course": "Science 8: 6(A-B)",
+      "student": "Charlotte L****",
+      "due": "2026-09-14T15:30:00",
+      "status": "unclear",
+      "submitted": null,
+      "grade": "2 - Below Expectations",
+      "source": "materials+submission_page",
+      "effort": "medium",
+      "note": "CONTRADICTION: listed in Recently Completed as submitted, but assignment page shows no submission and gradebook pre-entry '2 - Below Expectations'. Needs re-check. Due Mon Sep 14 3:30pm."
+    },
+    {
+      "id": null,
+      "title": "Graphing PE and KE",
+      "course": "Science 8: 6(A-B)",
+      "student": "Charlotte L****",
+      "due": "2026-09-15T15:30:00",
+      "status": "unclear",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "medium",
+      "note": "CONTRADICTION: listed in Recently Completed as submitted, but assignment page shows no submission yet. Due Tue Sep 15 3:30pm. Needs re-check."
+    },
+    {
+      "id": null,
+      "title": "2.3 Notes and HW",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-09-14T23:59:00",
+      "status": "submitted",
+      "submitted": "2026-09-11T11:53:00",
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "easy",
+      "note": "COMPLETE, submitted early Sep 11: Rev1 HW photo (image-9D08A.png) 11:53am - RENDERS; Rev2 notes PDF (2.3_SolvingInequalitiesMultDiv.pdf) 11:54am - RENDERS."
+    },
+    {
+      "id": null,
+      "title": "Chapter 1 Practice Test",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-09-14T23:59:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "medium",
+      "note": "Due Mon Sep 14 11:59pm."
+    },
+    {
+      "id": null,
+      "title": "2.4 Notes and HW",
+      "course": "Algebra 1: 4(A-B)",
+      "student": "Louis L****",
+      "due": "2026-09-16T23:59:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "easy",
+      "note": "Due Wed Sep 16 11:59pm."
+    },
+    {
+      "id": null,
+      "title": "Unit 2: Video: Engineering-Rome: Assign #3",
+      "course": "Social Studies 7",
+      "student": "Louis L****",
+      "due": "2026-09-15T15:10:00",
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "easy",
+      "note": "Due Tue Sep 15 3:10pm. Renders; no submission yet."
+    },
+    {
+      "id": null,
+      "title": "Unit 1: Assignment #3: Short Answer",
+      "course": "Social Studies 7",
+      "student": "Louis L****",
+      "due": null,
+      "status": "submitted",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": null,
+      "note": "Submitted, not graded (in Recently Completed Sep 11)."
+    },
+    {
+      "id": null,
+      "title": "Modeling Mono Lake Food Web",
+      "course": "Science 7",
+      "student": "Louis L****",
+      "due": null,
+      "status": "submitted",
+      "submitted": null,
+      "grade": "3",
+      "source": "materials+submission_page",
+      "effort": null,
+      "note": "Submitted, graded '3 - Met Expectations' Sep 11."
+    },
+    {
+      "id": null,
+      "title": "All About Me Scholar Survey",
+      "course": "ELA 7",
+      "student": "Louis L****",
+      "due": null,
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "easy",
+      "note": "New item not previously known; no badge, no due date shown."
+    },
+    {
+      "id": null,
+      "title": "iReady Reflection / Goal Setting with Signatures",
+      "course": "ELA 7",
+      "student": "Louis L****",
+      "due": null,
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "easy",
+      "note": "New item not previously known; no badge. Needs signatures."
+    },
+    {
+      "id": null,
+      "title": "Bring your IRB to ELA on block day",
+      "course": "ELA 7",
+      "student": "Louis L****",
+      "due": null,
+      "status": "upcoming",
+      "submitted": null,
+      "grade": null,
+      "source": "materials+submission_page",
+      "effort": "easy",
+      "note": "New item not previously known; no badge."
     }
   ],
   "attachments": [
@@ -938,7 +1128,7 @@
         "1_1.5_RewritingEqFormulas.pdf",
         "image-2B1F2.png"
       ],
-      "verdict": "Complete: notes PDF + HW photo with work present and rendering for 1.1 through 1.5. 1.5 gradebook 'Missing' flag is a teacher error (all files on time). 1.1 Rev 4 contains the wrong file (2.1 notes PDF)."
+      "verdict": "Complete: notes PDF + HW photo with work present and rendering for 1.1 through 1.5. 1.5 gradebook 'Missing' flag is a teacher error (all files on time). 1.1 Rev 4 still contains the wrong file (2.1 notes PDF)."
     },
     {
       "student": "Louis L****",
@@ -947,7 +1137,7 @@
         "image-4B206.png",
         "2.1_WriteGraphInequalities.pdf"
       ],
-      "verdict": "Complete: HW photo Sep 9 8:16pm + notes PDF Sep 10 10:29am, both on time, both render."
+      "verdict": "Complete: HW photo Sep 9 8:16pm + notes PDF Sep 10 10:29am, both on time, both render. Notes PDF now correctly on 2.1."
     },
     {
       "student": "Louis L****",
@@ -955,29 +1145,40 @@
       "files": [
         "2.2_SolvingInequalitiesAddSub.pdf"
       ],
-      "verdict": "Partial: notes PDF submitted Sep 10 11:10am on time, renders. HW photo still missing, due tomorrow Sep 11."
+      "verdict": "INCOMPLETE (re-verified Sep 11): notes PDF submitted Sep 10 11:10am on time + resubmitted Sep 11 11:54am, renders. NO HW PHOTO with work. Due Sep 11 11:59pm."
     },
     {
       "student": "Louis L****",
       "title": "Chapter 1 Review HW (ID 8516163321)",
-      "files": [],
-      "verdict": "No submission rendered - genuinely missing."
+      "files": [
+        "image-E3341.png"
+      ],
+      "verdict": "Submitted Sep 11 4:14pm LATE (7 days late). Assignment page still shows 'Grade: Missing'; Algebra gradebook row shows no badge - badge likely not cleared."
     },
     {
       "student": "Louis L****",
       "title": "Unit 1 ISN Check (ID 8536920978)",
       "files": [],
       "verdict": "No submission rendered - genuinely missing."
+    },
+    {
+      "student": "Louis L****",
+      "title": "Louis 2.3 Notes and HW (new Sep 11)",
+      "files": [
+        "image-9D08A.png",
+        "2.3_SolvingInequalitiesMultDiv.pdf"
+      ],
+      "verdict": "Complete: HW photo Sep 11 11:53am + notes PDF Sep 11 11:54am, both on time, both render."
     }
   ],
   "updates": [
     {
       "student": "Charlotte L****",
-      "summary": "0 genuinely missing. 2.1 in class gradebook-flagged Missing despite a verified rendered submission (teacher error to correct). All 5 DIGITs mastered including new 2.1 DIGIT. 3 due tomorrow: Lamb to the Slaughter annotation, Energy Thief Lab, Adaptations & Exploration test."
+      "summary": "1 genuinely overdue: Energy Thief Lab (due Sep 11 3:30pm, no submission, lab write-up needed ASAP). 2.1 in class gradebook-flagged Missing despite verified rendered submission (teacher error - needs Sayre Dolan). All 5 DIGITs mastered. Chapter 1 Test submitted Sep 11, ungraded. New upcoming: 2.3 in class (Mon Sep 14 8:30am), CER Formative Assessment (Mon Sep 14 3:30pm), Graphing PE and KE (Tue Sep 15 3:30pm) - last two show submission/display contradictions, needs re-check."
     },
     {
       "student": "Louis L****",
-      "summary": "2 genuinely missing: Chapter 1 Review HW (6 days overdue) and Unit 1 ISN Check (missing from To-Do Overdue, easy to overlook). 1.5 gradebook error persists (Ms. Hagg email). 2.2 HW photo still needed by tomorrow. Reading log submitted 9/4 (needs signatures). 3 due tomorrow: About Me Email, Unit 2 ISN #2, iReady lesson."
+      "summary": "Chapter 1 Review HW SUBMITTED Sep 11 4:14pm (7 days late) but Missing badge persists - teacher action still needed. Unit 1 ISN Check still genuinely missing (invisible in To-Do Overdue). 2.2 Notes and HW still incomplete (no HW photo, due Sep 11 11:59pm). 2.3 Notes and HW complete. 1.5 gradebook error persists (Ms. Hagg email). ELA About Me Email (due Sep 11 8am) unsubmitted. New upcoming: Chapter 1 Practice Test (Mon Sep 14), Engineering-Rome Assign #3 + Modeling Mono Lake Trophic Levels + Questions-Trophic Levels (Tue Sep 15), 2.4 Notes and HW (Wed Sep 16), Unit 2 TEST (Fri Sep 18), CER Assessment (Tue Sep 22)."
     }
   ],
   "calendar_events": [
@@ -985,6 +1186,16 @@
       "student": "Louis L****",
       "title": "Unit 2 TEST (Social Studies 7)",
       "due": "2026-09-18"
+    },
+    {
+      "student": "Louis L****",
+      "title": "Picture Make-Ups",
+      "due": "2026-09-29"
+    },
+    {
+      "student": "Louis L****",
+      "title": "NO SCHOOL Staff Day",
+      "due": "2026-10-12"
     }
   ],
   "folders": [
