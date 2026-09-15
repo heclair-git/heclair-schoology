@@ -1,6 +1,6 @@
 {
  "version": "2.0",
- "generated_at": "2026-09-15T02:21:15Z",
+ "generated_at": "2026-09-15T02:40:34Z",
  "parent_account": "loo*****@gmail.com",
  "parent_name": "J**** L****",
  "students": [
@@ -42,7 +42,7 @@
    "NEW: Louis 'Unit 2 ISN: Assignment #4: Docs 3-5' (due Tue 9/15 8:30am); Science items 'Modeling Mono Lake Trophic Levels' (9/15 11:59pm), 'Questions-Trophic Levels' (no date), 'CER Assessment' (9/22).",
    "UNCHANGED: Louis Unit 1 ISN Check missing; 1.5 gradebook error; Chapter 1 Review HW ungraded; 1.1 Rev 4 wrong file; ELA log missing parent signatures."
   ],
-  "evening_sync_notes": "Sep 14 evening audit (19:05-19:26 PDT): Louis checked 19:05-19:25, Charlotte 19:14-19:26. New since morning: Charlotte FAQ KE/PE 2 + 2.4 in class; Louis 2.4 Notes and HW (submitted), ELA iReady/Quill lessons, SS Unit 2 TEST. Charlotte 2.3 in class now overdue (no submission); Louis teacher name confirmed Ms. Hagg. Chapter 1 Practice Test still quarantined; 2.4 Notes and HW released from quarantine.",
+  "evening_sync_notes": "Sep 14 evening audit (19:05-19:26 PDT): Louis checked 19:05-19:25, Charlotte 19:14-19:26. New since morning: Charlotte FAQ KE/PE 2 + 2.4 in class; Louis 2.4 Notes and HW (submitted), ELA iReady/Quill lessons, SS Unit 2 TEST. Charlotte 2.3 in class now overdue (no submission); Louis teacher name confirmed Ms. Hagg. Chapter 1 Practice Test still quarantined; 2.4 Notes and HW released from quarantine. CORRECTION: the '1 - Far Below Expectations' tooltips on Charlotte FAQ KE/PE 2 and Louis's Modeling Mono Lake Trophic Levels + Questions-Trophic Levels are misleading - JP confirmed via screenshot there is no grade yet on any of them. Charlotte's real concern is the CER Formative Assessment, genuinely graded 2/4.",
   "assignment_count": 87
  },
  "courses": [
@@ -506,7 +506,7 @@
    "student": "Charlotte L****",
    "status": "placeholder",
    "source": "grades",
-   "notes": "Future dates (Sep 18 / Sep 25 / Oct 2) already show '1 - Far Below Expectations' in the gradebook - likely pre-marked by teacher."
+   "notes": "Gradebook shows '1 - Far Below Expectations' for these future weeks (Sep 18/25, Oct 2). UNVERIFIED: Schoology was caught rendering a '1 - Far Below Expectations' tooltip on rows with no grade at all (see FAQ KE/PE 2) - treat as suspect until a real grade appears."
   },
   {
    "title": "Week 5 Participation",
@@ -514,7 +514,7 @@
    "student": "Charlotte L****",
    "status": "placeholder",
    "source": "grades",
-   "notes": "Future dates (Sep 18 / Sep 25 / Oct 2) already show '1 - Far Below Expectations' in the gradebook - likely pre-marked by teacher."
+   "notes": "Gradebook shows '1 - Far Below Expectations' for these future weeks (Sep 18/25, Oct 2). UNVERIFIED: Schoology was caught rendering a '1 - Far Below Expectations' tooltip on rows with no grade at all (see FAQ KE/PE 2) - treat as suspect until a real grade appears."
   },
   {
    "title": "Week 6 Participation",
@@ -522,7 +522,7 @@
    "student": "Charlotte L****",
    "status": "placeholder",
    "source": "grades",
-   "notes": "Future dates (Sep 18 / Sep 25 / Oct 2) already show '1 - Far Below Expectations' in the gradebook - likely pre-marked by teacher."
+   "notes": "Gradebook shows '1 - Far Below Expectations' for these future weeks (Sep 18/25, Oct 2). UNVERIFIED: Schoology was caught rendering a '1 - Far Below Expectations' tooltip on rows with no grade at all (see FAQ KE/PE 2) - treat as suspect until a real grade appears."
   },
   {
    "title": "QUEST SURVEY WEEK ONE",
@@ -737,7 +737,7 @@
    "source": "todo",
    "effort": "medium",
    "note": "Gradebook shows placeholder '1 - Far Below Expectations' (pre-filled). Due tomorrow 11:59pm.",
-   "notes": "Grade report shows '1 - Far Below Expectations' tooltip though no grade or submission exists - teacher may have pre-marked before the Sep 15 due date; status unsubmitted."
+   "notes": "CORRECTION (JP verified via screenshot Sep 14 evening): the gradebook tooltip renders '1 - Far Below Expectations' on this row, but there is NO grade and NO submission - the tooltip is misleading/wrong. There is no grade at this time."
   },
   {
    "title": "Questions-Trophic Levels",
@@ -747,7 +747,7 @@
    "source": "todo",
    "note": "No due time shown; gradebook shows placeholder '1 - Far Below Expectations' (pre-filled).",
    "due": "2026-09-15T23:59:00",
-   "notes": "Grade report shows '1 - Far Below Expectations' tooltip though no grade or submission exists - teacher may have pre-marked before the Sep 15 due date; status unsubmitted."
+   "notes": "CORRECTION (JP verified via screenshot Sep 14 evening): the gradebook tooltip renders '1 - Far Below Expectations' on this row, but there is NO grade and NO submission - the tooltip is misleading/wrong. There is no grade at this time."
   },
   {
    "title": "CER Assessment: Mono Lake Food Web and Trophic Level",
@@ -868,7 +868,7 @@
    "due": "2026-09-15T15:30:00",
    "status": "due",
    "source": "grades",
-   "notes": "Posted Sep 14 4:43pm (new since morning audit). Gradebook row shows '1 - Far Below Expectations' tooltip but the assignment page shows NO grade and NO submission - conflicting; current state = unsubmitted."
+   "notes": "CORRECTION (JP verified via screenshot Sep 14 evening): the gradebook tooltip renders '1 - Far Below Expectations' on this row, but there is NO grade and NO submission - the tooltip is misleading/wrong. There is no grade at this time."
   },
   {
    "title": "2.4 Notes and HW",
