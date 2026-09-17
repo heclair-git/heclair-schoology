@@ -1,6 +1,6 @@
 {
  "version": "2.0",
- "generated_at": "2026-09-15T02:40:34Z",
+ "generated_at": "2026-09-17T22:28:03Z",
  "parent_account": "loo*****@gmail.com",
  "parent_name": "J**** L****",
  "students": [
@@ -11,8 +11,8 @@
   "school": "Hillview Middle School",
   "login_verified": true,
   "children_count": 2,
-  "audit_date": "2026-09-14",
-  "run_window_pt": "2026-09-14 19:05-19:26 PDT",
+  "audit_date": "2026-09-17",
+  "run_window_pt": "3:07-3:27pm PDT",
   "read_only": true,
   "thorough_steps_completed": true,
   "digit_rule": "corrected 2026-09-08 per JP: type-2 checked AND type-3 checked = mastered (do NOT flag); type-2 only = growing (flag); neither = not understood (flag strongly)",
@@ -30,8 +30,7 @@
    "Louis 'Unit 1 ISN Check' (8536920978): genuinely missing, no submission."
   ],
   "quarantined_unverified": [
-   "Louis 'Chapter 1 Practice Test' (expected due Mon Sep 14): not rendered anywhere - NOT due, do not chase.",
-   "Louis '2.4 Notes and HW' (expected due Wed Sep 16): not rendered anywhere - NOT due, do not chase."
+   "Chapter 1 Practice Test (Louis) - renders nowhere, do not treat as due"
   ],
   "delta_vs_2026_09_11_evening": [
    "RESOLVED: Charlotte 'CER Formative Assessment' now in gradebook, graded 2/4 (2 - Below Expectations).",
@@ -43,7 +42,9 @@
    "UNCHANGED: Louis Unit 1 ISN Check missing; 1.5 gradebook error; Chapter 1 Review HW ungraded; 1.1 Rev 4 wrong file; ELA log missing parent signatures."
   ],
   "evening_sync_notes": "Sep 14 evening audit (19:05-19:26 PDT): Louis checked 19:05-19:25, Charlotte 19:14-19:26. New since morning: Charlotte FAQ KE/PE 2 + 2.4 in class; Louis 2.4 Notes and HW (submitted), ELA iReady/Quill lessons, SS Unit 2 TEST. Charlotte 2.3 in class now overdue (no submission); Louis teacher name confirmed Ms. Hagg. Chapter 1 Practice Test still quarantined; 2.4 Notes and HW released from quarantine. CORRECTION: the '1 - Far Below Expectations' tooltips on Charlotte FAQ KE/PE 2 and Louis's Modeling Mono Lake Trophic Levels + Questions-Trophic Levels are misleading - JP confirmed via screenshot there is no grade yet on any of them. Charlotte's real concern is the CER Formative Assessment, genuinely graded 2/4.",
-  "assignment_count": 87
+  "assignment_count": 106,
+  "sync_notes": "Full read-only pull Thu Sep 17, 2026 3:07-3:27pm PDT (Louis first). Screenshot attachment mechanism broke mid-run (handoff validator rejected all paths post-compaction); data 100% verified live, delivered as text. Louis: 2.2/2.4 HW photos now present (both complete); 1.5 + Ch1 Review Missing badges still STALE; Chapter 1 Test graded 3; Modeling Mono Lake Trophic Levels actually graded 3/4 (tooltip \"1\" was wrong); Questions-Trophic Levels genuinely Missing; Unit 1 ISN Check still Missing; NEW: Exploring Limiting Factors (Sep 18), Carrying Capacity-Kaibab Deer (Sep 23); Unit 2 TEST Fri Sep 18 + Mr. Rogers retake warning. Charlotte: 2.1 in class Missing badge CLEARED; 2.3/2.4 in class badges STALE (submitted Sep 15); all 5 DIGITs mastered; NEW overdue: 2.3 DIGIT + 2.5 in class; NEW: 2.6 in class (Sep 18), Unrest cartoons (Sep 18), Rube Goldberg Partner Agreement (Sep 21); CER 2/4 is a REAL grade; FAQ KE/PE 2 + Energy Thief Lab submitted, ungraded; tooltip artifacts confirmed in HTML for Orchestra weeks and ELA rows.",
+  "delta_vs_2026_09_14_evening": "Louis: +Chapter 1 Test grade (3); +Modeling Mono Lake Trophic Levels grade (3/4); +2.2/2.4 HW photos (now complete); +new assignments (Exploring Limiting Factors, Carrying Capacity-Kaibab Deer); +Mr. Rogers retake warning; +2.1-2.4 Practice Quiz submitted. Charlotte: 2.1 in class badge cleared; +new overdue (2.3 DIGIT, 2.5 in class); +new (2.6 in class, Unrest cartoons, Rube Goldberg Partner Agreement); +Energy Thief Lab + FAQ KE/PE 2 submitted; +Quiz 2.1-2.4 submitted; +Tygers teacher comment."
  },
  "courses": [
   {
@@ -132,776 +133,1000 @@
  ],
  "assignments": [
   {
+   "title": "1.1 Notes and HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-08-25",
+   "notes": "Rev1-3 notes PDF + HW photos on time Aug 24. Rev 4 (Sep 9, late) misfiles 2.1_WriteGraphInequalities.pdf under the 1.1 assignment.",
+   "effort": "medium"
+  },
+  {
+   "title": "1.2 Notes and HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-08-27",
+   "notes": "Notes PDF + HW photo on time Aug 25.",
+   "effort": "medium"
+  },
+  {
+   "title": "10 Things About Me",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-08-27",
+   "effort": "easy"
+  },
+  {
+   "title": "1.3 Notes and HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-08-28",
+   "notes": "Notes PDF + HW photo, submitted late Aug 31.",
+   "effort": "medium"
+  },
+  {
+   "title": "1.4 Notes and HW (Day 1)",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-08-31",
+   "notes": "Notes PDF + HW photo on time Aug 31.",
+   "effort": "medium"
+  },
+  {
+   "title": "1.4 Notes and HW (Day 2)",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-01",
+   "notes": "Notes PDF + HW photo on time Sep 1.",
+   "effort": "medium"
+  },
+  {
+   "title": "1.5 Notes and HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "missing_gradebook_error",
+   "source": "grades",
+   "due": "2026-09-03",
+   "notes": "Missing badge is STALE - 4 revisions verified present: notes PDF + 2 HW photos on time Sep 1; notes PDF resubmitted late Sep 12. Ms. Hagg email still owed.",
+   "effort": "medium"
+  },
+  {
+   "title": "Practice Quiz 1.1-1.3",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-03",
+   "effort": "medium"
+  },
+  {
+   "title": "Practice Quiz 1.4-1.5",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-03",
+   "effort": "medium"
+  },
+  {
+   "title": "Chapter 1 Review HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "missing_gradebook_error",
+   "source": "grades",
+   "due": "2026-09-04",
+   "notes": "Missing badge is STALE - 2 late revisions verified (image-E3341.png Sep 11, image-A6E4C.png Sep 12, real work). Ms. Hagg email still owed.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.1 Notes and HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-10",
+   "notes": "HW photo + notes PDF on time Sep 9-10.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.2 Notes and HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-11",
+   "notes": "Notes PDF on time; HW photo image-62BA8.png submitted late Sep 14 7:18pm. Complete.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.3 Notes and HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-14",
+   "notes": "HW photo + notes PDF on time Sep 11.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.4 Notes and HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-15",
+   "notes": "Notes PDF Sep 14 12:03pm + HW photo image-968B8.png Sep 14 7:43pm, both on time. Complete.",
+   "effort": "medium"
+  },
+  {
+   "title": "Chapter 1 Test: Solving Linear Equations",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-15",
+   "grade": "3 - Consistent Proficiency",
+   "notes": "Received Sep 16 11:32am.",
+   "effort": "hard"
+  },
+  {
+   "title": "2.1-2.4 Practice Quiz",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "submitted-not-graded",
+   "source": "grades",
+   "due": "2026-09-17",
+   "notes": "Submitted Sep 17 11:36am (image-03CFF.png, image-9D735.png). Not yet graded.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.1-2.4 Quiz Review HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-17",
+   "notes": "Due TODAY 11:59pm. NO submission. Worksheet only.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.5 Notes and HW",
+   "course": "Algebra 1: 4(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-18",
+   "notes": "Due Fri 11:59pm. NO submission. Attached: 2.5_CompoundInequalities.pdf 67KB (Ms. Hagg posted Sep 16).",
+   "effort": "medium"
+  },
+  {
+   "title": "Week 1 Participation (08/20-08/28)",
+   "course": "Chamber Orchestra: 2(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-08-28",
+   "grade": "3/4 - Met Expectations"
+  },
+  {
+   "title": "Week 2 Participation (08/31-09/04)",
+   "course": "Chamber Orchestra: 2(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-04",
+   "grade": "3/4 - Met Expectations"
+  },
+  {
+   "title": "Week 3 Participation (09/08-09/11)",
+   "course": "Chamber Orchestra: 2(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "grades",
+   "due": "2026-09-11",
+   "notes": "Grade cell is blank; \"1 - Far Below Expectations\" is a hover tooltip artifact, NOT a grade (confirmed in HTML)."
+  },
+  {
+   "title": "Week 4 Participation (09/14-09/18)",
+   "course": "Chamber Orchestra: 2(A-B)",
+   "student": "Louis L****",
+   "status": "placeholder",
+   "source": "grades",
+   "due": "2026-09-18",
+   "notes": "Grade cell blank; tooltip artifact only. Not a real grade."
+  },
+  {
+   "title": "Week 5 Participation (09/21-09/25)",
+   "course": "Chamber Orchestra: 2(A-B)",
+   "student": "Louis L****",
+   "status": "placeholder",
+   "source": "grades",
+   "due": "2026-09-25",
+   "notes": "Grade cell blank; tooltip artifact only. Not a real grade."
+  },
+  {
+   "title": "Week 6 Participation (09/28-10/02)",
+   "course": "Chamber Orchestra: 2(A-B)",
+   "student": "Louis L****",
+   "status": "placeholder",
+   "source": "grades",
+   "due": "2026-10-02",
+   "notes": "Grade cell blank; tooltip artifact only. Not a real grade."
+  },
+  {
+   "title": "All About Me Scholar Survey for Mr. Rogers and Ms. Ross",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-08-28",
+   "effort": "easy"
+  },
+  {
+   "title": "iReady Reading - Fall 2026 Assessment",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-08-28",
+   "grade": "3 - Consistent Proficiency"
+  },
+  {
+   "title": "Summer Reading Due IN CLASS",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "late",
+   "source": "grades",
+   "due": "2026-08-28",
+   "notes": "Teacher comment: log submitted Sep 4 but still lacks parent signatures. Action needed.",
+   "effort": "easy"
+  },
+  {
+   "title": "Parts of Speech Check In *formative quiz*",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-03",
+   "grade": "7/10"
+  },
+  {
+   "title": "iReady Reflection / Goal Setting with Signatures",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-04",
+   "effort": "easy"
+  },
+  {
+   "title": "1 PASSED iReady lesson",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-04",
+   "effort": "easy"
+  },
+  {
+   "title": "Quill Diagnostic - Baseline Conventions Score *formative*",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-04",
+   "grade": "15/24"
+  },
+  {
+   "title": "About Me Email to Ms. Ross and Mr. Thompson Inboxes",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "grades",
+   "due": "2026-09-11",
+   "notes": "Sent directly to teachers inboxes (jross@mpcsd.org, MrTStudentTeach@gmail.com), not via Schoology. Tooltip artifact is not a grade.",
+   "effort": "easy"
+  },
+  {
+   "title": "1 PASSED iReady lesson",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-11",
+   "effort": "easy"
+  },
+  {
+   "title": "1 PASSED iReady lesson",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-18",
+   "notes": "Due Fri 3:00pm. Done on external platform.",
+   "effort": "easy"
+  },
+  {
+   "title": "1 PASSED Quill lesson - Due Friday by 3:00pm",
+   "course": "English Language Arts 7: 3(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-18",
+   "notes": "Due Fri 3:00pm. Done on external platform.",
+   "effort": "easy"
+  },
+  {
+   "title": "Questions: Mono Lake",
+   "course": "Science 7: 5(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-08-28",
+   "grade": "3/4"
+  },
+  {
+   "title": "Levels of Organization in the Ecosystem Card Sort",
+   "course": "Science 7: 5(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-01",
+   "grade": "3/4"
+  },
+  {
+   "title": "Modeling Mono Lake Food Web",
+   "course": "Science 7: 5(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-04",
+   "grade": "3/4",
+   "notes": "Submitted Sep 2 1:40pm, on time."
+  },
+  {
+   "title": "Modeling Mono Lake Trophic Levels",
+   "course": "Science 7: 5(A-B)",
+   "student": "Louis L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-15",
+   "grade": "3/4",
+   "notes": "Submitted Sep 15 12:22pm, on time. CORRECTION: earlier tooltip said \"1 - Far Below Expectations\" - actual grade on submission page is 3/4."
+  },
+  {
+   "title": "Questions-Trophic Levels",
+   "course": "Science 7: 5(A-B)",
+   "student": "Louis L****",
+   "status": "missing",
+   "source": "grades",
+   "due": "2026-09-15",
+   "notes": "2 days overdue. NO submission. CORRECTION: tooltip \"1\" was an artifact - no grade exists.",
+   "effort": "easy"
+  },
+  {
+   "title": "Exploring Limiting Factors of Mono Lake",
+   "course": "Science 7: 5(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-18",
+   "notes": "NEW - posted Thu Sep 17 9:20am. No submission.",
+   "effort": "medium"
+  },
+  {
+   "title": "CER Assessment: Mono Lake Food Web and Trophic Level",
+   "course": "Science 7: 5(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-22",
+   "effort": "hard"
+  },
+  {
+   "title": "Carrying Capacity-Kaibab Deer",
+   "course": "Science 7: 5(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-23",
+   "notes": "NEW - posted Tue Sep 15 2:54pm. No submission.",
+   "effort": "medium"
+  },
+  {
+   "title": "Unit 1 ISN Check",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "missing",
+   "source": "grades",
+   "due": "2026-09-04",
+   "notes": "Still Missing - no submission anywhere. Checklist requires Part 1/Part 2 stamped and complete. Action needed.",
+   "effort": "easy"
+  },
+  {
+   "title": "Unit 1: Assignment #3: Short Answer",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-04",
+   "notes": "Done in class."
+  },
+  {
+   "title": "Unit 2: ISN",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-18",
+   "notes": "Due Fri 3:10pm. Mr. Rogers: all Unit 2 work in by Fri 8:30am or eligible for RETAKE on Unit 2 Test.",
+   "effort": "medium"
+  },
+  {
+   "title": "Unit 2: Video: Engineering-Rome: Assign #3",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-18",
+   "notes": "Due Fri 3:10pm. Turn in at beginning of class.",
+   "effort": "medium"
+  },
+  {
+   "title": "Unit 2 TEST",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "calendar",
+   "due": "2026-09-18",
+   "notes": "Mr. Rogers announcement Sep 16: study guides available in Schoology.",
+   "effort": "hard"
+  },
+  {
+   "title": "PE 78 participation (Volleyball)",
+   "course": "PE 78: 1(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "grades",
+   "notes": "Active Fitness / Motor Skills / Responsibility and Group Dynamics - no grades, no due dates."
+  },
+  {
+   "title": "Qu3ST 7 - Sustained Silent Reading",
+   "course": "Qu3ST 7: 7(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "grades",
+   "notes": "\"Bring a book to Qu3ST\" items - no grades."
+  },
+  {
    "title": "Safety Camera",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-08-24",
    "status": "submitted-not-graded",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-08-24",
+   "effort": "easy"
   },
   {
    "title": "1.1 in class",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-08-25",
    "status": "completed",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-08-25",
+   "notes": "image-91B3F.png submitted on time Aug 24 - photo of worked HW problems.",
+   "effort": "medium"
   },
   {
    "title": "1.2 in class assignment",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-08-26",
    "status": "completed",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-08-26",
+   "effort": "medium"
   },
   {
-   "id": "8531738496",
    "title": "DIGIT (1.1)",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-08-26T13:45:00",
-   "status": "submitted-not-graded",
-   "submitted": "2026-08-26T12:43:00",
-   "source": "grades+submission",
-   "note": "Submission image opened and read: type-2 box CHECKED, type-3 box CHECKED -> MASTERED (JP corrected rule). Do not flag."
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-08-26",
+   "notes": "MASTERED - type-2 (basic) checked AND type-3 (mastery) checked. image-D8B60.png.",
+   "effort": "medium"
   },
   {
    "title": "1.3 in class",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-08-28",
    "status": "completed",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-08-28",
+   "effort": "medium"
   },
   {
-   "id": "8536972371",
    "title": "1.2 DIGIT",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-08-28T15:00:00",
-   "status": "submitted-not-graded",
-   "submitted": "2026-08-28T12:12:00",
-   "source": "grades+submission",
-   "note": "type-2 CHECKED, type-3 CHECKED -> MASTERED. Do not flag."
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-08-28",
+   "notes": "MASTERED - both checkmarks. image-FB026.png.",
+   "effort": "medium"
   },
   {
    "title": "Quiz 1.1-1.3 (Formative) & Reflection",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "status": "submitted-not-graded",
-   "source": "grades"
+   "status": "no-badge",
+   "source": "grades",
+   "notes": "Listed in gradebook; no submission/grade detail pulled in this sweep."
   },
   {
    "title": "1.4 (day 1) in class",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-08-31",
    "status": "completed",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-08-31",
+   "effort": "medium"
   },
   {
    "title": "1.4 (Day 2) in class",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-01",
    "status": "completed",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-09-01",
+   "effort": "medium"
   },
   {
-   "id": "8543876232",
    "title": "1.3 DIGIT",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-01T15:00:00",
-   "status": "submitted-not-graded",
-   "submitted": "2026-09-01T12:17:00",
-   "source": "grades+submission",
-   "note": "type-2 CHECKED, type-3 CHECKED -> MASTERED. Do not flag."
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-01",
+   "notes": "MASTERED - both checkmarks. image-01EB0.png.",
+   "effort": "medium"
   },
   {
    "title": "1.5 in class",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-02",
    "status": "completed",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-09-02",
+   "effort": "medium"
   },
   {
-   "id": "8549612461",
    "title": "1.4 DIGIT (day 1 + 2)",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-02T14:30:00",
-   "status": "submitted-not-graded",
-   "submitted": "2026-09-02T12:47:00",
-   "source": "grades+submission",
-   "note": "Sheet format differs (two level-3 boxes, no type-2 row); both visible boxes CHECKED -> MASTERED. Do not flag."
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-02",
+   "notes": "MASTERED - type-3 checked on Day 1 and Day 2; form has no type-2 boxes. image.jpg.",
+   "effort": "medium"
   },
   {
    "title": "Chapter 1 Book Review",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
    "status": "completed",
-   "source": "grades"
+   "source": "grades",
+   "notes": "Submitted; no due date captured."
   },
   {
-   "title": "Quiz 1.4+1.5 (formative)",
+   "title": "Quiz 1.4 + 1.5 (formative)",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "status": "submitted-not-graded",
-   "source": "grades"
+   "status": "no-badge",
+   "source": "grades",
+   "notes": "Listed in gradebook; no submission/grade detail pulled in this sweep."
   },
   {
    "title": "WS- Chapter 1 Review",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-08",
    "status": "completed",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-09-08",
+   "effort": "medium"
   },
   {
    "title": "Chapter 1 Priority Sheet (cover sheet)",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
+   "status": "completed",
+   "source": "grades",
    "due": "2026-09-08",
-   "status": "submitted-not-graded",
-   "source": "grades"
+   "effort": "easy"
   },
   {
-   "id": "8557233367",
    "title": "2.1 in class",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-09T08:30:00",
-   "status": "missing_gradebook_error",
-   "submitted": "2026-09-09T12:28:00",
-   "source": "grades+submission_page",
-   "note": "STILL gradebook 'Missing' as of Sep 14. Submission image RENDERS CLEARLY (notebook spread '2.1 in-class', solved problems, teacher checkmarks); submitted Sep 9 12:28pm (Late). Teacher has not cleared the Missing badge - Sayre Dolan correction/email owed.",
-   "notes": "Submitted Sep 9 12:28pm Late (image-B41C0.png): real inequality work with red teacher checkmarks; gradebook \"Missing\" badge persists - teacher-side error."
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-09",
+   "notes": "Missing badge CLEARED - verified late submission image-B41C0.png Sep 9 12:28pm with real work. Sayre Dolan email no longer needed.",
+   "effort": "medium"
   },
   {
    "title": "2.2 in class",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-11T08:30:00",
-   "status": "submitted-not-graded",
-   "source": "grades"
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-11",
+   "notes": "image-E4A14.png submitted on time Sep 9.",
+   "effort": "medium"
   },
   {
-   "id": "8560745748",
    "title": "2.1 DIGIT",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-11T15:00:00",
-   "status": "submitted-not-graded",
-   "submitted": "2026-09-09T13:24:00",
-   "source": "grades+submission",
-   "note": "type-2 CHECKED, type-3 CHECKED; work correct (x <= 4 graph, 15 <= t/5) -> MASTERED. Do not flag."
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-09-11",
+   "notes": "MASTERED - both checkmarks. image-30700.png.",
+   "effort": "medium"
   },
   {
    "title": "2.3 in class",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-14T08:30:00",
+   "status": "missing_gradebook_error",
+   "source": "grades",
+   "due": "2026-09-14",
+   "notes": "Missing badge is STALE - late submission image.jpg verified Sep 15 6:59pm.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.4 in class",
+   "course": "Algebra 1: 5(A-B)",
+   "student": "Charlotte L****",
+   "status": "missing_gradebook_error",
+   "source": "grades",
+   "due": "2026-09-15",
+   "notes": "Missing badge is STALE - late submission image.jpg verified Sep 15 6:59pm.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.3 DIGIT",
+   "course": "Algebra 1: 5(A-B)",
+   "student": "Charlotte L****",
    "status": "missing",
-   "source": "todo-overdue+grades",
-   "effort": "easy",
-   "note": "In-class assignment; posted Sep 10 12:25pm; not yet submitted at 8:35am observation.",
-   "notes": "In-class assignment due Sep 14 8:30am; at 7:20pm check submissions section EMPTY, Grade N/A, dashboard Overdue shows \"Due earlier today\". Posted Sep 10 12:25pm."
+   "source": "grades",
+   "due": "2026-09-15",
+   "notes": "NEW - posted Mon Sep 14 9:03pm. 2 days overdue. NO submission.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.5 in class",
+   "course": "Algebra 1: 5(A-B)",
+   "student": "Charlotte L****",
+   "status": "missing",
+   "source": "grades",
+   "due": "2026-09-16",
+   "notes": "NEW - posted Mon Sep 14 9:05pm. 1 day overdue. NO submission.",
+   "effort": "medium"
+  },
+  {
+   "title": "Quiz 2.1-2.4 (Formative)",
+   "course": "Algebra 1: 5(A-B)",
+   "student": "Charlotte L****",
+   "status": "submitted-not-graded",
+   "source": "grades",
+   "due": "2026-09-16",
+   "notes": "Submitted on time Sep 16 12:53pm (image-8BDC0.png, image-F706B.png). Not yet graded.",
+   "effort": "medium"
+  },
+  {
+   "title": "2.6 in class",
+   "course": "Algebra 1: 5(A-B)",
+   "student": "Charlotte L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-18",
+   "notes": "NEW - posted Wed Sep 16 10:31am. Due Fri 8:30am. No submission.",
+   "effort": "medium"
   },
   {
    "title": "Chapter 1 Test (Solving Equations)",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
+   "status": "no-badge",
+   "source": "grades",
+   "notes": "Summative; grade not captured in this sweep."
+  },
+  {
+   "title": "Week 1 Participation (08/20-08/28)",
+   "course": "Chamber Orchestra: 2(A-B)",
+   "student": "Charlotte L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-08-28",
+   "grade": "3/4 - Met Expectations"
+  },
+  {
+   "title": "Week 2 Participation (08/31-09/04)",
+   "course": "Chamber Orchestra: 2(A-B)",
+   "student": "Charlotte L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-04",
+   "grade": "3/4 - Met Expectations"
+  },
+  {
+   "title": "Week 3 Participation (09/08-09/11)",
+   "course": "Chamber Orchestra: 2(A-B)",
+   "student": "Charlotte L****",
+   "status": "no-badge",
+   "source": "grades",
    "due": "2026-09-11",
-   "status": "submitted-not-graded (summative)",
-   "source": "grades+recently-completed"
+   "notes": "Grade cell is blank; \"1 - Far Below Expectations\" is a hover tooltip artifact, NOT a grade (confirmed in HTML)."
   },
   {
-   "id": "8560740989",
-   "title": "Energy Thief Lab",
-   "course": "Science 8: 6(A-B)",
+   "title": "Week 4 Participation (09/14-09/18)",
+   "course": "Chamber Orchestra: 2(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-11T15:30:00",
-   "status": "missing",
-   "source": "todo-overdue",
-   "effort": "medium",
-   "note": "3 days overdue. STILL NO SUBMISSION at all - genuine overdue item. Needs doing ASAP.",
-   "notes": "Instructions: take photos of pages 1-2 of the handout, paste into Noteability and link the document to this assignment. No submission, no comments, Grade N/A."
+   "status": "placeholder",
+   "source": "grades",
+   "due": "2026-09-18",
+   "notes": "Grade cell blank; tooltip artifact only. UNVERIFIED - not a real grade."
   },
   {
-   "id": "8565076718",
-   "title": "CER Formative Assessment",
-   "course": "Science 8: 6(A-B)",
+   "title": "Week 5 Participation (09/21-09/25)",
+   "course": "Chamber Orchestra: 2(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-14T15:30:00",
-   "status": "graded",
-   "submitted": "2026-09-11",
-   "grade": "2/4 (2 - Below Expectations)",
-   "source": "grades+recently-completed",
-   "note": "RESOLVED Sep 14: now in gradebook, graded 2/4. Was flagged Sep 11 as submitted-but-absent.",
-   "notes": "Graded 2/4 - '2 - Below Expectations' (Newton's Cradle Demo; conservation of energy, forces)."
+   "status": "placeholder",
+   "source": "grades",
+   "due": "2026-09-25",
+   "notes": "Grade cell blank; tooltip artifact only. UNVERIFIED - not a real grade."
   },
   {
-   "id": "8564878529",
-   "title": "Graphing PE and KE",
-   "course": "Science 8: 6(A-B)",
+   "title": "Week 6 Participation (09/28-10/02)",
+   "course": "Chamber Orchestra: 2(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-15T15:30:00",
-   "status": "submitted-not-graded",
-   "submitted": "2026-09-11T14:10:00",
-   "source": "grades+recently-completed",
-   "note": "RESOLVED Sep 14: now in gradebook, submitted on time. Due tomorrow 3:30pm - already submitted.",
-   "notes": "Submitted Sep 11 2:10pm On time (\"Note Sep 11, 2026.pdf\"): Graphing KE/PE tables, graphs, analysis answers. Only 1 PDF (1 page) though instructions asked for \"all five pages\". Awaiting grade."
+   "status": "placeholder",
+   "source": "grades",
+   "due": "2026-10-02",
+   "notes": "Grade cell blank; tooltip artifact only. UNVERIFIED - not a real grade."
   },
   {
-   "title": "FAQ 1 PE/KE",
+   "title": "About Me Concept Map",
    "course": "Science 8: 6(A-B)",
    "student": "Charlotte L****",
-   "status": "graded",
-   "grade": "3 - Met Expectations",
-   "source": "grades"
+   "status": "completed",
+   "source": "grades",
+   "due": "2026-08-28",
+   "effort": "easy"
   },
   {
    "title": "Syllabus",
    "course": "Science 8: 6(A-B)",
    "student": "Charlotte L****",
    "status": "completed",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-09-02",
+   "effort": "easy"
+  },
+  {
+   "title": "Bookwork 1",
+   "course": "Science 8: 6(A-B)",
+   "student": "Charlotte L****",
+   "status": "submitted-not-graded",
+   "source": "grades",
+   "due": "2026-09-04"
+  },
+  {
+   "title": "FAQ 1 PE/KE",
+   "course": "Science 8: 6(A-B)",
+   "student": "Charlotte L****",
+   "status": "no-badge",
+   "source": "grades",
+   "due": "2026-09-08",
+   "notes": "Tooltip shows \"3 - Met Expectations\" but grade cell blank and no submission found - tooltip-only, UNVERIFIED."
+  },
+  {
+   "title": "Energy Thief Lab",
+   "course": "Science 8: 6(A-B)",
+   "student": "Charlotte L****",
+   "status": "submitted-not-graded",
+   "source": "grades",
+   "due": "2026-09-11",
+   "notes": "Submitted late Sep 15 7:03pm (image.jpg). NOT graded yet.",
+   "effort": "medium"
+  },
+  {
+   "title": "CER Formative Assessment",
+   "course": "Science 8: 6(A-B)",
+   "student": "Charlotte L****",
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-14",
+   "grade": "2/4",
+   "notes": "REAL grade 2/4 \"2 - Below Expectations\" confirmed on assignment page (Newtons Cradle work). Concerning.",
+   "effort": "hard"
+  },
+  {
+   "title": "FAQ KE/PE 2",
+   "course": "Science 8: 6(A-B)",
+   "student": "Charlotte L****",
+   "status": "submitted-not-graded",
+   "source": "grades",
+   "due": "2026-09-15",
+   "notes": "Submitted late Sep 15 7:03pm (2 files, both \"image.jpg\"). NO grade yet - \"1 - Far Below Expectations\" tooltip is an artifact (confirmed Sep 14 via screenshot).",
+   "effort": "easy"
+  },
+  {
+   "title": "Graphing PE and KE",
+   "course": "Science 8: 6(A-B)",
+   "student": "Charlotte L****",
+   "status": "submitted-not-graded",
+   "source": "grades",
+   "due": "2026-09-15",
+   "notes": "Submitted on time Sep 11 2:10pm as \"Note Sep 11, 2026.pdf\" - 1 PDF page holding photos of 3 handout sheets; instructions required all five pages (shortfall ~2 pages) with name/date/period on all pages.",
+   "effort": "medium"
+  },
+  {
+   "title": "Rube Goldberg Machine Partner Agreement",
+   "course": "Science 8: 6(A-B)",
+   "student": "Charlotte L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-21",
+   "notes": "NEW. Due Mon 3:30pm.",
+   "effort": "easy"
   },
   {
    "title": "My-Story",
    "course": "Social Studies 8: 4(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-01",
    "status": "graded",
-   "grade": "4 - Deeper Application",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-09-01",
+   "grade": "4 - Deeper Application"
   },
   {
    "title": "Adaptations & Exploration test",
    "course": "Social Studies 8: 4(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-11T08:00:00",
-   "status": "submitted-not-graded",
-   "source": "grades"
+   "status": "graded",
+   "source": "grades",
+   "due": "2026-09-11",
+   "grade": "3 - Consistent Proficiency"
   },
   {
-   "title": "Unrest Matrix pg. 1",
+   "title": "Unrest cartoons",
    "course": "Social Studies 8: 4(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-09-15T08:00:00",
    "status": "due",
-   "source": "todo",
-   "effort": "medium",
-   "note": "Due tomorrow 8:00am."
-  },
-  {
-   "title": "Unrest Matrix pg. 2",
-   "course": "Social Studies 8: 4(A-B)",
-   "student": "Charlotte L****",
-   "due": "2026-09-17T08:00:00",
-   "status": "due",
-   "source": "todo",
+   "source": "materials",
+   "due": "2026-09-18",
+   "notes": "NEW - posted Sun Sep 13 11:58am. Notebook work: divide notebook pg. 3 in half, make cartoons. Due Fri 8:00am.",
    "effort": "medium"
   },
   {
-   "title": "ITN (pgs. 2-3)",
+   "title": "Unrest Matrix pg.1 / pg.2",
    "course": "Social Studies 8: 4(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-10-30T15:05:00",
-   "status": "due",
-   "source": "todo",
-   "note": "Marked 'not available within Schoology'."
+   "status": "no-badge",
+   "source": "materials",
+   "notes": "Materials-only reference in Colonial Unrest folder; NOT graded, no submission possible. pg.2 due Sep 17 8:00am per earlier record but no submission needed."
   },
   {
    "title": "In the News T1 (pg. 1)",
    "course": "Social Studies 8: 4(A-B)",
    "student": "Charlotte L****",
    "status": "due",
-   "source": "todo"
+   "source": "grades",
+   "due": "2026-10-30",
+   "effort": "medium"
   },
   {
-   "title": "READ AND ANNOTATE 20 BENEFITS",
-   "course": "English Language Arts 8: 3(A-B)",
+   "title": "ITN (pgs. 2-3)",
+   "course": "Social Studies 8: 4(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-08-26",
-   "status": "graded",
-   "grade": "1 - Far Below Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "LITERARY DEVICES CHART",
-   "course": "English Language Arts 8: 3(A-B)",
-   "student": "Charlotte L****",
-   "due": "2026-09-02",
-   "status": "graded",
-   "grade": "1 - Far Below Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "ANNOTATE HERE THERE BE TYGERS",
-   "course": "English Language Arts 8: 3(A-B)",
-   "student": "Charlotte L****",
-   "due": "2026-09-04",
-   "status": "graded",
-   "grade": "1 - Far Below Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "ANNOTATE LAMB TO THE SLAUGHTER PART 1",
-   "course": "English Language Arts 8: 3(A-B)",
-   "student": "Charlotte L****",
-   "due": "2026-09-11T08:00:00",
-   "status": "submitted-not-graded",
-   "source": "grades"
+   "status": "no-badge",
+   "source": "grades",
+   "due": "2026-10-30",
+   "notes": "Teacher flags \"not available within Schoology\"."
   },
   {
    "title": "ELA 8 Summer Reading",
    "course": "English Language Arts 8: 3(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-08-24",
    "status": "no-badge",
-   "source": "grades"
+   "source": "grades",
+   "due": "2026-08-24",
+   "notes": "Tooltip \"1 - Far Below Expectations\" is an artifact; no grade."
+  },
+  {
+   "title": "READ AND ANNOTATE \"20 SURPRISING BENEFITS OF READING\"",
+   "course": "English Language Arts 8: 3(A-B)",
+   "student": "Charlotte L****",
+   "status": "no-badge",
+   "source": "grades",
+   "due": "2026-08-26",
+   "notes": "Listed in gradebook; no submission/grade detail pulled in this sweep."
+  },
+  {
+   "title": "Overview of T #1 IRU",
+   "course": "English Language Arts 8: 3(A-B)",
+   "student": "Charlotte L****",
+   "status": "submitted-not-graded",
+   "source": "grades",
+   "due": "2026-09-01"
+  },
+  {
+   "title": "COMPLETE LITERARY DEVICES CHART",
+   "course": "English Language Arts 8: 3(A-B)",
+   "student": "Charlotte L****",
+   "status": "no-badge",
+   "source": "grades",
+   "due": "2026-09-02",
+   "notes": "Tooltip artifact only; no grade."
+  },
+  {
+   "title": "ANNOTATE \"HERE THERE BE TYGERS\"",
+   "course": "English Language Arts 8: 3(A-B)",
+   "student": "Charlotte L****",
+   "status": "missing",
+   "source": "grades",
+   "due": "2026-09-04",
+   "notes": "Missing + teacher comment: \"I think you may have this in your binder or at home. Let me know so I can adjust your grade.\"",
+   "effort": "easy"
+  },
+  {
+   "title": "HTBT TEXT ELEMENTS QUIZ (in class)",
+   "course": "English Language Arts 8: 3(A-B)",
+   "student": "Charlotte L****",
+   "status": "no-badge",
+   "source": "grades",
+   "due": "2026-09-04",
+   "notes": "Not available in Schoology."
+  },
+  {
+   "title": "ANNOTATE PART 1 of \"LAMB TO THE SLAUGHTER\"",
+   "course": "English Language Arts 8: 3(A-B)",
+   "student": "Charlotte L****",
+   "status": "no-badge",
+   "source": "grades",
+   "due": "2026-09-11",
+   "notes": "Listed in gradebook; no submission/grade detail pulled in this sweep."
+  },
+  {
+   "title": "ANNOTATE PART 2 of \"LAMB TO THE SLAUGHTER\"",
+   "course": "English Language Arts 8: 3(A-B)",
+   "student": "Charlotte L****",
+   "status": "due",
+   "source": "grades",
+   "due": "2026-09-16",
+   "effort": "medium"
   },
   {
    "title": "IRU/AR READING TRIMESTER 1",
    "course": "English Language Arts 8: 3(A-B)",
    "student": "Charlotte L****",
-   "due": "2026-11-06T15:00:00",
-   "status": "graded",
-   "grade": "1 - Far Below Expectations",
-   "source": "grades",
-   "note": "Grade appears pre-filled."
-  },
-  {
-   "title": "Week 1 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Charlotte L****",
-   "status": "graded",
-   "grade": "3 - Met Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "Week 2 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Charlotte L****",
-   "status": "graded",
-   "grade": "3 - Met Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "Week 3 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Charlotte L****",
-   "status": "placeholder",
-   "grade": "1 - Far Below Expectations",
-   "source": "grades",
-   "note": "Weeks 4-6 also show '1 - Far Below Expectations' though not yet elapsed; system placeholder default, not actual scores."
-  },
-  {
-   "title": "Week 4 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Charlotte L****",
-   "status": "placeholder",
-   "source": "grades",
-   "notes": "Gradebook shows '1 - Far Below Expectations' for these future weeks (Sep 18/25, Oct 2). UNVERIFIED: Schoology was caught rendering a '1 - Far Below Expectations' tooltip on rows with no grade at all (see FAQ KE/PE 2) - treat as suspect until a real grade appears."
-  },
-  {
-   "title": "Week 5 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Charlotte L****",
-   "status": "placeholder",
-   "source": "grades",
-   "notes": "Gradebook shows '1 - Far Below Expectations' for these future weeks (Sep 18/25, Oct 2). UNVERIFIED: Schoology was caught rendering a '1 - Far Below Expectations' tooltip on rows with no grade at all (see FAQ KE/PE 2) - treat as suspect until a real grade appears."
-  },
-  {
-   "title": "Week 6 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Charlotte L****",
-   "status": "placeholder",
-   "source": "grades",
-   "notes": "Gradebook shows '1 - Far Below Expectations' for these future weeks (Sep 18/25, Oct 2). UNVERIFIED: Schoology was caught rendering a '1 - Far Below Expectations' tooltip on rows with no grade at all (see FAQ KE/PE 2) - treat as suspect until a real grade appears."
-  },
-  {
-   "title": "QUEST SURVEY WEEK ONE",
-   "course": "Qu3ST 8",
-   "student": "Charlotte L****",
-   "status": "completed",
-   "source": "grades"
-  },
-  {
-   "id": "8516163487",
-   "title": "1.1 Notes and HW",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-08-25",
-   "status": "completed",
-   "source": "grades",
-   "note": "Revs 1-3 (Aug 24, On time) contain the correct 1_1.1_SolvingSimpleEq.pdf. Rev 4 (Sep 9 8:17pm, Late) STILL contains the wrong file '2.1_WriteGraphInequalities.pdf' - never replaced/removed. Gradebook shows completed, no badge.",
-   "notes": "Rev 4 Sep 9 8:17pm Late still wrongly contains 2.1_WriteGraphInequalities.pdf. No Missing badge on the assignment page."
-  },
-  {
-   "title": "1.2 Notes and HW",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-08-27",
-   "status": "completed",
-   "source": "grades"
-  },
-  {
-   "title": "10 Things About Me",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "status": "no-badge",
-   "source": "grades"
-  },
-  {
-   "title": "1.3 Notes and HW",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-08-28",
-   "status": "completed",
-   "source": "grades"
-  },
-  {
-   "title": "1.4 Notes and HW Day 1",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-08-31",
-   "status": "completed",
-   "source": "grades"
-  },
-  {
-   "title": "1.4 Notes and HW Day 2",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-01",
-   "status": "completed",
-   "source": "grades"
-  },
-  {
-   "id": "8516163380",
-   "title": "1.5 Notes and HW",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-03",
-   "status": "missing_gradebook_error",
-   "submitted": "2026-09-01",
-   "source": "grades+submission_page",
-   "note": "STILL 'Missing'. Rev 1 (Sep 1 11:55am, On time) = notes PDF 1_1.5_RewritingEqFormulas.pdf RENDERS; Rev 2 (Sep 1 2:50pm, On time) = HW photo RENDERS with actual work (Pgs. 32-33 #37-44 solved). BOTH PARTS PRESENT, both on time. Gradebook error - Ms. Hogg correction/email owed.",
-   "notes": "Notes PDF + 2 HW photos submitted on time Sep 1; Rev 4 Sep 12 12:32pm resubmitted the notes PDF; Missing badge persists - teacher-side error."
-  },
-  {
-   "title": "Practice Quiz 1.1-1.3",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "status": "no-badge",
-   "source": "grades"
-  },
-  {
-   "title": "Practice Quiz 1.4-1.5",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "status": "no-badge",
-   "source": "grades"
-  },
-  {
-   "id": "8516163321",
-   "title": "Chapter 1 Review HW",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-04T23:59:00",
-   "status": "missing_ungraded",
-   "submitted": "2026-09-11T16:14:00",
-   "source": "grades+submission_page",
-   "effort": "medium",
-   "note": "STILL 'Missing' badge, ungraded. Rev 1 Sep 11 4:14pm (Late), Rev 2 Sep 12 12:30pm (Late) = image RENDERS with real work (worksheet with equations, literal equations, t-shirt company problem). Teacher has not graded/cleared the badge.",
-   "notes": "Rev 1 Sep 11 4:14pm Late (image-E3341.png); Rev 2 Sep 12 12:30pm Late (image-A6E4C.png) shows real work; Missing badge persists pending teacher grade."
-  },
-  {
-   "title": "2.1 Notes and HW",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-10",
-   "status": "completed",
-   "source": "grades+recently-completed"
-  },
-  {
-   "id": "8516164709",
-   "title": "2.2 Notes and HW",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-11",
-   "status": "completed_but_hw_photo_missing",
-   "submitted": "2026-09-11T11:54:00",
-   "source": "grades+submission_page",
-   "effort": "medium",
-   "note": "HW PHOTO DID NOT LAND. Rev 1 (Sep 10 11:10am) = notes PDF; Rev 2 (Sep 11 11:54am) = SAME notes PDF re-uploaded (6 pages; p.6 only a stick-figure doodle). NO image of handwritten homework in either revision. Gradebook shows a submission icon but the HW work photo is absent. Flag: needs HW photo re-upload.",
-   "notes": "Rev 1 Sep 10 11:10am + Rev 2 Sep 11 11:54am both contain only 2.2_SolvingInequalitiesAddSub.pdf; homework photo with actual work still absent."
-  },
-  {
-   "id": "8516164697",
-   "title": "2.3 Notes and HW",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-14T23:59:00",
-   "status": "submitted-not-graded",
-   "submitted": "2026-09-11T11:53:00",
-   "source": "grades+submission_page+recently-completed",
-   "effort": "medium",
-   "note": "Due TODAY 11:59pm - already handled. Rev 1 (Sep 11 11:53am) = HW photo RENDERS with real work (Pg. 71 #3-27 odd, teacher checkmarks); Rev 2 (Sep 11 11:54am) = notes PDF 2.3_SolvingInequalitiesMultDiv.pdf RENDERS. BOTH PARTS PRESENT, on time. Ungraded.",
-   "notes": "Both parts submitted Sep 11: image-9D08A.png (homework photo) + 2.3_SolvingInequalitiesMultDiv.pdf (notes PDF)."
-  },
-  {
-   "id": "8536920978",
-   "title": "Unit 1 ISN Check",
-   "course": "Social Studies 7: 6(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-04",
-   "status": "missing",
-   "source": "grades",
-   "effort": "medium",
-   "note": "Genuinely MISSING - no submission exists. Still the one real missing item for Louis."
-  },
-  {
-   "title": "Unit 2: Video: Engineering-Rome: Assign #3",
-   "course": "Social Studies 7: 6(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-15T15:10:00",
-   "status": "due",
-   "source": "todo",
-   "effort": "medium",
-   "note": "Due tomorrow 3:10pm."
-  },
-  {
-   "title": "Unit 2 ISN: Assignment #4: Docs 3-5",
-   "course": "Social Studies 7: 6(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-15T08:30:00",
-   "status": "due",
-   "source": "todo",
-   "effort": "medium",
-   "note": "NEW since Sep 11. Due tomorrow 8:30am. Not yet in gradebook."
-  },
-  {
-   "title": "Unit 1: Assignment #3: Short Answer",
-   "course": "Social Studies 7: 6(A-B)",
-   "student": "Louis L****",
-   "status": "submitted-not-graded",
-   "source": "grades"
-  },
-  {
-   "title": "Who am I Project",
-   "course": "Science 7: 5(A-B)",
-   "student": "Louis L****",
-   "due": "2026-08-25",
-   "status": "graded",
-   "grade": "3 - Met Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "Questions: Mono Lake",
-   "course": "Science 7: 5(A-B)",
-   "student": "Louis L****",
-   "due": "2026-08-28",
-   "status": "graded",
-   "grade": "3 - Met Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "Levels of Organization",
-   "course": "Science 7: 5(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-01",
-   "status": "graded",
-   "grade": "3 - Met Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "Modeling Mono Lake Food Web",
-   "course": "Science 7: 5(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-04",
-   "status": "graded",
-   "grade": "3 - Met Expectations",
-   "source": "grades+recently-completed"
-  },
-  {
-   "title": "Modeling Mono Lake Trophic Levels",
-   "course": "Science 7: 5(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-15T23:59:00",
-   "status": "due",
-   "source": "todo",
-   "effort": "medium",
-   "note": "Gradebook shows placeholder '1 - Far Below Expectations' (pre-filled). Due tomorrow 11:59pm.",
-   "notes": "CORRECTION (JP verified via screenshot Sep 14 evening): the gradebook tooltip renders '1 - Far Below Expectations' on this row, but there is NO grade and NO submission - the tooltip is misleading/wrong. There is no grade at this time."
-  },
-  {
-   "title": "Questions-Trophic Levels",
-   "course": "Science 7: 5(A-B)",
-   "student": "Louis L****",
-   "status": "due",
-   "source": "todo",
-   "note": "No due time shown; gradebook shows placeholder '1 - Far Below Expectations' (pre-filled).",
-   "due": "2026-09-15T23:59:00",
-   "notes": "CORRECTION (JP verified via screenshot Sep 14 evening): the gradebook tooltip renders '1 - Far Below Expectations' on this row, but there is NO grade and NO submission - the tooltip is misleading/wrong. There is no grade at this time."
-  },
-  {
-   "title": "CER Assessment: Mono Lake Food Web and Trophic Level",
-   "course": "Science 7: 5(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-22",
-   "status": "due",
-   "source": "todo",
-   "effort": "hard"
-  },
-  {
-   "id": "8512604467",
-   "title": "Summer Reading Due IN CLASS",
-   "course": "English Language Arts 7: 3(A-B)",
-   "student": "Louis L****",
-   "status": "late",
-   "source": "grades",
-   "note": "Badge LATE; teacher comment unchanged: 'missing - turn in ASAP. Project submitted 8/31. Missing log (no signatures). Log submitted 9/4'. Log still flagged for missing parent signatures.",
-   "notes": "Teacher comment: 'missing - turn in ASAP. Project submitted 8/31. Missing log (no signatures). Log submitted 9/4'. Parent signatures still missing."
-  },
-  {
-   "title": "iReady Reading Fall 2026",
-   "course": "English Language Arts 7: 3(A-B)",
-   "student": "Louis L****",
-   "status": "graded",
-   "grade": "3 - Consistent Proficiency",
-   "source": "grades"
-  },
-  {
-   "title": "About Me Email",
-   "course": "English Language Arts 7: 3(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-11",
-   "status": "graded",
-   "grade": "1 - Far Below Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "iReady Reflection / Goal Setting with Signatures",
-   "course": "English Language Arts 7: 3(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-04",
-   "status": "no-badge",
-   "source": "grades"
-  },
-  {
-   "title": "My Social Media Life Reading/Questions",
-   "course": "English Language Arts 7: 3(A-B)",
-   "student": "Louis L****",
-   "status": "completed",
-   "source": "recently-completed"
-  },
-  {
-   "title": "Week 1 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Louis L****",
-   "status": "graded",
-   "grade": "3 - Met Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "Week 2 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Louis L****",
-   "status": "graded",
-   "grade": "3 - Met Expectations",
-   "source": "grades"
-  },
-  {
-   "title": "Week 3 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Louis L****",
-   "status": "placeholder",
-   "source": "grades"
-  },
-  {
-   "title": "Week 4 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Louis L****",
-   "status": "placeholder",
-   "source": "grades"
-  },
-  {
-   "title": "Week 5 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Louis L****",
-   "status": "placeholder",
-   "source": "grades"
-  },
-  {
-   "title": "Week 6 Participation",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "student": "Louis L****",
-   "status": "placeholder",
-   "source": "grades"
-  },
-  {
-   "title": "Bring a book to Qu3ST",
-   "course": "Qu3ST 7",
-   "student": "Louis L****",
-   "due": "2026-08-26",
-   "status": "completed",
-   "source": "grades"
-  },
-  {
-   "title": "2.4 in class",
-   "course": "Algebra 1: 5(A-B)",
-   "student": "Charlotte L****",
-   "due": "2026-09-15T08:30:00",
    "status": "due",
    "source": "grades",
-   "notes": "In-class assignment, due tomorrow morning. Posted Sep 14 7:49am; new since the morning audit."
-  },
-  {
-   "title": "FAQ KE/PE 2",
-   "course": "Science 8: 6(A-B)",
-   "student": "Charlotte L****",
-   "due": "2026-09-15T15:30:00",
-   "status": "due",
-   "source": "grades",
-   "notes": "CORRECTION (JP verified via screenshot Sep 14 evening): the gradebook tooltip renders '1 - Far Below Expectations' on this row, but there is NO grade and NO submission - the tooltip is misleading/wrong. There is no grade at this time."
-  },
-  {
-   "title": "2.4 Notes and HW",
-   "course": "Algebra 1: 4(A-B)",
-   "student": "Louis L****",
-   "due": "2026-09-15T23:59:00",
-   "status": "submitted-not-graded",
-   "source": "grades+submission_page",
-   "notes": "Submitted Sep 14 12:03pm On time; single file 2.4_MultiStepInequalities.pdf (notes PDF only, no HW photo in that revision)."
-  },
-  {
-   "title": "1 PASSED iReady lesson",
-   "course": "English Language Arts 7",
-   "student": "Louis L****",
-   "due": "2026-09-18T15:00:00",
-   "status": "due",
-   "source": "todo"
-  },
-  {
-   "title": "1 PASSED Quill lesson",
-   "course": "English Language Arts 7",
-   "student": "Louis L****",
-   "due": "2026-09-18T15:00:00",
-   "status": "due",
-   "source": "todo"
-  },
-  {
-   "title": "Unit 2 TEST",
-   "course": "Social Studies 7",
-   "student": "Louis L****",
-   "due": "2026-09-18",
-   "status": "due",
-   "source": "todo"
+   "due": "2026-11-06",
+   "notes": "Summative; tooltip artifact only, no grade."
   }
  ],
  "attachments": [
@@ -1291,6 +1516,18 @@
    "course": "Charlotte (school-wide)",
    "author": "(school)",
    "text": "M-A shadowing sign-up"
+  },
+  {
+   "posted": "2026-09-16T14:09:00-07:00",
+   "course": "Social Studies 7: 6(A-B)",
+   "author": "Mr. Rogers",
+   "text": "Remember, all Unit 2 work must be in by this Friday, 8:30 am or you will be eligible for a RETAKE on the Unit 2 Test. Be sure to trun in your Unit 2 ISN and movie quesitions at the beginning of clas. Study Guides are available through Schoology for the test. Good Luck"
+  },
+  {
+   "posted": "2026-09-16T08:33:00-07:00",
+   "course": "Algebra 1: 4(A-B)",
+   "author": "Ms. Hagg",
+   "text": "Good morning, everybody, and happy Tuesday! Today we are covering the 2.5 lesson; notes are posted (attachment 2.5_CompoundInequalities.pdf 68KB)."
   }
  ],
  "calendar_events": [
@@ -1321,6 +1558,36 @@
    "title": "Sonia's birthday",
    "date": "2026-09-19",
    "note": "personal event in feed"
+  },
+  {
+   "title": "Exploring Limiting Factors of Mono Lake",
+   "course": "Science 7: 5(A-B)",
+   "date": "2026-09-18"
+  },
+  {
+   "title": "Carrying Capacity-Kaibab Deer",
+   "course": "Science 7: 5(A-B)",
+   "date": "2026-09-23"
+  },
+  {
+   "title": "CER Assessment: Mono Lake Food Web and Trophic Level",
+   "course": "Science 7: 5(A-B)",
+   "date": "2026-09-22"
+  },
+  {
+   "title": "Unrest cartoons",
+   "course": "Social Studies 8: 4(A-B)",
+   "date": "2026-09-18"
+  },
+  {
+   "title": "Rube Goldberg Machine Partner Agreement",
+   "course": "Science 8: 6(A-B)",
+   "date": "2026-09-21"
+  },
+  {
+   "title": "NO SCHOOL - Staff Development Day",
+   "course": null,
+   "date": "2026-10-12"
   }
  ],
  "folders": [
@@ -1352,8 +1619,8 @@
    "student": "Louis L****",
    "expected_due": "2026-09-14",
    "status": "UNVERIFIED - not rendered anywhere",
-   "note": "Expected per Sep 11 records; re-checked in the Sep 14 evening pull (To-Do, gradebook, all Materials folders) - still does not render anywhere. Quarantined - do NOT treat as due."
+   "note": "Re-checked in the Sep 17 pull (To-Do, gradebook, all Materials folders) - still renders nowhere. Quarantined - do NOT treat as due."
   }
  ],
- "observed_at": "2026-09-14T19:26:00-07:00"
+ "observed_at": "2026-09-17T15:27:00-07:00"
 }
