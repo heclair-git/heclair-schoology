@@ -1,6 +1,6 @@
 {
  "version": "2.0",
- "generated_at": "2026-09-17T22:28:03Z",
+ "generated_at": "2026-09-18T04:08:35Z",
  "parent_account": "loo*****@gmail.com",
  "parent_name": "J**** L****",
  "students": [
@@ -12,7 +12,7 @@
   "login_verified": true,
   "children_count": 2,
   "audit_date": "2026-09-17",
-  "run_window_pt": "3:07-3:27pm PDT",
+  "run_window_pt": "3:07-3:27pm PDT + 9:00-9:08pm PDT (Louis-only evening pull)",
   "read_only": true,
   "thorough_steps_completed": true,
   "digit_rule": "corrected 2026-09-08 per JP: type-2 checked AND type-3 checked = mastered (do NOT flag); type-2 only = growing (flag); neither = not understood (flag strongly)",
@@ -42,9 +42,10 @@
    "UNCHANGED: Louis Unit 1 ISN Check missing; 1.5 gradebook error; Chapter 1 Review HW ungraded; 1.1 Rev 4 wrong file; ELA log missing parent signatures."
   ],
   "evening_sync_notes": "Sep 14 evening audit (19:05-19:26 PDT): Louis checked 19:05-19:25, Charlotte 19:14-19:26. New since morning: Charlotte FAQ KE/PE 2 + 2.4 in class; Louis 2.4 Notes and HW (submitted), ELA iReady/Quill lessons, SS Unit 2 TEST. Charlotte 2.3 in class now overdue (no submission); Louis teacher name confirmed Ms. Hagg. Chapter 1 Practice Test still quarantined; 2.4 Notes and HW released from quarantine. CORRECTION: the '1 - Far Below Expectations' tooltips on Charlotte FAQ KE/PE 2 and Louis's Modeling Mono Lake Trophic Levels + Questions-Trophic Levels are misleading - JP confirmed via screenshot there is no grade yet on any of them. Charlotte's real concern is the CER Formative Assessment, genuinely graded 2/4.",
-  "assignment_count": 106,
-  "sync_notes": "Full read-only pull Thu Sep 17, 2026 3:07-3:27pm PDT (Louis first). Screenshot attachment mechanism broke mid-run (handoff validator rejected all paths post-compaction); data 100% verified live, delivered as text. Louis: 2.2/2.4 HW photos now present (both complete); 1.5 + Ch1 Review Missing badges still STALE; Chapter 1 Test graded 3; Modeling Mono Lake Trophic Levels actually graded 3/4 (tooltip \"1\" was wrong); Questions-Trophic Levels genuinely Missing; Unit 1 ISN Check still Missing; NEW: Exploring Limiting Factors (Sep 18), Carrying Capacity-Kaibab Deer (Sep 23); Unit 2 TEST Fri Sep 18 + Mr. Rogers retake warning. Charlotte: 2.1 in class Missing badge CLEARED; 2.3/2.4 in class badges STALE (submitted Sep 15); all 5 DIGITs mastered; NEW overdue: 2.3 DIGIT + 2.5 in class; NEW: 2.6 in class (Sep 18), Unrest cartoons (Sep 18), Rube Goldberg Partner Agreement (Sep 21); CER 2/4 is a REAL grade; FAQ KE/PE 2 + Energy Thief Lab submitted, ungraded; tooltip artifacts confirmed in HTML for Orchestra weeks and ELA rows.",
-  "delta_vs_2026_09_14_evening": "Louis: +Chapter 1 Test grade (3); +Modeling Mono Lake Trophic Levels grade (3/4); +2.2/2.4 HW photos (now complete); +new assignments (Exploring Limiting Factors, Carrying Capacity-Kaibab Deer); +Mr. Rogers retake warning; +2.1-2.4 Practice Quiz submitted. Charlotte: 2.1 in class badge cleared; +new overdue (2.3 DIGIT, 2.5 in class); +new (2.6 in class, Unrest cartoons, Rube Goldberg Partner Agreement); +Energy Thief Lab + FAQ KE/PE 2 submitted; +Quiz 2.1-2.4 submitted; +Tygers teacher comment."
+  "assignment_count": 112,
+  "sync_notes": "Full read-only pull Thu Sep 17, 2026 3:07-3:27pm PDT (Louis first). Screenshot attachment mechanism broke mid-run (handoff validator rejected all paths post-compaction); data 100% verified live, delivered as text. Louis: 2.2/2.4 HW photos now present (both complete); 1.5 + Ch1 Review Missing badges still STALE; Chapter 1 Test graded 3; Modeling Mono Lake Trophic Levels actually graded 3/4 (tooltip \"1\" was wrong); Questions-Trophic Levels genuinely Missing; Unit 1 ISN Check still Missing; NEW: Exploring Limiting Factors (Sep 18), Carrying Capacity-Kaibab Deer (Sep 23); Unit 2 TEST Fri Sep 18 + Mr. Rogers retake warning. Charlotte: 2.1 in class Missing badge CLEARED; 2.3/2.4 in class badges STALE (submitted Sep 15); all 5 DIGITs mastered; NEW overdue: 2.3 DIGIT + 2.5 in class; NEW: 2.6 in class (Sep 18), Unrest cartoons (Sep 18), Rube Goldberg Partner Agreement (Sep 21); CER 2/4 is a REAL grade; FAQ KE/PE 2 + Energy Thief Lab submitted, ungraded; tooltip artifacts confirmed in HTML for Orchestra weeks and ELA rows. EVENING (Louis-only, 9pm): 2.1-2.4 Quiz Review HW submitted 9:01pm tonight (on time); 2.5 Notes and HW submitted 8:58/8:59pm tonight (on time); 2.1-2.4 Practice Quiz submitted 11:36am today; 1.5 Notes and HW + Chapter 1 Review HW still MISSING (late revs ungraded); ELA reading log resolved (submitted 9/4); phantom \"1\" grade entries removed (Questions-Trophic Levels, About Me Email, Orchestra Weeks 3-6); Trophic Levels grade corrected to 3; +SS ISN sub-part entries (#1,#2 Geo,Essay/Docs1-2,Docs3-5,Docs6-8); +Mr. Rogers 4:47pm WIN-time essay post; +calendar: Unit 3 begins Sep 21, Club Fair/Genre Quiz/IRB Sep 18.",
+  "delta_vs_2026_09_14_evening": "Louis: +Chapter 1 Test grade (3); +Modeling Mono Lake Trophic Levels grade (3/4); +2.2/2.4 HW photos (now complete); +new assignments (Exploring Limiting Factors, Carrying Capacity-Kaibab Deer); +Mr. Rogers retake warning; +2.1-2.4 Practice Quiz submitted. Charlotte: 2.1 in class badge cleared; +new overdue (2.3 DIGIT, 2.5 in class); +new (2.6 in class, Unrest cartoons, Rube Goldberg Partner Agreement); +Energy Thief Lab + FAQ KE/PE 2 submitted; +Quiz 2.1-2.4 submitted; +Tygers teacher comment.",
+  "evening_pull_pt": "9:00-9:08pm PDT"
  },
  "courses": [
   {
@@ -195,10 +196,10 @@
    "title": "1.5 Notes and HW",
    "course": "Algebra 1: 4(A-B)",
    "student": "Louis L****",
-   "status": "missing_gradebook_error",
+   "status": "missing",
    "source": "grades",
    "due": "2026-09-03",
-   "notes": "Missing badge is STALE - 4 revisions verified present: notes PDF + 2 HW photos on time Sep 1; notes PDF resubmitted late Sep 12. Ms. Hagg email still owed.",
+   "notes": "MISSING per gradebook. Rev 1-3 submitted Sep 1 (on time), Rev 4 Sep 12 12:32pm (LATE); ungraded. Ms. Hagg email still owed.",
    "effort": "medium"
   },
   {
@@ -223,10 +224,10 @@
    "title": "Chapter 1 Review HW",
    "course": "Algebra 1: 4(A-B)",
    "student": "Louis L****",
-   "status": "missing_gradebook_error",
+   "status": "missing",
    "source": "grades",
    "due": "2026-09-04",
-   "notes": "Missing badge is STALE - 2 late revisions verified (image-E3341.png Sep 11, image-A6E4C.png Sep 12, real work). Ms. Hagg email still owed.",
+   "notes": "MISSING per gradebook. Rev 1 Sep 11 4:14pm (LATE), Rev 2 Sep 12 12:30pm (LATE); ungraded. Ms. Hagg email still owed.",
    "effort": "medium"
   },
   {
@@ -287,27 +288,27 @@
    "status": "submitted-not-graded",
    "source": "grades",
    "due": "2026-09-17",
-   "notes": "Submitted Sep 17 11:36am (image-03CFF.png, image-9D735.png). Not yet graded.",
+   "notes": "Rev 1 submitted Sep 17 11:36am (on time) + Rev 2. Not yet graded.",
    "effort": "medium"
   },
   {
    "title": "2.1-2.4 Quiz Review HW",
    "course": "Algebra 1: 4(A-B)",
    "student": "Louis L****",
-   "status": "due",
+   "status": "submitted-not-graded",
    "source": "grades",
    "due": "2026-09-17",
-   "notes": "Due TODAY 11:59pm. NO submission. Worksheet only.",
+   "notes": "Submitted Sep 17 9:01pm (on time, due 11:59pm tonight). Not yet graded.",
    "effort": "medium"
   },
   {
    "title": "2.5 Notes and HW",
    "course": "Algebra 1: 4(A-B)",
    "student": "Louis L****",
-   "status": "due",
+   "status": "submitted-not-graded",
    "source": "grades",
    "due": "2026-09-18",
-   "notes": "Due Fri 11:59pm. NO submission. Attached: 2.5_CompoundInequalities.pdf 67KB (Ms. Hagg posted Sep 16).",
+   "notes": "Rev 1 submitted Sep 17 8:58pm + Rev 2 8:59pm (on time, due Fri 11:59pm). Not yet graded.",
    "effort": "medium"
   },
   {
@@ -389,7 +390,7 @@
    "status": "late",
    "source": "grades",
    "due": "2026-08-28",
-   "notes": "Teacher comment: log submitted Sep 4 but still lacks parent signatures. Action needed.",
+   "notes": "Reading log (Reading Goals Tracker) SUBMITTED Sep 4 - resolved. Teacher comment on file.",
    "effort": "easy"
   },
   {
@@ -512,7 +513,7 @@
    "status": "missing",
    "source": "grades",
    "due": "2026-09-15",
-   "notes": "2 days overdue. NO submission. CORRECTION: tooltip \"1\" was an artifact - no grade exists.",
+   "notes": "MISSING (due Sep 15, 2 days overdue; To-Do \"Overdue Warning\"). NO submission. Tooltip \"1\" was an artifact - no grade exists.",
    "effort": "easy"
   },
   {
@@ -551,7 +552,7 @@
    "status": "missing",
    "source": "grades",
    "due": "2026-09-04",
-   "notes": "Still Missing - no submission anywhere. Checklist requires Part 1/Part 2 stamped and complete. Action needed.",
+   "notes": "Still MISSING - no submission anywhere. Physical notebook check. Action needed.",
    "effort": "easy"
   },
   {
@@ -570,7 +571,7 @@
    "status": "due",
    "source": "grades",
    "due": "2026-09-18",
-   "notes": "Due Fri 3:10pm. Mr. Rogers: all Unit 2 work in by Fri 8:30am or eligible for RETAKE on Unit 2 Test.",
+   "notes": "Full notebook check in class, due Fri Sep 18 3:10pm. Mr. Rogers: all Unit 2 work in by Fri 8:30am or NO retake eligibility on Unit 2 Test.",
    "effort": "medium"
   },
   {
@@ -580,7 +581,7 @@
    "status": "due",
    "source": "grades",
    "due": "2026-09-18",
-   "notes": "Due Fri 3:10pm. Turn in at beginning of class.",
+   "notes": "Handout stamped Tue Sep 15. Due Fri Sep 18 3:10pm; turn in at beginning of class. Retake cutoff Fri 8:30am.",
    "effort": "medium"
   },
   {
@@ -1127,6 +1128,58 @@
    "source": "grades",
    "due": "2026-11-06",
    "notes": "Summative; tooltip artifact only, no grade."
+  },
+  {
+   "title": "Unit 1 ISN #1 Vocabulary / Parts of a Map",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "materials",
+   "notes": "Past in-class work; no missing flag, no grade."
+  },
+  {
+   "title": "Unit 1 ISN #2 Pt.2",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "materials",
+   "notes": "Past in-class work; no missing flag, no grade."
+  },
+  {
+   "title": "Unit 2 ISN #1 Geo Challenge",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "materials",
+   "due": "2026-09-10",
+   "notes": "Due Thu Sep 10 8:30am; no missing flag, no grade."
+  },
+  {
+   "title": "Unit 2 ISN #2 Background Essay & Docs 1&2",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "materials",
+   "due": "2026-09-11",
+   "notes": "Due Fri Sep 11 8:30am; no missing flag, no grade."
+  },
+  {
+   "title": "Unit 2 ISN #4 Docs 3-5",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "materials",
+   "due": "2026-09-15",
+   "notes": "Due Tue Sep 15 8:30am; no missing flag, no grade."
+  },
+  {
+   "title": "Unit 2 ISN #5 Docs 6-8",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "no-badge",
+   "source": "materials",
+   "due": "2026-09-17",
+   "notes": "Due Thu Sep 17 8:30am (today). Stamped in class today; no missing flag, no grade."
   }
  ],
  "attachments": [
@@ -1256,15 +1309,9 @@
    "student": "Louis L****",
    "course": "Science 7: 5(A-B)",
    "assignment": "Modeling Mono Lake Trophic Levels",
-   "grade": "1",
-   "label": "placeholder pre-filled"
-  },
-  {
-   "student": "Louis L****",
-   "course": "Science 7: 5(A-B)",
-   "assignment": "Questions-Trophic Levels",
-   "grade": "1",
-   "label": "placeholder pre-filled"
+   "grade": "3",
+   "label": "3 - Met Expectations",
+   "note": "Confirmed 3/4 on submission page Sep 17 (earlier \"1\" tooltip was a rendering artifact)."
   },
   {
    "student": "Louis L****",
@@ -1283,13 +1330,6 @@
   },
   {
    "student": "Louis L****",
-   "course": "English Language Arts 7: 3(A-B)",
-   "assignment": "About Me Email",
-   "grade": "1",
-   "label": "1 - Far Below Expectations"
-  },
-  {
-   "student": "Louis L****",
    "course": "Chamber Orchestra: 2(A-B)",
    "assignment": "Week 1 Participation",
    "grade": "3",
@@ -1301,13 +1341,6 @@
    "assignment": "Week 2 Participation",
    "grade": "3",
    "label": "3 - Met Expectations"
-  },
-  {
-   "student": "Louis L****",
-   "course": "Chamber Orchestra: 2(A-B)",
-   "assignment": "Weeks 3-6 Participation",
-   "grade": "1",
-   "label": "placeholder default for future weeks"
   }
  ],
  "submissions": [
@@ -1528,6 +1561,18 @@
    "course": "Algebra 1: 4(A-B)",
    "author": "Ms. Hagg",
    "text": "Good morning, everybody, and happy Tuesday! Today we are covering the 2.5 lesson; notes are posted (attachment 2.5_CompoundInequalities.pdf 68KB)."
+  },
+  {
+   "posted": "2026-09-17T16:47:00-07:00",
+   "course": "Social Studies 7: 6(A-B)",
+   "author": "Mr. Rogers",
+   "text": "Essay on the Study Guide (Background Essay) - students who finished the reading and note-taking can use Thursday WIN time to start typing the essay."
+  },
+  {
+   "posted": "2026-09-17T09:20:00-07:00",
+   "course": "Science 7: 5(A-B)",
+   "author": "(science teacher)",
+   "text": "Posted assignment \"Exploring Limiting Factors of Mono Lake\" (Day 9 folder), due Fri Sep 18."
   }
  ],
  "calendar_events": [
@@ -1588,6 +1633,26 @@
    "title": "NO SCHOOL - Staff Development Day",
    "course": null,
    "date": "2026-10-12"
+  },
+  {
+   "title": "Unit 3: Christianity begins",
+   "course": "Social Studies 7: 6(A-B)",
+   "date": "2026-09-21"
+  },
+  {
+   "title": "Club Fair @ Lunch",
+   "course": "Advisory (7th Grade - Class of 2028)",
+   "date": "2026-09-18"
+  },
+  {
+   "title": "Reading Genre Quiz (in class)",
+   "course": "English Language Arts 7: 3(A-B)",
+   "date": "2026-09-18"
+  },
+  {
+   "title": "Bring IRB and Reading Tracker to ELA",
+   "course": "English Language Arts 7: 3(A-B)",
+   "date": "2026-09-18"
   }
  ],
  "folders": [
@@ -1622,5 +1687,5 @@
    "note": "Re-checked in the Sep 17 pull (To-Do, gradebook, all Materials folders) - still renders nowhere. Quarantined - do NOT treat as due."
   }
  ],
- "observed_at": "2026-09-17T15:27:00-07:00"
+ "observed_at": "2026-09-17T21:08:00-07:00"
 }
