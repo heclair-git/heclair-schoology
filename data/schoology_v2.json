@@ -1,6 +1,6 @@
 {
  "version": "2.0",
- "generated_at": "2026-09-18T04:08:35Z",
+ "generated_at": "2026-09-20T01:45:33Z",
  "parent_account": "loo*****@gmail.com",
  "parent_name": "J**** L****",
  "students": [
@@ -11,8 +11,8 @@
   "school": "Hillview Middle School",
   "login_verified": true,
   "children_count": 2,
-  "audit_date": "2026-09-17",
-  "run_window_pt": "3:07-3:27pm PDT + 9:00-9:08pm PDT (Louis-only evening pull)",
+  "audit_date": "2026-09-19",
+  "run_window_pt": "6:38-7:13pm PDT fast update (~35 min live audit, Louis then Charlotte, high-signal surfaces only, no Materials expansion)",
   "read_only": true,
   "thorough_steps_completed": true,
   "digit_rule": "corrected 2026-09-08 per JP: type-2 checked AND type-3 checked = mastered (do NOT flag); type-2 only = growing (flag); neither = not understood (flag strongly)",
@@ -27,7 +27,8 @@
    "Louis '2.2 Notes and HW' (8516164709): gradebook shows submission icon but NO HW photo exists in any revision - photo never landed.",
    "Louis '1.1 Notes and HW' (8516163487): Rev 4 still holds wrong file 2.1_WriteGraphInequalities.pdf.",
    "Charlotte 'Energy Thief Lab' (8560740989): genuinely overdue 3 days, zero submission.",
-   "Louis 'Unit 1 ISN Check' (8536920978): genuinely missing, no submission."
+   "Louis 'Unit 1 ISN Check' (8536920978): genuinely missing, no submission.",
+   "Charlotte 'FAQ KE/PE 2': gradebook tooltip '1 - Far Below Expectations' vs Recently Completed 'submitted but not yet graded'. Per the Sep 14 phantom-tooltip rule, not recorded as a grade; needs teacher's eyes."
   ],
   "quarantined_unverified": [
    "Chapter 1 Practice Test (Louis) - renders nowhere, do not treat as due"
@@ -45,7 +46,17 @@
   "assignment_count": 112,
   "sync_notes": "Full read-only pull Thu Sep 17, 2026 3:07-3:27pm PDT (Louis first). Screenshot attachment mechanism broke mid-run (handoff validator rejected all paths post-compaction); data 100% verified live, delivered as text. Louis: 2.2/2.4 HW photos now present (both complete); 1.5 + Ch1 Review Missing badges still STALE; Chapter 1 Test graded 3; Modeling Mono Lake Trophic Levels actually graded 3/4 (tooltip \"1\" was wrong); Questions-Trophic Levels genuinely Missing; Unit 1 ISN Check still Missing; NEW: Exploring Limiting Factors (Sep 18), Carrying Capacity-Kaibab Deer (Sep 23); Unit 2 TEST Fri Sep 18 + Mr. Rogers retake warning. Charlotte: 2.1 in class Missing badge CLEARED; 2.3/2.4 in class badges STALE (submitted Sep 15); all 5 DIGITs mastered; NEW overdue: 2.3 DIGIT + 2.5 in class; NEW: 2.6 in class (Sep 18), Unrest cartoons (Sep 18), Rube Goldberg Partner Agreement (Sep 21); CER 2/4 is a REAL grade; FAQ KE/PE 2 + Energy Thief Lab submitted, ungraded; tooltip artifacts confirmed in HTML for Orchestra weeks and ELA rows. EVENING (Louis-only, 9pm): 2.1-2.4 Quiz Review HW submitted 9:01pm tonight (on time); 2.5 Notes and HW submitted 8:58/8:59pm tonight (on time); 2.1-2.4 Practice Quiz submitted 11:36am today; 1.5 Notes and HW + Chapter 1 Review HW still MISSING (late revs ungraded); ELA reading log resolved (submitted 9/4); phantom \"1\" grade entries removed (Questions-Trophic Levels, About Me Email, Orchestra Weeks 3-6); Trophic Levels grade corrected to 3; +SS ISN sub-part entries (#1,#2 Geo,Essay/Docs1-2,Docs3-5,Docs6-8); +Mr. Rogers 4:47pm WIN-time essay post; +calendar: Unit 3 begins Sep 21, Club Fair/Genre Quiz/IRB Sep 18.",
   "delta_vs_2026_09_14_evening": "Louis: +Chapter 1 Test grade (3); +Modeling Mono Lake Trophic Levels grade (3/4); +2.2/2.4 HW photos (now complete); +new assignments (Exploring Limiting Factors, Carrying Capacity-Kaibab Deer); +Mr. Rogers retake warning; +2.1-2.4 Practice Quiz submitted. Charlotte: 2.1 in class badge cleared; +new overdue (2.3 DIGIT, 2.5 in class); +new (2.6 in class, Unrest cartoons, Rube Goldberg Partner Agreement); +Energy Thief Lab + FAQ KE/PE 2 submitted; +Quiz 2.1-2.4 submitted; +Tygers teacher comment.",
-  "evening_pull_pt": "9:00-9:08pm PDT"
+  "evening_pull_pt": "9:00-9:08pm PDT",
+  "delta_vs_2026_09_19_1805": [
+   "UNCHANGED: all 9 missing/contested items rechecked \u2014 no status changes since the 6:05pm speed test.",
+   "NEW: Louis 'Carrying Capacity-Kaibab Deer' (Science 7) in To-Do, due Wed Sep 23 11:59pm; not submitted.",
+   "NEW: Louis '*Unit 2 Retake*' calendar event Wed Sep 30 (Social Studies 7).",
+   "NEW: Louis Quill lesson PASSED (Sep 18 11:03am).",
+   "CORRECTED: Ms. Hagg 8:37am Sep 18 '2.5 hw questions' post is the same post as the Sep 18 schedule-switch update \u2014 duplicate Notion row marked.",
+   "CONFIRMED: Unit 1 ISN Check is Social Studies 7 (Mr. Rogers), not Science; still genuinely missing, due Sep 4.",
+   "AMBIGUOUS: Charlotte 2.1/1.3 DIGIT show submitted-ungraded again though Sep 18 pull verified mastered \u2014 resubmission or re-grade suspected.",
+   "NOT RECORDED: Charlotte FAQ KE/PE 2 gradebook '1 - Far Below Expectations' tooltip conflicts with Recently Completed 'submitted but not yet graded' \u2014 per phantom-tooltip rule, no grade recorded."
+  ]
  },
  "courses": [
   {
@@ -700,7 +711,7 @@
    "status": "completed",
    "source": "grades",
    "due": "2026-09-01",
-   "notes": "MASTERED - both checkmarks. image-01EB0.png.",
+   "notes": "MASTERED - both checkmarks. image-01EB0.png. Sep 19 18:43 fast audit shows submitted-ungraded again (possible resubmission or re-grade); verify at next pull.",
    "effort": "medium"
   },
   {
@@ -783,7 +794,7 @@
    "status": "completed",
    "source": "grades",
    "due": "2026-09-11",
-   "notes": "MASTERED - both checkmarks. image-30700.png.",
+   "notes": "MASTERED - both checkmarks. image-30700.png. Sep 19 18:43 fast audit shows submitted-ungraded again (possible resubmission or re-grade); verify at next pull.",
    "effort": "medium"
   },
   {
@@ -810,10 +821,10 @@
    "title": "2.3 DIGIT",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "status": "missing",
+   "status": "submitted-not-graded",
    "source": "grades",
    "due": "2026-09-15",
-   "notes": "NEW - posted Mon Sep 14 9:03pm. 2 days overdue. NO submission.",
+   "notes": "Submitted late Sep 18 12:30pm (Late). Ungraded; no Missing badge on page or gradebook as of Sep 19 18:43 fast audit. Proficiency marks still ambiguous (type-2 'N', type-3 checked) \u2014 teacher's eyes.",
    "effort": "medium"
   },
   {
@@ -1180,6 +1191,16 @@
    "source": "materials",
    "due": "2026-09-17",
    "notes": "Due Thu Sep 17 8:30am (today). Stamped in class today; no missing flag, no grade."
+  },
+  {
+   "title": "Unit 2 Retake",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "due",
+   "source": "calendar",
+   "due": "2026-09-30",
+   "notes": "*Unit 2 Retake* calendar event Wed Sep 30. Mr. Rogers retake-deadline topic already tracked.",
+   "effort": "medium"
   }
  ],
  "attachments": [
@@ -1341,6 +1362,13 @@
    "assignment": "Week 2 Participation",
    "grade": "3",
    "label": "3 - Met Expectations"
+  },
+  {
+   "student": "Louis L****",
+   "course": "English Language Arts 7: 3(A-B)",
+   "assignment": "Quill Lesson",
+   "grade": "PASSED",
+   "label": "PASSED"
   }
  ],
  "submissions": [
@@ -1573,6 +1601,36 @@
    "course": "Science 7: 5(A-B)",
    "author": "(science teacher)",
    "text": "Posted assignment \"Exploring Limiting Factors of Mono Lake\" (Day 9 folder), due Fri Sep 18."
+  },
+  {
+   "posted": "2026-09-18",
+   "course": "Social Studies 7: 6(A-B)",
+   "author": "Mr. Rogers",
+   "text": "Post with no text rendered (attachment-only or blank)."
+  },
+  {
+   "posted": "2026-09-18",
+   "course": "Algebra 1: 4(A-B)",
+   "author": "Ms. Hagg",
+   "text": "Hi Everyone, good morning and happy Friday! Some questions came up on the 2.5 hw that made me realize we need to discuss special cases in compound inequalities. I didn't think it would come up until Monday. Switched Friday/Monday on the stamp sheet."
+  },
+  {
+   "posted": "2026-09-18",
+   "course": "Social Studies 7: 6(A-B)",
+   "author": "Mr. Rogers",
+   "text": "Retake deadlines are a teacher-update topic to track for Louis's Social Studies 7 course."
+  },
+  {
+   "posted": "2026-09-18",
+   "course": "Social Studies 8: 4(A-B)",
+   "author": "Lexy Keller",
+   "text": "In the News questions: Pennsylvania measles/CDC reaction or Kennedy Center controversy."
+  },
+  {
+   "posted": "2026-09-18",
+   "course": "Algebra 1: 4(A-B)",
+   "author": "Ms. Hagg",
+   "text": "Moved the 2.6 lesson to Monday; Review 2.5 Special Cases due date may shift."
   }
  ],
  "calendar_events": [
@@ -1653,6 +1711,11 @@
    "title": "Bring IRB and Reading Tracker to ELA",
    "course": "English Language Arts 7: 3(A-B)",
    "date": "2026-09-18"
+  },
+  {
+   "title": "*Unit 2 Retake*",
+   "course": "Social Studies 7: 6(A-B)",
+   "date": "2026-09-30"
   }
  ],
  "folders": [
@@ -1687,5 +1750,5 @@
    "note": "Re-checked in the Sep 17 pull (To-Do, gradebook, all Materials folders) - still renders nowhere. Quarantined - do NOT treat as due."
   }
  ],
- "observed_at": "2026-09-17T21:08:00-07:00"
+ "observed_at": "2026-09-19T18:43:00-07:00"
 }
