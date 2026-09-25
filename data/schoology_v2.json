@@ -1,7 +1,7 @@
 {
  "version": "2.0",
- "generated_at": "2026-09-24T14:15:37Z",
- "observed_at": "2026-09-24T07:25:00-07:00",
+ "generated_at": "2026-09-25T19:50:21Z",
+ "observed_at": "2026-09-25T12:49:00-07:00",
  "parent_account": "loo*****@gmail.com",
  "parent_name": "J**** L****",
  "students": [
@@ -13,7 +13,7 @@
   "login_verified": true,
   "children_count": 2,
   "audit_date": "2026-09-21",
-  "run_window_pt": "7:10-7:25am PDT fast live pull Thu Sep 24 (main-agent browser task; high-signal surfaces only: To-Do + hidden overdue + Assignments page + grades + feed/calendar; no Materials folders). Read-only; rubric tooltips on blank cells treated as NOT grades.",
+  "run_window_pt": "12:15-12:49pm PDT fast live pull Fri Sep 25 (main-agent browser task; high-signal surfaces only: To-Do + hidden overdue + Assignments page + grades + feed/dashboard Upcoming Events; no Materials folders; Calendar page not opened). Read-only; rubric tooltips on blank cells treated as NOT grades. Screenshot capture for math confirmations failed at handoff attachment (disclosed); 2.6 DIGIT proficiency verified visually.",
   "read_only": true,
   "gradebook_note": "Louis's Science 7 and ELA 7 gradebooks rendered this pull (were locked Sep 20); cells with only rubric tooltips ('1 - Far Below Expectations' etc.) are reported as blank per rule. Louis's parent-home To-Do has no rendered OVERDUE section; 'Overdue Warning' seen only in Charlotte's To-Do.",
   "digit_rule": "corrected 2026-09-08 per JP: type-2 checked AND type-3 checked = mastered (do NOT flag); type-2 only = growing (flag); neither = not understood (flag strongly); ambiguous marks (e.g. type-2 'N' with type-3 checked, or type-3 box checked with no type-2 checkbox) are reported verbatim and NOT flagged",
@@ -28,12 +28,12 @@
    "Louis low grades (ELA Reading Genre Quiz #4 = 1, About Me Email = 1 from Sep 19 baseline): could NOT be re-verified \u2014 pages render Grade blank, gradebook cells blank with tooltips only. Remain UNVERIFIED."
   ],
   "totals": {
-   "total_assignments": 111,
-   "charlotte_count": 65,
-   "louis_count": 46,
+   "total_assignments": 115,
+   "charlotte_count": 67,
+   "louis_count": 48,
    "missing_badges_charlotte": 4,
-   "missing_badges_louis": 6,
-   "grades_recorded": 26
+   "missing_badges_louis": 5,
+   "grades_recorded": 29
   },
   "deltas_vs_sep_20_pull": [
    "LOUIS 1.5 Notes and HW: HW photo ADDED \u2014 Rev 2 (image-5B757.png) and Rev 3 (image-2B1F2.png) are VERIFIED homework photos (notebook 'Pgs. 32-33 # 37-44'), both on time Sep 1. Notes PDF in Rev 1 and Rev 4. Badge still Missing, grade blank.",
@@ -47,7 +47,7 @@
    "CHARLOTTE Rube Goldberg Machine Partner Agreement: NOT submitted; due 9/21 3:30pm \u2014 now To-Do OVERDUE.",
    "No change: Louis Chapter 1 Review HW, Unit 1 ISN Check, Exploring Limiting Factors, Review 2.5 Special Cases (still awaiting grade), Kaibab Deer, Predator-Prey, ELA 1s (unverified); Charlotte 2.5 in class, HTBT ANNOTATIONS, 2.3/1.4/2.1 DIGIT marks, HTBT quiz (2), FAQ KE/PE 2 (ungraded)."
   ],
-  "note": "Fast live pull Thu Sep 24 ~7:10-7:25am PDT, parent dashboard with 2 linked children. Baseline comparison vs Sep 21 thorough pull: Charlotte's Sep 21-22 submissions now carry teacher \u2705 marks; Louis 2.6 Notes and HW has a new Rev 2; Kaibab Deer went overdue; new numeric grades render for both kids. Persistent contradictions: Louis 1.5 + Ch1 Review HW Missing badges with real submissions; Charlotte HTBT Annotations Missing (paper).",
+  "note": "Fast live pull Fri Sep 25 ~12:15-12:49pm PDT, parent dashboard with 2 linked children. Baseline comparison vs Sep 24 fast pull: Louis Exploring Limiting Factors resolved at 3/4; Kaibab Deer went 2 days overdue; Charlotte Chapter 2 Book Review gained a feed/submission contradiction; WS- Chapter 2 Review flagged \u274c today; Charlotte 2.6 DIGIT both checkmarks verified = mastered. Persistent contradictions: Louis 1.5 + Ch1 Review HW Missing badges with real submissions; Charlotte HTBT Annotations Missing (paper).",
   "deltas_vs_sep_21_pull": [
    "CHARLOTTE: teacher \u2705 marks on Sep 22 9:51-9:52am \u2014 2.5 in class, 2.6 in class, 2.5 Book Problems (part 2), 2.4 DIGIT, 2.5 DIGIT. All now submitted-and-marked; grades still blank.",
    "CHARLOTTE: teacher \u2705 marks on Sep 23 1:37pm \u2014 Quiz 2.5+2.6 (formative) submitted Sep 22 12:45pm on time; 2.6 DIGIT submitted Sep 22 12:36pm on time. Grade fields blank.",
@@ -61,6 +61,21 @@
    "LOUIS: 9/18 Quill + iReady lessons submitted \u2705 (Quill teacher comment: 'This is missing the date... 9/18 Got it!'); 9/25 Quill/iReady lessons still upcoming (Fri 3:00pm).",
    "LOUIS: no change \u2014 1.5 Notes and HW + Chapter 1 Review HW still Missing badges WITH real submissions present (contradictions persist); Unit 1 ISN Check Missing; Exploring Limiting Factors blank; ELA Reading Genre Quiz #4 + About Me Email still unverified (blank cells).",
    "LOUIS: upcoming \u2014 Unit 3 ISN #2 (Thu 9/24 8:30am), 2.5-2.6 Practice Quiz (Thu 9/24 11:59pm), Chapter 2 Review HW Day 1 (Thu 9/24 11:59pm), Effects of Hate Speech (Fri 9/25 8:30am), Quill/iReady (Fri 9/25 3:00pm), Chapter 2 Review WS Day 2 (Fri 9/25 11:59pm), Predator-Prey (Fri 9/25 11:59pm), Interaction of Organisms (Sep 29)."
+  ],
+  "deltas_vs_sep_24_pull": [
+   "LOUIS: Exploring Limiting Factors of Mono Lake now GRADED 3/4 (real grade renders) \u2014 resolved.",
+   "LOUIS: Carrying Capacity-Kaibab Deer now 2 days overdue (due Sep 23 11:59pm), still no submission.",
+   "LOUIS: Unit 1 ISN Check still Missing \u2014 NEW: appears in dashboard Recently Completed despite missing flag and no submission.",
+   "LOUIS: Unit 2: Test: Content: Fall of Rome rubric-graded '3 - Consistent Proficiency' (Sep 24 2:08pm feed).",
+   "LOUIS: 1.5 Notes and HW + Chapter 1 Review HW contradictions re-verified unchanged (Missing badges with real submissions).",
+   "CHARLOTTE: Chapter 2 Book Review 3 days overdue, Missing badge \u2014 NEW contradiction: feed shows a Submission Notification while assignment page submissions area is empty.",
+   "CHARLOTTE: Rube Goldberg Machine Partner Agreement 4 days overdue, still no submission.",
+   "CHARLOTTE: WS- Chapter 2 Review (due Fri Sep 25 8:30am) \u2014 feed 12:15pm: 'Charlotte L**** received \u274c'.",
+   "CHARLOTTE: 2.6 DIGIT proficiency VERIFIED \u2014 type-2 AND type-3 both checked = mastered (do NOT flag).",
+   "CHARLOTTE: HTBT Text Elements Quiz '2 - Approaching Proficiency' verified as plain gradebook grade value.",
+   "CHARLOTTE: Chapter 1 Test + Adaptations & Exploration test rubric '3 - Consistent Proficiency' (grade lines blank).",
+   "CHARLOTTE: Quiz 2.5+2.6 (formative) submitted Sep 23 1:37pm (feed), not graded.",
+   "No new DIGIT submissions since Sep 24 for Charlotte; no new math submissions to screenshot."
   ]
  },
  "courses": [
@@ -184,8 +199,8 @@
    "title": "Rube Goldberg Machine Partner Agreement",
    "course": "Science 8: 6(A-B)",
    "student": "Charlotte L****",
-   "status": "3 days OVERDUE, due Mon Sep 21 3:30pm; no submission; gradebook cell blank, no badge rendered",
-   "source": "To-Do + gradebook",
+   "status": "4 days OVERDUE, due Mon Sep 21 3:30pm; no submission; 'Grade: N/A' (blank); web-link attachment 'Rube Goldberg Machine Docs'; posted Sep 17 8:19am; notably NO Comments section renders",
+   "source": "assignment page + To-Do",
    "due": "2026-09-21 15:30"
   },
   {
@@ -241,8 +256,8 @@
    "title": "Chapter 2 Book Review",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "status": "2 days overdue, due Tue Sep 22 8:30am; Missing badge; marked \u274c Missing Sep 23 1:37pm",
-   "source": "To-Do + feed + gradebook",
+   "status": "3 days OVERDUE, due Tue Sep 22 8:30am ('p. 94-96 #1-29'; posted Sep 21 10:08am); MISSING badge; Grade blank; Submissions area renders EMPTY. CONTRADICTION: parent dashboard feed contains a 'Submission Notification' for this item (feed nesting places related item at Sep 22 12:45pm)",
+   "source": "assignment page + feed + To-Do",
    "due": "2026-09-22 08:30",
    "problems": "p. 94-96 #1-29"
   },
@@ -478,8 +493,8 @@
    "title": "HTBT TEXT ELEMENTS QUIZ (in class)",
    "course": "English Language Arts 8: 3(A-B)",
    "student": "Charlotte L****",
-   "status": "graded 2 - Approaching Proficiency (no change)",
-   "source": "assignment page",
+   "status": "graded 2 - Approaching Proficiency \u2014 VERIFIED as plain grade value rendering in the gradebook (Sep 25 pull); material not available within Schoology",
+   "source": "gradebook",
    "due": "2026-09-04 15:30"
   },
   {
@@ -597,8 +612,8 @@
    "title": "Adaptations & Exploration test",
    "course": "Social Studies 8: 4(A-B)",
    "student": "Charlotte L****",
-   "status": "blank cell (tooltip '3 - Consistent Proficiency')",
-   "source": "gradebook",
+   "status": "rubric '3 - Consistent Proficiency' CONFIRMED on assignment page (rubric icon shows selected rating); Grade line blank; due Sep 11 8:00am",
+   "source": "assignment page",
    "due": "2026-09-11 08:00"
   },
   {
@@ -778,7 +793,7 @@
    "title": "Exploring Limiting Factors of Mono Lake",
    "course": "Science 7: 5(A-B)",
    "student": "Louis L****",
-   "status": "no submission rendered, blank grade (tooltip '1 - Far Below Expectations' \u2014 NOT a grade), no Missing badge",
+   "status": "GRADED 3/4 (Sep 25 pull renders 'Grade: 3/4'); due Sep 18; posted Sep 17 9:20am; no student submission rendered (PDF handout viewer only); no comments",
    "source": "assignment page",
    "due": "2026-09-18"
   },
@@ -786,8 +801,8 @@
    "title": "Carrying Capacity-Kaibab Deer",
    "course": "Science 7: 5(A-B)",
    "student": "Louis L****",
-   "status": "1 day OVERDUE, due Wed Sep 23 11:59pm; no submission rendered; blank grade (rubric tooltip '1 - Far Below Expectations' on blank cell = NOT a grade)",
-   "source": "To-Do + assignment page",
+   "status": "2 days OVERDUE, due Wed Sep 23 11:59pm; no submission visible; Grade N/A on assignment page (gradebook rubric tooltip '1 - Far Below Expectations' on blank cell = NOT a grade); PDF attachment; posted Sep 15 2:54pm",
+   "source": "To-Do + assignment page + gradebook",
    "due": "2026-09-23 23:59"
   },
   {
@@ -866,7 +881,7 @@
    "title": "1 PASSED iReady lesson - due Friday by 3:00pm (not 3:00 or 3:09!)",
    "course": "English Language Arts 7: 3(A-B)",
    "student": "Louis L****",
-   "status": "upcoming; prior 9/18 iReady lesson submitted \u2705",
+   "status": "upcoming; prior 9/18 iReady lesson submitted \u2705; NO due date rendered on Sep 25 pull",
    "source": "To-Do + gradebook",
    "due": "2026-09-25 15:00"
   },
@@ -888,8 +903,8 @@
    "title": "Unit 1 ISN Check",
    "course": "Social Studies 7: 6(A-B)",
    "student": "Louis L****",
-   "status": "MISSING badge, blank grade \u2014 no submission rendered, no comments (consistent)",
-   "source": "assignment page",
+   "status": "MISSING persists \u2014 gradebook shows '0 - Missing Past Assessment Deadline'; Grade blank; no online submission content; due Fri Sep 4 3:10pm. NEW DETAIL: appears in dashboard 'Recently Completed' despite the missing flag and no submission (contradiction)",
+   "source": "assignment page + gradebook + parent dashboard",
    "due": "2026-09-04 15:10"
   },
   {
@@ -942,16 +957,16 @@
    "title": "2.6 DIGIT",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "status": "submitted ON TIME Sep 22 12:36pm; teacher \u2705 marked Sep 23 1:37pm; no numeric grade",
-   "source": "assignment page + feed",
+   "status": "submitted ON TIME Sep 22 12:36pm (Revision 1, 1 image 'image-D3304.png'); teacher \u2705 marked Sep 23 1:37pm; PROFICIENCY VERIFIED Sep 25: type-2 ('2 Approaching Proficiency') CHECKED and type-3 ('3 - Create, solve, and manipulate') CHECKED \u2014 both cleared = MASTERED; no numeric grade",
+   "source": "assignment page + feed + submission viewer",
    "due": "2026-09-22 15:00"
   },
   {
    "title": "Quiz 2.5+2.6 (formative)",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "status": "submitted Sep 22 12:45pm (On time, 3 revisions); teacher \u2705 marked Sep 23 1:37pm; Grade blank \u2014 gradebook '0' in Recently Completed widget is unverified, NOT reported as a grade",
-   "source": "assignment page + feed",
+   "status": "submitted Sep 23 1:37pm (feed; quiz submissions also Sep 22 12:45pm); submitted, not graded",
+   "source": "feed + assignment page",
    "due": "2026-09-22"
   },
   {
@@ -974,8 +989,8 @@
    "title": "WS- Chapter 2 Review",
    "course": "Algebra 1: 5(A-B)",
    "student": "Charlotte L****",
-   "status": "upcoming, no submission",
-   "source": "To-Do",
+   "status": "due TODAY Fri Sep 25 8:30am; feed Sep 25 12:15pm: 'Charlotte L**** received \u274c for WS- Chapter 2 Review'",
+   "source": "To-Do + feed",
    "due": "2026-09-25 08:30",
    "problems": "chapter 2 review worksheet"
   },
@@ -1034,6 +1049,37 @@
    "status": "upcoming, no submission",
    "source": "To-Do",
    "due": "2026-09-29"
+  },
+  {
+   "title": "Unit 2: Test: Content: Fall of Rome",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "rubric-graded '3 - Consistent Proficiency' Sep 24 2:08pm (feed); assignment page rubric icon shows selected rating; Grade line blank",
+   "source": "feed + assignment page"
+  },
+  {
+   "title": "LG #2",
+   "course": "Social Studies 7: 6(A-B)",
+   "student": "Louis L****",
+   "status": "upcoming, no submission",
+   "source": "To-Do",
+   "due": "2026-09-29 15:10"
+  },
+  {
+   "title": "Chapter 1 Test (Solving Equations)",
+   "course": "Algebra 1: 5(A-B)",
+   "student": "Charlotte L****",
+   "status": "rubric '3 - Consistent Proficiency' (assignment page rubric icon shows selected rating); 2 on-time submissions Sep 11 12:12pm and 12:26pm; Grade line blank",
+   "source": "assignment page",
+   "due": "2026-09-11"
+  },
+  {
+   "title": "WEB 2027-2028 Application",
+   "course": "WEB",
+   "student": "Charlotte L****",
+   "status": "upcoming: Application Status / Teacher Recommendation / WEB Application",
+   "source": "To-Do",
+   "due": "2027-03-26 22:00"
   }
  ],
  "attachments": [
@@ -1276,6 +1322,27 @@
    "assignment": "Volleyball PE item 3",
    "grade": "rubric",
    "label": "3 - Consistent Proficiency"
+  },
+  {
+   "student": "Louis L****",
+   "course": "Science 7: 5(A-B)",
+   "assignment": "Exploring Limiting Factors of Mono Lake",
+   "grade": "3/4",
+   "label": "3/4"
+  },
+  {
+   "student": "Louis L****",
+   "course": "Social Studies 7: 6(A-B)",
+   "assignment": "Unit 2: Test: Content: Fall of Rome",
+   "grade": "rubric",
+   "label": "3 - Consistent Proficiency"
+  },
+  {
+   "student": "Charlotte L****",
+   "course": "Social Studies 8: 4(A-B)",
+   "assignment": "Adaptations & Exploration test",
+   "grade": "rubric",
+   "label": "3 - Consistent Proficiency"
   }
  ],
  "submissions": [
@@ -1415,6 +1482,14 @@
    "submitted": "Rev 1 Sep 21 12:04; NEW Rev 2 Sep 22 19:16 on time",
    "items": 2,
    "status": "ungraded"
+  },
+  {
+   "student": "Charlotte L****",
+   "course": "Algebra 1: 5(A-B)",
+   "assignment": "Quiz 2.5+2.6 (formative)",
+   "submitted": "2026-09-23 13:37 (feed)",
+   "items": 1,
+   "status": "submitted, not graded"
   }
  ],
  "updates": [
@@ -1481,6 +1556,26 @@
   {
    "student": "Charlotte L****",
    "text": "Chapter 2 Book Review marked \u274c Missing \u2014 Sep 23 1:37 pm"
+  },
+  {
+   "student": "Charlotte L****",
+   "text": "feed Sep 25 12:15pm \u2014 'Charlotte L**** received \u274c for WS- Chapter 2 Review'"
+  },
+  {
+   "student": "Charlotte L****",
+   "text": "feed \u2014 Submission Notification for Chapter 2 Book Review (assignment page submissions empty; contradiction)"
+  },
+  {
+   "student": "Louis L****",
+   "text": "feed Sep 24 2:08pm \u2014 '3 - Consistent Proficiency' for Unit 2: Test: Content: Fall of Rome"
+  },
+  {
+   "student": "Louis L****",
+   "text": "Mr. Rogers posted to Social Studies 7 \u2014 Sep 25 7:33am"
+  },
+  {
+   "student": "Charlotte L****",
+   "text": "Lexy Keller posted to Social Studies 8 \u2014 IN THE NEWS (due every 2 weeks) \u2014 Sep 25 8:06am"
   }
  ],
  "calendar_events": [
@@ -1755,6 +1850,48 @@
    "student": "Louis L****",
    "title": "Movie Night 6:00pm",
    "date": "2026-09-25",
+   "course": "7th Grade"
+  },
+  {
+   "student": "Charlotte L****",
+   "title": "Final Draft Group Project \u2014 Dance",
+   "date": "2026-09-30",
+   "course": "8th Grade"
+  },
+  {
+   "student": "Charlotte L****",
+   "title": "Service Team Meeting",
+   "date": "2026-10-09",
+   "course": "8th Grade"
+  },
+  {
+   "student": "Charlotte L****",
+   "title": "NO SCHOOL \u2014 Staff Development Day",
+   "date": "2026-10-12",
+   "course": "8th Grade"
+  },
+  {
+   "student": "Charlotte L****",
+   "title": "Relay For Life",
+   "date": "2026-10-23",
+   "course": "8th Grade"
+  },
+  {
+   "student": "Louis L****",
+   "title": "*Unit 2 Retake* \u2014 Social Studies",
+   "date": "2026-09-30",
+   "course": "7th Grade"
+  },
+  {
+   "student": "Louis L****",
+   "title": "Service Team Meeting",
+   "date": "2026-10-09",
+   "course": "7th Grade"
+  },
+  {
+   "student": "Louis L****",
+   "title": "NO SCHOOL \u2014 Staff Development Day",
+   "date": "2026-10-12",
    "course": "7th Grade"
   }
  ],
