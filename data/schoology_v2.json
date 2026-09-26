@@ -35,7 +35,7 @@
       "missing_badges_louis": 8,
       "grades_recorded": 29
     },
-    "deltas_vs_sep_20_pull": "4:20pm PDT Sep 26 fast recheck (Louis-only): To-Do overdue collapsed from 7 items to 1 (only Predator-Prey still overdue, grade 1 unchanged). Quill lesson (due 9/25) now shows submitted Sep 26 12:14pm awaiting grading — teacher comment still says MISSING (contradiction). Five other overdue items dropped from To-Do with NO new submission events and gradebook missing flags unchanged (contradictions persist). No new submissions since 12:36pm; no confirmed new grades. Upcoming unchanged: LG #2 + Interaction of Organisms due Tue Sep 29.",
+    "deltas_vs_sep_20_pull": "4:20pm PDT Sep 26 fast recheck (Louis-only): To-Do overdue collapsed from 7 items to 1 (only Predator-Prey still overdue, grade 1 unchanged). Quill lesson (due 9/25) now shows submitted Sep 26 12:14pm awaiting grading — teacher comment still says MISSING (contradiction). Five other overdue items dropped from To-Do with NO new submission events and gradebook missing flags unchanged (contradictions persist). No new submissions since 12:36pm; no confirmed new grades. Upcoming unchanged: LG #2 + Interaction of Organisms due Tue Sep 29. 4:25pm PDT targeted recheck: Predator-Prey IS submitted (PDF, Sep 26 12:31pm, late) — assignment page is the only view showing it; gradebook/To-Do/activity feed still stale.",
     "note": "Louis-only fast pull Sat Sep 26 ~12:20pm PDT (read-only, high-signal surfaces). Charlotte data unchanged from Sep 25 12:49pm pull.",
     "deltas_vs_sep_21_pull": [
       "CHARLOTTE: teacher ✅ marks on Sep 22 9:51-9:52am — 2.5 in class, 2.6 in class, 2.5 Book Problems (part 2), 2.4 DIGIT, 2.5 DIGIT. All now submitted-and-marked; grades still blank.",
@@ -812,8 +812,8 @@
       "title": "Predator-Prey Lynx and Snowshoe Hare Analysis Questions",
       "course": "Science 7: 5(A-B)",
       "student": "Louis L****",
-      "status": "STILL OVERDUE (To-Do: '1 day overdue ... due Friday, September 25, 2026 at 11:59 pm'); gradebook cell UNCHANGED: 1 - Far Below Expectations. Rechecked 4:20pm PDT Sat Sep 26.",
-      "source": "assignment page + To-Do + grades (4:20pm PDT recheck Sep 26)",
+      "status": "SUBMITTED: assignment page shows 'Louis Loose Assignment submitted' — Revision 1 submitted Sep 26 12:31pm (LATE, was due Sep 25 11:59pm), attached file 'Predator Prey Lynx and Hare Analysis Questions.pdf'. CONTRADICTIONS: gradebook row still shows '1 - Far Below Expectations' with NO submission indicator; still listed in To-Do as '1 day overdue'; NOT in Recently Completed; Student Activity feed does not list this submission. Rechecked 4:25pm PDT Sep 26.",
+      "source": "assignment page (8571855504/info) + To-Do + gradebook (4:25pm PDT targeted recheck)",
       "due": "2026-09-25 23:59"
     },
     {
