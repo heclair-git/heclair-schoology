@@ -1,7 +1,7 @@
 {
  "version": "2.0",
- "generated_at": "2026-09-25T19:50:21Z",
- "observed_at": "2026-09-25T12:49:00-07:00",
+ "generated_at": "2026-09-26T19:00:36Z",
+ "observed_at": "2026-09-26T12:20:00-07:00",
  "parent_account": "loo*****@gmail.com",
  "parent_name": "J**** L****",
  "students": [
@@ -28,11 +28,11 @@
    "Louis low grades (ELA Reading Genre Quiz #4 = 1, About Me Email = 1 from Sep 19 baseline): could NOT be re-verified \u2014 pages render Grade blank, gradebook cells blank with tooltips only. Remain UNVERIFIED."
   ],
   "totals": {
-   "total_assignments": 115,
+   "total_assignments": 116,
    "charlotte_count": 67,
-   "louis_count": 48,
+   "louis_count": 49,
    "missing_badges_charlotte": 4,
-   "missing_badges_louis": 5,
+   "missing_badges_louis": 8,
    "grades_recorded": 29
   },
   "deltas_vs_sep_20_pull": [
@@ -47,7 +47,7 @@
    "CHARLOTTE Rube Goldberg Machine Partner Agreement: NOT submitted; due 9/21 3:30pm \u2014 now To-Do OVERDUE.",
    "No change: Louis Chapter 1 Review HW, Unit 1 ISN Check, Exploring Limiting Factors, Review 2.5 Special Cases (still awaiting grade), Kaibab Deer, Predator-Prey, ELA 1s (unverified); Charlotte 2.5 in class, HTBT ANNOTATIONS, 2.3/1.4/2.1 DIGIT marks, HTBT quiz (2), FAQ KE/PE 2 (ungraded)."
   ],
-  "note": "Fast live pull Fri Sep 25 ~12:15-12:49pm PDT, parent dashboard with 2 linked children. Baseline comparison vs Sep 24 fast pull: Louis Exploring Limiting Factors resolved at 3/4; Kaibab Deer went 2 days overdue; Charlotte Chapter 2 Book Review gained a feed/submission contradiction; WS- Chapter 2 Review flagged \u274c today; Charlotte 2.6 DIGIT both checkmarks verified = mastered. Persistent contradictions: Louis 1.5 + Ch1 Review HW Missing badges with real submissions; Charlotte HTBT Annotations Missing (paper).",
+  "note": "Louis-only fast pull Sat Sep 26 ~12:20pm PDT (read-only, high-signal surfaces). Charlotte data unchanged from Sep 25 12:49pm pull.",
   "deltas_vs_sep_21_pull": [
    "CHARLOTTE: teacher \u2705 marks on Sep 22 9:51-9:52am \u2014 2.5 in class, 2.6 in class, 2.5 Book Problems (part 2), 2.4 DIGIT, 2.5 DIGIT. All now submitted-and-marked; grades still blank.",
    "CHARLOTTE: teacher \u2705 marks on Sep 23 1:37pm \u2014 Quiz 2.5+2.6 (formative) submitted Sep 22 12:45pm on time; 2.6 DIGIT submitted Sep 22 12:36pm on time. Grade fields blank.",
@@ -76,6 +76,19 @@
    "CHARLOTTE: Chapter 1 Test + Adaptations & Exploration test rubric '3 - Consistent Proficiency' (grade lines blank).",
    "CHARLOTTE: Quiz 2.5+2.6 (formative) submitted Sep 23 1:37pm (feed), not graded.",
    "No new DIGIT submissions since Sep 24 for Charlotte; no new math submissions to screenshot."
+  ],
+  "deltas_vs_sep_25_pull": [
+   "LOUIS-ONLY pull Sat Sep 26 ~12:20pm PDT; Charlotte untouched.",
+   "NEW (confirmed): Science 7 Questions-Trophic Levels graded 3/4 (3 - Met Expectations), submitted Late Sep 18 5:35pm.",
+   "NEW MISSING x4, all due Fri Sep 25: ELA '1 PASSED Quill lesson' 3:00pm (tooltips 'Missing' / 'MISSING - did not do a Quill lesson this week'); ELA '1 PASSED iReady lesson' 3:00pm ('MISSING - did not take any iReady lessons this week'); ELA 'Effects of Hate Speech' 8:30am ('MISSING. Did not do homework.'); Science 'Predator-Prey Lynx and Snowshoe Hare Analysis Questions' 11:59pm. All: Grade blank, no submissions.",
+   "Carrying Capacity-Kaibab Deer: now 3 days overdue (was 2); still no submission, Grade blank.",
+   "Unit 1 ISN Check: still Missing, no submission, Grade blank; now also renders in dashboard Recently Completed (cosmetic only).",
+   "1.5 Notes and HW: Missing badge persists despite 4 real submissions (contradiction unchanged).",
+   "Chapter 1 Review HW: Missing badge persists on assignment page despite 2 real submissions; Algebra gradebook no longer shows 'Missing' text (partial improvement).",
+   "Summer Reading Due IN CLASS (due 8/28): flagged Late; teacher comment 'missing - turn in ASAP. Project submitted 8/31. Missing log (no signatures). Log submitted 9/4'.",
+   "Orchestra Week 3/4/5 tooltips '1 - Far Below Expectations' on blank cells are NOT grades per read rule; Week 1/2 remain 3 - Met Expectations.",
+   "Upcoming: Social Studies 'LG #2' due Tue Sep 29 3:10pm; Science 'Interaction of Organisms' due Tue Sep 29 11:59pm; '*Unit 2 Retake*' Wed Sep 30.",
+   "No other new grades, submissions, teacher feedback, or feed notices for Louis since Sep 25 baseline."
   ]
  },
  "courses": [
@@ -652,8 +665,8 @@
    "title": "Chapter 1 Review HW",
    "course": "Algebra 1: 4(A-B)",
    "student": "Louis L****",
-   "status": "MISSING badge, blank grade \u2014 CONTRADICTION: 2 late revisions exist (Sep 11 4:14pm image-E3341.png; Sep 12 12:30pm image-A6E4C.png)",
-   "source": "assignment page + submission viewer",
+   "status": "MISSING badge persists on assignment page despite 2 real submissions (Rev 1 Late Sep 11 4:14pm; Rev 2 Late Sep 12 12:30pm) \u2014 CONTRADICTION; Algebra gradebook no longer shows 'Missing' text (partial improvement)",
+   "source": "assignment page + gradebook (Sep 26 Louis-only pull)",
    "due": "2026-09-04 23:59"
   },
   {
@@ -801,16 +814,16 @@
    "title": "Carrying Capacity-Kaibab Deer",
    "course": "Science 7: 5(A-B)",
    "student": "Louis L****",
-   "status": "2 days OVERDUE, due Wed Sep 23 11:59pm; no submission visible; Grade N/A on assignment page (gradebook rubric tooltip '1 - Far Below Expectations' on blank cell = NOT a grade); PDF attachment; posted Sep 15 2:54pm",
-   "source": "To-Do + assignment page + gradebook",
+   "status": "3 days OVERDUE (was 2), due Wed Sep 23 11:59pm; no submission visible; Grade blank",
+   "source": "assignment page + gradebook (Sep 26 Louis-only pull)",
    "due": "2026-09-23 23:59"
   },
   {
    "title": "Predator-Prey Lynx and Snowshoe Hare Analysis Questions",
    "course": "Science 7: 5(A-B)",
    "student": "Louis L****",
-   "status": "no submission rendered, blank grade (tooltip '1' \u2014 NOT a grade)",
-   "source": "To-Do + assignment page",
+   "status": "MISSING \u2014 1 day overdue, due Fri Sep 25 11:59pm; no submission; Grade blank",
+   "source": "assignment page + gradebook (Sep 26 Louis-only pull)",
    "due": "2026-09-25 23:59"
   },
   {
@@ -873,16 +886,16 @@
    "title": "1 PASSED Quill lesson - Due Friday 9/25 by 3:00pm (not 3:00 or 3:09!)",
    "course": "English Language Arts 7: 3(A-B)",
    "student": "Louis L****",
-   "status": "upcoming; prior 9/18 Quill lesson submitted \u2705 \u2014 teacher comment: 'This is missing the date... 9/18 Got it!'",
-   "source": "To-Do + gradebook",
+   "status": "MISSING \u2014 1 day overdue; Grade blank with tooltips 'Missing' and 'MISSING - did not do a Quill lesson this week'; no submission; no comments",
+   "source": "assignment page + gradebook (Sep 26 Louis-only pull)",
    "due": "2026-09-25 15:00"
   },
   {
    "title": "1 PASSED iReady lesson - due Friday by 3:00pm (not 3:00 or 3:09!)",
    "course": "English Language Arts 7: 3(A-B)",
    "student": "Louis L****",
-   "status": "upcoming; prior 9/18 iReady lesson submitted \u2705; NO due date rendered on Sep 25 pull",
-   "source": "To-Do + gradebook",
+   "status": "MISSING \u2014 1 day overdue; Grade blank with tooltips 'Missing' and 'MISSING - did not take any iReady lessons this week'; no submission; no comments",
+   "source": "assignment page + gradebook (Sep 26 Louis-only pull)",
    "due": "2026-09-25 15:00"
   },
   {
@@ -903,8 +916,8 @@
    "title": "Unit 1 ISN Check",
    "course": "Social Studies 7: 6(A-B)",
    "student": "Louis L****",
-   "status": "MISSING persists \u2014 gradebook shows '0 - Missing Past Assessment Deadline'; Grade blank; no online submission content; due Fri Sep 4 3:10pm. NEW DETAIL: appears in dashboard 'Recently Completed' despite the missing flag and no submission (contradiction)",
-   "source": "assignment page + gradebook + parent dashboard",
+   "status": "MISSING persists \u2014 gradebook '0 - Missing Past Assessment Deadline'; Grade blank, no submissions; now also renders in Recently Completed (cosmetic)",
+   "source": "assignment page + gradebook (Sep 26 Louis-only pull)",
    "due": "2026-09-04 15:10"
   },
   {
@@ -1030,8 +1043,8 @@
    "title": "Effects of Hate Speech",
    "course": "English Language Arts 7: 3(A-B)",
    "student": "Louis L****",
-   "status": "upcoming, no submission",
-   "source": "To-Do",
+   "status": "MISSING \u2014 Grade blank with tooltip 'Missing' / 'MISSING. Did not do homework.'; no submission; due Fri Sep 25 8:30am",
+   "source": "assignment page + gradebook (Sep 26 Louis-only pull)",
    "due": "2026-09-25 08:30"
   },
   {
@@ -1080,6 +1093,14 @@
    "status": "upcoming: Application Status / Teacher Recommendation / WEB Application",
    "source": "To-Do",
    "due": "2027-03-26 22:00"
+  },
+  {
+   "title": "Summer Reading Due IN CLASS",
+   "course": "English Language Arts 7",
+   "student": "Louis L****",
+   "status": "flagged Late (due 8/28/26); teacher comment: 'missing - turn in ASAP. Project submitted 8/31. Missing log (no signatures). Log submitted 9/4'",
+   "source": "assignment page (Sep 26 Louis-only pull)",
+   "due": "2026-08-28"
   }
  ],
  "attachments": [
