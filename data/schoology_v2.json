@@ -1,7 +1,7 @@
 {
   "version": "2.0",
-  "generated_at": "2026-09-26T16:22:48.471862-07:00",
-  "observed_at": "2026-09-26T16:20:00-07:00",
+  "generated_at": "2026-09-26T16:39:42.636813-07:00",
+  "observed_at": "2026-09-26T16:35:00-07:00",
   "parent_account": "loo*****@gmail.com",
   "parent_name": "J**** L****",
   "students": [
@@ -12,8 +12,8 @@
     "school": "Hillview Middle School",
     "login_verified": true,
     "children_count": 2,
-    "audit_date": "2026-09-26 4:20pm PDT fast Louis-only recheck (main-agent browser task; To-Do + Assignments All + Recently Completed + Student Activity + grade reports for Science 7, Social Studies 7, Algebra 1, ELA 7). Charlotte untouched since Sep 25 12:49pm fast pull. Read-only; website-truth-only; contradictions narrated, nothing invented.",
-    "run_window_pt": "4:18-4:20pm PDT fast recheck Sat Sep 26",
+    "audit_date": "2026-09-26 4:35pm PDT thorough Louis-only recheck. Charlotte untouched since Sep 25 12:49pm fast pull. Read-only; website-truth-only; contradictions narrated, nothing invented.",
+    "run_window_pt": "4:28-4:35pm PDT thorough Louis-only recheck Sat Sep 26 (full: To-Do + all 8 courses Materials folders expanded + Assignments All + Recently Completed + Student Activity + grade reports + submission content opened)",
     "read_only": true,
     "gradebook_note": "Louis's Science 7 and ELA 7 gradebooks rendered this pull (were locked Sep 20); cells with only rubric tooltips ('1 - Far Below Expectations' etc.) are reported as blank per rule. Louis's parent-home To-Do has no rendered OVERDUE section; 'Overdue Warning' seen only in Charlotte's To-Do.",
     "digit_rule": "corrected 2026-09-08 per JP: type-2 checked AND type-3 checked = mastered (do NOT flag); type-2 only = growing (flag); neither = not understood (flag strongly); ambiguous marks (e.g. type-2 'N' with type-3 checked, or type-3 box checked with no type-2 checkbox) are reported verbatim and NOT flagged",
@@ -35,7 +35,7 @@
       "missing_badges_louis": 8,
       "grades_recorded": 29
     },
-    "deltas_vs_sep_20_pull": "4:20pm PDT Sep 26 fast recheck (Louis-only): To-Do overdue collapsed from 7 items to 1 (only Predator-Prey still overdue, grade 1 unchanged). Quill lesson (due 9/25) now shows submitted Sep 26 12:14pm awaiting grading — teacher comment still says MISSING (contradiction). Five other overdue items dropped from To-Do with NO new submission events and gradebook missing flags unchanged (contradictions persist). No new submissions since 12:36pm; no confirmed new grades. Upcoming unchanged: LG #2 + Interaction of Organisms due Tue Sep 29. 4:25pm PDT targeted recheck: Predator-Prey IS submitted (PDF, Sep 26 12:31pm, late) — assignment page is the only view showing it; gradebook/To-Do/activity feed still stale.",
+    "deltas_vs_sep_20_pull": "4:20pm PDT Sep 26 fast recheck (Louis-only): To-Do overdue collapsed from 7 items to 1 (only Predator-Prey still overdue, grade 1 unchanged). Quill lesson (due 9/25) now shows submitted Sep 26 12:14pm awaiting grading — teacher comment still says MISSING (contradiction). Five other overdue items dropped from To-Do with NO new submission events and gradebook missing flags unchanged (contradictions persist). No new submissions since 12:36pm; no confirmed new grades. Upcoming unchanged: LG #2 + Interaction of Organisms due Tue Sep 29. 4:25pm PDT targeted recheck: Predator-Prey IS submitted (PDF, Sep 26 12:31pm, late) — assignment page is the only view showing it; gradebook/To-Do/activity feed still stale. 4:35pm PDT thorough recheck: 3 new submissions TODAY all verified SUBMITTED+COMPLETE (Quill 12:14pm 9/10 90%; Predator-Prey PDF 12:31pm all 6 Qs answered; 1.5 Notes&HW Rev5 1:01pm notes+HW photo both present). Unit 1 ISN Check has NO submission anywhere (genuinely owed). Algebra 2.5/2.6 notes+HW, Chapter 2 Review WS/HW, 2.5-2.6 Practice Quiz all SUBMITTED+COMPLETE with real work. Newly observed grades (unconfirmed timing): ELA iReady Fall 2026 Assessment = 3; Quill Diagnostic = 15. Materials sweep: all folders expanded in all 8 courses; no hidden graded items; stamp sheets only in Algebra; new events: Unit 3 Test Oct 21/22, Minimum Days Oct 13-16, No School Oct 12, Service Team Meeting Oct 9.",
     "note": "Louis-only fast pull Sat Sep 26 ~12:20pm PDT (read-only, high-signal surfaces). Charlotte data unchanged from Sep 25 12:49pm pull.",
     "deltas_vs_sep_21_pull": [
       "CHARLOTTE: teacher ✅ marks on Sep 22 9:51-9:52am — 2.5 in class, 2.6 in class, 2.5 Book Problems (part 2), 2.4 DIGIT, 2.5 DIGIT. All now submitted-and-marked; grades still blank.",
@@ -647,8 +647,8 @@
       "title": "1.5 Notes and HW",
       "course": "Algebra 1: 4(A-B)",
       "student": "Louis L****",
-      "status": "Dropped from To-Do overdue list (rechecked 4:20pm PDT Sep 26); gradebook UNCHANGED: 'Missing' + 'This student has made a submission that has not been graded.' — CONTRADICTION persists (known badge lag).",
-      "source": "assignment page + To-Do + grades (4:20pm PDT recheck Sep 26)",
+      "status": "SUBMITTED+COMPLETE (across revisions): Rev 4 (Sep 12) 5-page notes PDF with handwritten answers; Rev 5 TODAY Sep 26 1:01pm (Late) 'image-CF5BE.png' HW photo showing worked problems Pgs 32-33 #27-44. BOTH notes and HW present. CONTRADICTION: gradebook still 'Missing' badge + 'submission not yet graded' despite 5 revisions.",
+      "source": "assignment page + submission content opened (4:35pm PDT thorough recheck Sep 26)",
       "due": "2026-09-03 23:59"
     },
     {
@@ -671,16 +671,16 @@
       "title": "2.6 Notes and HW",
       "course": "Algebra 1: 4(A-B)",
       "student": "Louis L****",
-      "status": "Submitted, not yet graded (Recently Completed)",
-      "source": "To-Do + Assignments + Materials(all folders expanded) + gradebook (Sep 26 12:30-12:36pm PDT thorough Louis pull, main-agent browser task)",
+      "status": "SUBMITTED+COMPLETE: Rev 2 Sep 22 7:16pm (On time), 'image-C4803.png' — open notebook with extensive handwritten compound-inequality solutions, graphs, checkmarks.",
+      "source": "assignment page + submission content opened (4:35pm PDT thorough recheck Sep 26)",
       "due": "2026-09-22 23:59"
     },
     {
       "title": "2.5 Notes and HW",
       "course": "Algebra 1: 4(A-B)",
       "student": "Louis L****",
-      "status": "submitted — Rev 1 Sep 17 8:58pm (image-885DD.png); Rev 2 Sep 17 8:59pm (2.5_CompoundInequalities-1.pdf) — awaiting grade, no Missing badge",
-      "source": "assignment page",
+      "status": "SUBMITTED+COMPLETE: Rev 2 Sep 17 8:59pm (On time), 7-page '2.5_CompoundInequalities-1.pdf' — notes warm-up handwritten, practice problems solved with steps and number-line graphs (substantial real work throughout).",
+      "source": "assignment page + submission content opened (4:35pm PDT thorough recheck Sep 26)",
       "due": "2026-09-18 23:59"
     },
     {
@@ -812,8 +812,8 @@
       "title": "Predator-Prey Lynx and Snowshoe Hare Analysis Questions",
       "course": "Science 7: 5(A-B)",
       "student": "Louis L****",
-      "status": "SUBMITTED: assignment page shows 'Louis Loose Assignment submitted' — Revision 1 submitted Sep 26 12:31pm (LATE, was due Sep 25 11:59pm), attached file 'Predator Prey Lynx and Hare Analysis Questions.pdf'. CONTRADICTIONS: gradebook row still shows '1 - Far Below Expectations' with NO submission indicator; still listed in To-Do as '1 day overdue'; NOT in Recently Completed; Student Activity feed does not list this submission. Rechecked 4:25pm PDT Sep 26.",
-      "source": "assignment page (8571855504/info) + To-Do + gradebook (4:25pm PDT targeted recheck)",
+      "status": "SUBMITTED+COMPLETE: Rev 1 Sep 26 12:31pm (LATE, due Sep 25 11:59pm), 'Predator Prey Lynx and Hare Analysis Questions.pdf' (2 pages) — all 6 analysis questions answered (Q1-Q4 handwritten, Q5-Q6 typed), name/period filled in. CONTRADICTIONS: gradebook still '1 - Far Below Expectations'; To-Do still lists 1-day-overdue; not in Recently Completed; Student Activity feed omits it.",
+      "source": "assignment page + submission content opened (4:35pm PDT thorough recheck Sep 26)",
       "due": "2026-09-25 23:59"
     },
     {
@@ -876,8 +876,8 @@
       "title": "1 PASSED Quill lesson - Due Friday 9/25 by 3:00pm (not 3:00 or 3:09!)",
       "course": "English Language Arts 7: 3(A-B)",
       "student": "Louis L****",
-      "status": "CHANGED: dropped from To-Do; now in Recently Completed 'This material has been submitted but not yet graded'; gradebook: 'submission that has not been graded' — CONTRADICTION: teacher comment still reads 'MISSING - did not do a Quill lesson this week'. Student Activity confirms submission Sep 26 12:14pm. Rechecked 4:20pm PDT.",
-      "source": "assignment page + To-Do + grades (4:20pm PDT recheck Sep 26)",
+      "status": "SUBMITTED+COMPLETE: Sep 26 12:14pm, 'IMG_0126-D2264.jpeg' screenshot of Quill.org Completed Activities — 'Plural Possessive vs. Singular Possessive Nouns 1, Sep 26 12:09pm, 9 of 10 (90%)', screenshot stamped 12:13pm; date+score visible as instructed. CONTRADICTION: gradebook still 'MISSING - did not do a Quill lesson this week'.",
+      "source": "assignment page + submission content opened (4:35pm PDT thorough recheck Sep 26)",
       "due": "2026-09-25 15:00"
     },
     {
@@ -906,8 +906,8 @@
       "title": "Unit 1 ISN Check",
       "course": "Social Studies 7: 6(A-B)",
       "student": "Louis L****",
-      "status": "Dropped from To-Do overdue list (rechecked 4:20pm PDT Sep 26); gradebook UNCHANGED: 0 - Missing Past Assessment Deadline — CONTRADICTION persists: Recently Completed lists it as submitted (badge '0').",
-      "source": "assignment page + To-Do + grades (4:20pm PDT recheck Sep 26)",
+      "status": "NO SUBMISSION: assignment page shows zero Submissions section; gradebook '0 - Missing Past Assessment Deadline'. CONTRADICTION: parent-home Recently Completed lists it (interaction list, not proof of submission). Still genuinely owed.",
+      "source": "assignment page + submission content opened (4:35pm PDT thorough recheck Sep 26)",
       "due": "2026-09-04 15:10"
     },
     {
@@ -1112,8 +1112,8 @@
       "title": "1 PASSED Quill lesson - Due Friday 9/25 by 3:00pm",
       "course": "English Language Arts 7: 3(A-B)",
       "student": "Louis L****",
-      "status": "CHANGED: dropped from To-Do; now in Recently Completed 'This material has been submitted but not yet graded'; gradebook: 'submission that has not been graded' — CONTRADICTION: teacher comment still reads 'MISSING - did not do a Quill lesson this week'. Student Activity confirms submission Sep 26 12:14pm. Rechecked 4:20pm PDT.",
-      "source": "assignment page + To-Do + grades (4:20pm PDT recheck Sep 26)",
+      "status": "SUBMITTED+COMPLETE: Sep 26 12:14pm, 'IMG_0126-D2264.jpeg' — 'Plural Possessive vs. Singular Possessive Nouns 1, Sep 26 12:09pm, 9 of 10 (90%)'. CONTRADICTION: gradebook still 'MISSING - did not do a Quill lesson this week'.",
+      "source": "assignment page + submission content opened (4:35pm PDT thorough recheck Sep 26)",
       "due": "2026-09-25 15:00"
     },
     {
@@ -1479,6 +1479,13 @@
       "assignment": "Week 6 Participation-09/28-10/02",
       "grade": "1",
       "label": "1 - Far Below Expectations — ANOMALY: graded before the week occurs"
+    },
+    {
+      "student": "Louis L****",
+      "course": "English Language Arts 7: 3(A-B)",
+      "assignment": "iReady Reading - Fall 2026 Assessment",
+      "grade": "3",
+      "label": "3 - Consistent Proficiency"
     }
   ],
   "submissions": [
@@ -2041,6 +2048,30 @@
       "student": "Louis L****",
       "date": "2026-10-02",
       "source": "Upcoming Events 4:20pm recheck"
+    },
+    {
+      "title": "Unit 3 TEST (Social Studies 7)",
+      "student": "Louis L****",
+      "date": "2026-10-21",
+      "source": "Upcoming Events 4:35pm recheck"
+    },
+    {
+      "title": "Unit 3 TEST (Social Studies 7, day 2)",
+      "student": "Louis L****",
+      "date": "2026-10-22",
+      "source": "Upcoming Events 4:35pm recheck"
+    },
+    {
+      "title": "NO SCHOOL",
+      "student": "Louis L****",
+      "date": "2026-10-12",
+      "source": "Upcoming Events 4:35pm recheck"
+    },
+    {
+      "title": "Minimum Days",
+      "student": "Louis L****",
+      "date": "2026-10-13",
+      "source": "Upcoming Events 4:35pm recheck"
     }
   ],
   "folders": [
