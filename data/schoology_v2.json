@@ -35,7 +35,7 @@
       "missing_badges_louis": 8,
       "grades_recorded": 29
     },
-    "deltas_vs_sep_20_pull": "4:20pm PDT Sep 26 fast recheck (Louis-only): To-Do overdue collapsed from 7 items to 1 (only Predator-Prey still overdue, grade 1 unchanged). Quill lesson (due 9/25) now shows submitted Sep 26 12:14pm awaiting grading — teacher comment still says MISSING (contradiction). Five other overdue items dropped from To-Do with NO new submission events and gradebook missing flags unchanged (contradictions persist). No new submissions since 12:36pm; no confirmed new grades. Upcoming unchanged: LG #2 + Interaction of Organisms due Tue Sep 29. 4:25pm PDT targeted recheck: Predator-Prey IS submitted (PDF, Sep 26 12:31pm, late) — assignment page is the only view showing it; gradebook/To-Do/activity feed still stale. 4:35pm PDT thorough recheck: 3 new submissions TODAY all verified SUBMITTED+COMPLETE (Quill 12:14pm 9/10 90%; Predator-Prey PDF 12:31pm all 6 Qs answered; 1.5 Notes&HW Rev5 1:01pm notes+HW photo both present). Unit 1 ISN Check has NO submission anywhere (genuinely owed). Algebra 2.5/2.6 notes+HW, Chapter 2 Review WS/HW, 2.5-2.6 Practice Quiz all SUBMITTED+COMPLETE with real work. Newly observed grades (unconfirmed timing): ELA iReady Fall 2026 Assessment = 3; Quill Diagnostic = 15. Materials sweep: all folders expanded in all 8 courses; no hidden graded items; stamp sheets only in Algebra; new events: Unit 3 Test Oct 21/22, Minimum Days Oct 13-16, No School Oct 12, Service Team Meeting Oct 9.",
+    "deltas_vs_sep_20_pull": "4:20pm PDT Sep 26 fast recheck (Louis-only): To-Do overdue collapsed from 7 items to 1 (only Predator-Prey still overdue, grade 1 unchanged). Quill lesson (due 9/25) now shows submitted Sep 26 12:14pm awaiting grading — teacher comment still says MISSING (contradiction). Five other overdue items dropped from To-Do with NO new submission events and gradebook missing flags unchanged (contradictions persist). No new submissions since 12:36pm; no confirmed new grades. Upcoming unchanged: LG #2 + Interaction of Organisms due Tue Sep 29. 4:25pm PDT targeted recheck: Predator-Prey IS submitted (PDF, Sep 26 12:31pm, late) — assignment page is the only view showing it; gradebook/To-Do/activity feed still stale. 4:35pm PDT thorough recheck: 3 new submissions TODAY all verified SUBMITTED+COMPLETE (Quill 12:14pm 9/10 90%; Predator-Prey PDF 12:31pm all 6 Qs answered; 1.5 Notes&HW Rev5 1:01pm notes+HW photo both present). Unit 1 ISN Check has NO submission anywhere (genuinely owed). Algebra 2.5/2.6 notes+HW, Chapter 2 Review WS/HW, 2.5-2.6 Practice Quiz all SUBMITTED+COMPLETE with real work. Newly observed grades (unconfirmed timing): ELA iReady Fall 2026 Assessment = 3; Quill Diagnostic = 15. Materials sweep: all folders expanded in all 8 courses; no hidden graded items; stamp sheets only in Algebra; new events: Unit 3 Test Oct 21/22, Minimum Days Oct 13-16, No School Oct 12, Service Team Meeting Oct 9. 5:13pm: Effects of Hate Speech work emailed to teacher; grade expected within a few days — flagged for upcoming sweeps.",
     "note": "Louis-only fast pull Sat Sep 26 ~12:20pm PDT (read-only, high-signal surfaces). Charlotte data unchanged from Sep 25 12:49pm pull.",
     "deltas_vs_sep_21_pull": [
       "CHARLOTTE: teacher ✅ marks on Sep 22 9:51-9:52am — 2.5 in class, 2.6 in class, 2.5 Book Problems (part 2), 2.4 DIGIT, 2.5 DIGIT. All now submitted-and-marked; grades still blank.",
@@ -1033,8 +1033,8 @@
       "title": "Effects of Hate Speech",
       "course": "English Language Arts 7: 3(A-B)",
       "student": "Louis L****",
-      "status": "Dropped from To-Do overdue list (rechecked 4:20pm PDT Sep 26); grade cell UNCHANGED: 1 - Far Below Expectations; teacher comment still 'MISSING. Did not do homework.'",
-      "source": "assignment page + To-Do + grades (4:20pm PDT recheck Sep 26)",
+      "status": "Work emailed to teacher by JP/parent (Sep 26 evening); grade expected in a few days. Page showed plain MISSING ('Did not do homework') at 5:08pm recheck — the grade 1 seen at 4:35pm was not rendering on the assignment page. Watch for grade in upcoming sweeps.",
+      "source": "parent report (Sep 26 5:13pm) + assignment page (5:08pm)",
       "due": "2026-09-25 08:30"
     },
     {
@@ -1096,8 +1096,8 @@
       "title": "Effects of Hate Speech - due in class",
       "course": "English Language Arts 7: 3(A-B)",
       "student": "Louis L****",
-      "status": "Dropped from To-Do overdue list (rechecked 4:20pm PDT Sep 26); grade cell UNCHANGED: 1 - Far Below Expectations; teacher comment still 'MISSING. Did not do homework.'",
-      "source": "assignment page + To-Do + grades (4:20pm PDT recheck Sep 26)",
+      "status": "Work emailed to teacher by JP/parent (Sep 26 evening); grade expected in a few days. Page showed plain MISSING ('Did not do homework') at 5:08pm recheck — the grade 1 seen at 4:35pm was not rendering on the assignment page. Watch for grade in upcoming sweeps.",
+      "source": "parent report (Sep 26 5:13pm) + assignment page (5:08pm)",
       "due": "2026-09-25 08:30"
     },
     {
